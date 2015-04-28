@@ -4,4 +4,10 @@ Notes here.
 
 I foucs on:
 
-[PHP](/PHP "PHP")
+[PHP](/PHP)
+
+[MySQL](/MySQL)
+
+[MAC](/MAC)
+
+[SEO](/SEO)
