@@ -1,6 +1,6 @@
 ##OpenShift
 
-###简介
+###安装完应用后的文字
 
 What about ~/data folder?
 
