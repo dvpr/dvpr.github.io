@@ -350,8 +350,8 @@ pre.editor-colors .fold-marker:after,
 </style>
   </head>
   <body class='markdown-preview'><h2 id="mysql">Mysql</h2>
-<p>多表删除</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>SELECT&nbsp;CONCAT(&quot;DROP&nbsp;TABLE&nbsp;&quot;,&nbsp;GROUP_CONCAT(table_name),&nbsp;&quot;;&quot;)&nbsp;FROM&nbsp;information_schema.tables&nbsp;WHERE&nbsp;table_schema&nbsp;=&nbsp;&quot;DATABASE_NAME&quot;&nbsp;AND&nbsp;table_name&nbsp;LIKE&nbsp;&quot;PREFIX_TABLE_NAME%&quot;;</span></span></span></div></pre><p>创建用户</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>CREATE&nbsp;USER&nbsp;&#39;username&#39;@&#39;host&#39;&nbsp;IDENTIFIED&nbsp;BY&nbsp;&#39;password&#39;;</span></span></span></div></pre><p>修改权限</p>
+<h3 id="-">多表删除</h3>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>SELECT&nbsp;CONCAT(&quot;DROP&nbsp;TABLE&nbsp;&quot;,&nbsp;GROUP_CONCAT(table_name),&nbsp;&quot;;&quot;)&nbsp;FROM&nbsp;information_schema.tables&nbsp;WHERE&nbsp;table_schema&nbsp;=&nbsp;&quot;DATABASE_NAME&quot;&nbsp;AND&nbsp;table_name&nbsp;LIKE&nbsp;&quot;PREFIX_TABLE_NAME%&quot;;</span></span></span></div></pre><h3 id="-">创建用户</h3>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>CREATE&nbsp;USER&nbsp;&#39;username&#39;@&#39;host&#39;&nbsp;IDENTIFIED&nbsp;BY&nbsp;&#39;password&#39;;</span></span></span></div></pre><h3 id="-">修改权限</h3>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>grant&nbsp;all&nbsp;privileges&nbsp;on&nbsp;joomla.*&nbsp;to&nbsp;joomla@localhost&nbsp;identified&nbsp;by&nbsp;&#39;joomla!Q@W#E$R&#39;;</span></span></span></div></pre></body>
 </html>

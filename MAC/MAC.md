@@ -1,6 +1,6 @@
 ##MAC
 
-系统变慢
+###系统变慢
 
 1.	用CleanMyMac清理系统垃圾；
 
@@ -17,11 +17,11 @@
 
 > 进到资源库→找到“Preference”→清空里面的东西。**这样做等同于重装**
 
-OS X：关于 OS X 恢复功能
+#####OS X：关于 OS X 恢复功能
 
 > [链接](http://www.apple.com/cn/osx/recovery/) 只要在启动过程中按住 Command-R，OS X 恢复功能便会立即运行。它可让你从常用工具中进行选择：你可以运行磁盘工具来检查或修复硬盘，擦除硬盘并重装新的 OS X，或从 Time Machine 的备份中恢复你的 Mac。你还可使用 Safari 获得 Apple 在线技术支持。如果 OS X 恢复功能出现问题，它会自动通过互联网连接到 Apple。
 
-U盘重装
+###U盘重装
 
 > 下好山狮的dmg镜像，用mac里的磁盘工具把映像恢复到U盘上
 >

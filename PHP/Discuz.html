@@ -350,7 +350,7 @@ pre.editor-colors .fold-marker:after,
 </style>
   </head>
   <body class='markdown-preview'><h2 id="discuz">Discuz</h2>
-<p>修改创始人密码</p>
+<h3 id="-">修改创始人密码</h3>
 <ol>
 <li><p>在网站根目录下的子目录uc_server/data中找到文件config.inc.php，打开它，找到类似以下代码：</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>define(&#39;UC_FOUNDERPW&#39;,&nbsp;&#39;256955f2e034sad74f0e2953572ea360&#39;);</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>define(&#39;UC_FOUNDERSALT&#39;,&nbsp;&#39;217804&#39;);</span></span></span></div></pre></li>
@@ -359,9 +359,14 @@ pre.editor-colors .fold-marker:after,
 <li><p>修改完后，Ucenter创始人的密码就变为: 123456789　</p>
 </li>
 </ol>
-<p>Discuz X 开启防CC攻击</p>
+<h3 id="discuz-x-cc-">Discuz X 开启防CC攻击</h3>
 <p>在config/config_global.php文件中有如下代码：</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$_config[&#39;security&#39;][&#39;attackevasive&#39;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;0;</span></span></span></div></pre><p>可以设置的值有：</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0表示关闭此功能</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1表示cookie刷新限制</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2表示限制代理访问</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>4表示二次请求</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>8表示回答问题（第一次访问时需要回答问题）</span></span></span></div></pre><p>同时也可以设置为组合的方式：</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>如1|2表示同时启用cookie刷新限制和限制代理访问。</span></span></span></div></pre></body>
+<blockquote>
+<p>0表示关闭此功能<br>1表示cookie刷新限制<br>2表示限制代理访问<br>4表示二次请求<br>8表示回答问题（第一次访问时需要回答问题）</p>
+</blockquote>
+<p>同时也可以设置为组合的方式：</p>
+<blockquote>
+<p>如1|2表示同时启用cookie刷新限制和限制代理访问。</p>
+</blockquote></body>
 </html>

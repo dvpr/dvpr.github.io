@@ -1,4 +1,6 @@
-国内
+##Joomla 模版资源列表
+
+###国内
 
 > http://www.motostore.com.cn/  
 > http://www.91gogou.com/  
@@ -6,7 +8,7 @@
 > http://www.shopex.cn/  
 > http://mb.shopex.cn/
 
-外国
+###国外
 
 > http://demo.gavick.com/joomla15/mar2009/  
 > http://demo.gavick.com/joomla15/oct2009/  
