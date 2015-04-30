@@ -33,4 +33,4 @@ rem 重启Windows外壳程序explorer
 start explorer
 ```
 
-[脚本下载](/assets/windows/clean_icon_cache.bat)
+[脚本下载](/assets/windows/clean_icon_cache.zip)
