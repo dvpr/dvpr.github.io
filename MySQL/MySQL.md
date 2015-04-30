@@ -9,11 +9,11 @@ SELECT CONCAT("DROP TABLE ", GROUP_CONCAT(table_name), ";") FROM information_sch
 ###创建用户
 
 ```
-CREATE USER 'username'@'host' IDENTIFIED BY 'password';
+CREATE USER 'user_name'@'host' IDENTIFIED BY 'password';
 ```
 
 ###修改权限
 
 ```
-grant all privileges on joomla.* to joomla@localhost identified by 'joomla!Q@W#E$R';
+grant all privileges on database_name.* to 'user_name'@'host' identified by 'user_password';
 ```
