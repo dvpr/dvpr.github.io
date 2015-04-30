@@ -12,6 +12,4 @@ I foucs on:
 
 [MAC](/MAC)
 
-[Windows](/Windows)
-
 [SEO](/SEO)
