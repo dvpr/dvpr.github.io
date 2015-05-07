@@ -8,6 +8,8 @@ I foucs on:
 
 [MySQL](/MySQL)
 
+[Linux](/Linux)
+
 [Cloud](/Cloud)
 
 [MAC](/MAC)
@@ -15,3 +17,5 @@ I foucs on:
 [Windows](/Windows)
 
 [SEO](/SEO)
+
+[Words](/Words)
