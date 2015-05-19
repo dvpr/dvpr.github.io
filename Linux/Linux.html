@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <meta charset="utf-8" />
       <title>Linux</title>
       <style>.markdown-preview { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; line-height: 1.6; overflow: scroll; box-sizing: border-box; padding: 20px; background-color: rgb(255, 255, 255); }
 .markdown-preview code { color: rgb(51, 51, 51); }
@@ -67,10 +68,20 @@
 .markdown-preview span.float-right { display: block; margin-left: 13px; overflow: hidden; float: right; }
 .markdown-preview span.float-right > span { display: block; overflow: hidden; margin: 13px auto 0px; text-align: right; }
 .markdown-preview code, .markdown-preview tt { margin: 0px 2px; padding: 0px 5px; border: 1px solid rgb(234, 234, 234); border-radius: 3px; text-shadow: none; background-color: rgb(248, 248, 248); }
-.markdown-preview code { white-space: nowrap; }
-.markdown-preview pre.editor-colors { font-size: 13px; line-height: 19px; overflow: auto; padding: 6px 10px; border-radius: 3px; border: 1px solid rgb(18, 20, 23); background: rgb(41, 44, 51); }
+.markdown-preview pre.editor-colors { font-size: 13px; line-height: 19px; overflow: auto; padding: 6px 10px; border-radius: 3px; border: 1px solid rgb(17, 18, 22); background: rgb(39, 43, 51); }
 .markdown-preview kbd { border-radius: 2px; border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(204, 204, 204) rgb(204, 204, 204) rgb(221, 221, 221); padding: 1px 4px; line-height: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-image: linear-gradient(rgb(241, 241, 241), rgb(221, 221, 221)); background-color: rgb(221, 221, 221); background-repeat: repeat-x; }
 .markdown-preview .emoji { height: 20px; width: 20px; }
+.markdown-preview { font-size: 1.25em; color: rgb(200, 204, 213); background-color: rgb(45, 50, 60); }
+.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(27, 30, 36); }
+.markdown-preview a { color: rgb(100, 148, 237); }
+.markdown-preview hr { background-color: rgb(45, 50, 60); }
+.markdown-preview blockquote { color: rgb(156, 164, 180); border-left-color: rgba(156, 164, 180, 0.6); }
+.markdown-preview table th, .markdown-preview table td { border-color: rgb(27, 30, 36); }
+.markdown-preview table th { background-color: rgb(52, 57, 68); }
+.markdown-preview table tr { background-color: rgb(45, 50, 60); }
+.markdown-preview table tr:nth-child(2n) { background-color: rgb(39, 43, 51); }
+.markdown-preview code { color: rgb(243, 244, 246); border-color: rgb(27, 30, 36); background-color: rgb(61, 67, 80); background-clip: padding-box; }
+.markdown-preview pre.editor-colors::shadow .line.cursor-line { background-color: transparent; }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
   position: absolute;
@@ -82,8 +93,8 @@
 
 pre.editor-colors,
 .host {
-  background-color: #292c33;
-  color: #95a2bb;
+  background-color: #272b33;
+  color: #abb2c0;
 }
 pre.editor-colors .line.cursor-line,
 .host .line.cursor-line {
@@ -91,37 +102,37 @@ pre.editor-colors .line.cursor-line,
 }
 pre.editor-colors .invisible,
 .host .invisible {
-  color: #95a2bb;
+  color: #abb2c0;
 }
 pre.editor-colors .cursor,
 .host .cursor {
-  border-left: 2px solid #3d7af5;
+  border-left: 2px solid #528bff;
 }
 pre.editor-colors .selection .region,
 .host .selection .region {
-  background-color: #3f454f;
+  background-color: #3d4350;
 }
 pre.editor-colors .bracket-matcher .region,
 .host .bracket-matcher .region {
-  border-bottom: 1px solid #3d7af5;
+  border-bottom: 1px solid #528bff;
   box-sizing: border-box;
-  background-color: #363b44;
+  background-color: #343944;
 }
 pre.editor-colors .invisible-character,
 .host .invisible-character {
-  color: rgba(149, 162, 187, 0.15);
+  color: rgba(171, 178, 192, 0.15);
 }
 pre.editor-colors .indent-guide,
 .host .indent-guide {
-  color: rgba(149, 162, 187, 0.15);
+  color: rgba(171, 178, 192, 0.15);
 }
 pre.editor-colors .wrap-guide,
 .host .wrap-guide {
-  background-color: rgba(149, 162, 187, 0.15);
+  background-color: rgba(171, 178, 192, 0.15);
 }
 pre.editor-colors .gutter .line-number,
 .host .gutter .line-number {
-  color: #5a5b5e;
+  color: #636e84;
   -webkit-font-smoothing: antialiased;
 }
 pre.editor-colors .gutter .line-number.git-line-removed:before,
@@ -140,8 +151,8 @@ pre.editor-colors .gutter .line-number.git-line-removed:after,
 }
 pre.editor-colors .gutter .line-number.cursor-line,
 .host .gutter .line-number.cursor-line {
-  color: #95a2bb;
-  background-color: #2d3139;
+  color: #abb2c0;
+  background-color: #2b3039;
 }
 pre.editor-colors .gutter .line-number.cursor-line-no-selection,
 .host .gutter .line-number.cursor-line-no-selection {
@@ -149,11 +160,11 @@ pre.editor-colors .gutter .line-number.cursor-line-no-selection,
 }
 pre.editor-colors .gutter .line-number .icon-right,
 .host .gutter .line-number .icon-right {
-  color: #95a2bb;
+  color: #abb2c0;
 }
 pre.editor-colors .gutter .line-number .icon-right,
 .host .gutter .line-number .icon-right {
-  color: #95a2bb;
+  color: #abb2c0;
 }
 pre.editor-colors .gutter .line-number.folded,
 .host .gutter .line-number.folded,
@@ -161,197 +172,242 @@ pre.editor-colors .gutter .line-number:after,
 .host .gutter .line-number:after,
 pre.editor-colors .fold-marker:after,
 .host .fold-marker:after {
-  color: #95a2bb;
+  color: #abb2c0;
 }
 .comment {
-  color: #5f6b85;
+  color: #5b626f;
   font-style: italic;
 }
 .entity.name.type {
-  color: #d9bd86;
+  color: #e5c17c;
 }
 .entity.other.inherited-class {
-  color: #88b379;
+  color: #97c378;
 }
 .keyword {
-  color: #b27ecd;
+  color: #c679dd;
 }
 .keyword.control {
-  color: #b27ecd;
+  color: #c679dd;
 }
 .keyword.operator {
-  color: #95a2bb;
+  color: #abb2c0;
 }
 .keyword.other.special-method {
-  color: #66a5df;
+  color: #61aeef;
 }
 .keyword.other.unit {
-  color: #d49a67;
+  color: #d29b67;
 }
 .storage {
-  color: #b27ecd;
+  color: #c679dd;
+}
+.storage.type.annotation,
+.storage.type.primitive {
+  color: #c679dd;
+}
+.storage.modifier.package,
+.storage.modifier.import {
+  color: #abb2c0;
 }
 .constant {
-  color: #d49a67;
+  color: #d29b67;
+}
+.constant.variable {
+  color: #d29b67;
 }
 .constant.character.escape {
-  color: #59b3c5;
+  color: #57b6c2;
 }
 .constant.numeric {
-  color: #d49a67;
+  color: #d29b67;
 }
 .constant.other.color {
-  color: #59b3c5;
+  color: #57b6c2;
 }
 .constant.other.symbol {
-  color: #59b3c5;
+  color: #57b6c2;
 }
 .variable {
-  color: #bf6e7c;
+  color: #df6a73;
 }
 .variable.interpolation {
-  color: #8f5355;
+  color: #be4f44;
 }
-.variable.parameter.function {
-  color: #95a2bb;
+.variable.parameter {
+  color: #abb2c0;
 }
 .invalid.illegal {
-  background-color: #bf6e7c;
-  color: #292c33;
+  background-color: #df6a73;
+  color: #272b33;
 }
 .string {
-  color: #88b379;
+  color: #97c378;
 }
 .string.regexp {
-  color: #59b3c5;
+  color: #57b6c2;
 }
 .string.regexp .source.ruby.embedded {
-  color: #f18217;
+  color: #ff8000;
 }
 .string.other.link {
-  color: #bf6e7c;
+  color: #df6a73;
 }
 .punctuation.definition.comment {
-  color: #5f6b85;
+  color: #5b626f;
 }
+.punctuation.definition.method-parameters,
+.punctuation.definition.function-parameters,
 .punctuation.definition.parameters,
+.punctuation.definition.separator,
+.punctuation.definition.seperator,
 .punctuation.definition.array {
-  color: #95a2bb;
+  color: #abb2c0;
 }
 .punctuation.definition.heading,
 .punctuation.definition.identity {
-  color: #66a5df;
+  color: #61aeef;
 }
 .punctuation.definition.bold {
-  color: #d9bd86;
+  color: #e5c17c;
   font-weight: bold;
 }
 .punctuation.definition.italic {
-  color: #b27ecd;
+  color: #c679dd;
   font-style: italic;
 }
 .punctuation.section.embedded {
-  color: #8f5355;
+  color: #be4f44;
+}
+.punctuation.section.method,
+.punctuation.section.class,
+.punctuation.section.inner-class {
+  color: #abb2c0;
 }
 .support.class {
-  color: #d9bd86;
+  color: #e5c17c;
 }
 .support.function {
-  color: #59b3c5;
+  color: #57b6c2;
 }
 .support.function.any-method {
-  color: #66a5df;
+  color: #61aeef;
 }
 .entity.name.function {
-  color: #66a5df;
+  color: #61aeef;
 }
 .entity.name.class,
 .entity.name.type.class {
-  color: #d9bd86;
+  color: #e5c17c;
 }
 .entity.name.section {
-  color: #66a5df;
+  color: #61aeef;
 }
 .entity.name.tag {
-  color: #bf6e7c;
+  color: #df6a73;
 }
 .entity.other.attribute-name {
-  color: #d49a67;
+  color: #d29b67;
 }
 .entity.other.attribute-name.id {
-  color: #66a5df;
+  color: #61aeef;
 }
 .meta.class {
-  color: #d9bd86;
+  color: #e5c17c;
+}
+.meta.class.body {
+  color: #abb2c0;
+}
+.meta.method-call,
+.meta.method {
+  color: #abb2c0;
+}
+.meta.definition.variable {
+  color: #df6a73;
 }
 .meta.link {
-  color: #d49a67;
+  color: #d29b67;
 }
 .meta.require {
-  color: #66a5df;
+  color: #61aeef;
 }
 .meta.selector {
-  color: #b27ecd;
+  color: #c679dd;
 }
 .meta.separator {
   background-color: #373b41;
-  color: #95a2bb;
+  color: #abb2c0;
 }
 .meta.tag {
-  color: #95a2bb;
+  color: #abb2c0;
 }
 .none {
-  color: #95a2bb;
+  color: #abb2c0;
 }
 .markup.bold {
-  color: #d49a67;
+  color: #d29b67;
   font-weight: bold;
 }
 .markup.changed {
-  color: #b27ecd;
+  color: #c679dd;
 }
 .markup.deleted {
-  color: #bf6e7c;
+  color: #df6a73;
 }
 .markup.italic {
-  color: #b27ecd;
+  color: #c679dd;
   font-style: italic;
 }
 .markup.heading .punctuation.definition.heading {
-  color: #66a5df;
+  color: #61aeef;
 }
 .markup.inserted {
-  color: #88b379;
+  color: #97c378;
 }
 .markup.list {
-  color: #bf6e7c;
+  color: #df6a73;
 }
 .markup.quote {
-  color: #d49a67;
+  color: #d29b67;
 }
 .markup.raw.inline {
-  color: #88b379;
+  color: #97c378;
+}
+.source.cs .keyword.operator {
+  color: #c679dd;
 }
 .source.gfm .markup {
   -webkit-font-smoothing: auto;
 }
 .source.gfm .markup.heading {
-  color: #bf6e7c;
+  color: #df6a73;
 }
 .source.gfm .markup.link {
-  color: #b27ecd;
+  color: #c679dd;
 }
 .source.gfm .link .entity {
-  color: #66a5df;
+  color: #61aeef;
 }
-.ruby.symbol > .punctuation {
+.source.java .storage.modifier.import {
+  color: #e5c17c;
+}
+.source.java .storage.type {
+  color: #e5c17c;
+}
+.source.ruby .constant.other.symbol > .punctuation {
   color: inherit;
+}
+.source.python .keyword.operator.logical.python {
+  color: #c679dd;
 }
 </style>
   </head>
   <body class='markdown-preview'><h2 id="linux">Linux</h2>
 <h3 id="ius-yum-">IUS yum源</h3>
 <h5 id="-">快捷安装</h5>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>wget&nbsp;</span><span class="markup underline link http hyperlink"><span>http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/ius-release-1-2.ius.el5.noarch.rpm</span></span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>wget&nbsp;</span><span class="markup underline link http hyperlink"><span>http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/epel-release-1-1.ius.el5.noarch.rpm</span></span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>rpm&nbsp;-Uvh&nbsp;ius-release*.rpm&nbsp;epel-release*.rpm</span></span></span></div></pre><h5 id="yum-">yum包信息</h5>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span class="markup underline link https hyperlink"><span>https://dl.iuscommunity.org/pub/</span></span></span></span></div></pre></body>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>wget&nbsp;http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/ius-release-1-2.ius.el5.noarch.rpm</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>wget&nbsp;http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/epel-release-1-1.ius.el5.noarch.rpm</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>rpm&nbsp;-Uvh&nbsp;ius-release*.rpm&nbsp;epel-release*.rpm</span></span></span></div></pre><h5 id="yum-">yum包信息</h5>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>https://dl.iuscommunity.org/pub/</span></span></span></div></pre><h3 id="linux-">Linux 监控命令</h3>
+<h5 id="-apache-">查看apache连接数</h5>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>watch&nbsp;-n&nbsp;1&nbsp;-d&nbsp;&quot;pgrep&nbsp;httpd|wc&nbsp;-l&quot;</span></span></span></div></pre><h5 id="-mysql-">查看mysql连接数</h5>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>mysqladmin&nbsp;-uuser&nbsp;-p&nbsp;processlist</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>mysqladmin&nbsp;-uuser&nbsp;-p&nbsp;status</span></span></span></div></pre></body>
 </html>
