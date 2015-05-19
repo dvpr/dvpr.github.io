@@ -71,17 +71,6 @@
 .markdown-preview pre.editor-colors { font-size: 13px; line-height: 19px; overflow: auto; padding: 6px 10px; border-radius: 3px; border: 1px solid rgb(17, 18, 22); background: rgb(39, 43, 51); }
 .markdown-preview kbd { border-radius: 2px; border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(204, 204, 204) rgb(204, 204, 204) rgb(221, 221, 221); padding: 1px 4px; line-height: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-image: linear-gradient(rgb(241, 241, 241), rgb(221, 221, 221)); background-color: rgb(221, 221, 221); background-repeat: repeat-x; }
 .markdown-preview .emoji { height: 20px; width: 20px; }
-.markdown-preview { font-size: 1.25em; color: rgb(200, 204, 213); background-color: rgb(45, 50, 60); }
-.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(27, 30, 36); }
-.markdown-preview a { color: rgb(100, 148, 237); }
-.markdown-preview hr { background-color: rgb(45, 50, 60); }
-.markdown-preview blockquote { color: rgb(156, 164, 180); border-left-color: rgba(156, 164, 180, 0.6); }
-.markdown-preview table th, .markdown-preview table td { border-color: rgb(27, 30, 36); }
-.markdown-preview table th { background-color: rgb(52, 57, 68); }
-.markdown-preview table tr { background-color: rgb(45, 50, 60); }
-.markdown-preview table tr:nth-child(2n) { background-color: rgb(39, 43, 51); }
-.markdown-preview code { color: rgb(243, 244, 246); border-color: rgb(27, 30, 36); background-color: rgb(61, 67, 80); background-clip: padding-box; }
-.markdown-preview pre.editor-colors::shadow .line.cursor-line { background-color: transparent; }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
   position: absolute;
@@ -408,6 +397,6 @@ pre.editor-colors .fold-marker:after,
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>wget&nbsp;http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/ius-release-1-2.ius.el5.noarch.rpm</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>wget&nbsp;http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/epel-release-1-1.ius.el5.noarch.rpm</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>rpm&nbsp;-Uvh&nbsp;ius-release*.rpm&nbsp;epel-release*.rpm</span></span></span></div></pre><h5 id="yum-">yum包信息</h5>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>https://dl.iuscommunity.org/pub/</span></span></span></div></pre><h3 id="linux-">Linux 监控命令</h3>
 <h5 id="-apache-">查看apache连接数</h5>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>watch&nbsp;-n&nbsp;1&nbsp;-d&nbsp;&quot;pgrep&nbsp;httpd|wc&nbsp;-l&quot;</span></span></span></div></pre><h5 id="-mysql-">查看mysql连接数</h5>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>watch&nbsp;-n&nbsp;1&nbsp;-d&nbsp;&quot;pgrep&nbsp;httpd|wc&nbsp;-l&quot;</span></span></span></div></pre><h5 id="-mysql-">查看MySQL连接数</h5>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>mysqladmin&nbsp;-uuser&nbsp;-p&nbsp;processlist</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>mysqladmin&nbsp;-uuser&nbsp;-p&nbsp;status</span></span></span></div></pre></body>
 </html>

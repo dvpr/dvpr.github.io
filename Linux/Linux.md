@@ -24,7 +24,7 @@ https://dl.iuscommunity.org/pub/
 watch -n 1 -d "pgrep httpd|wc -l"
 ```
 
-##### 查看mysql连接数
+##### 查看MySQL连接数
 
 ```
 mysqladmin -uuser -p processlist
