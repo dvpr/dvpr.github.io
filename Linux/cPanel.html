@@ -267,5 +267,7 @@
 /usr/local/cpanel/bin/cphulk_pam_ctl --disable</code></pre>
 <h3>Can't enable SMTP Restrictions</h3>
 <pre><code>/scripts/smtpmailgidonly on</code></pre>
+<h3>查看邮件日志</h3>
+<pre><code>grep "your_keywork" /var/log/exim_mainlog* &gt; /tmp/analyzelogs.txt &amp;&amp; less /tmp/analyzelogs.txt</code></pre>
 </body>
 </html>

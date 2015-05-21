@@ -17,3 +17,10 @@ CREATE USER 'user_name'@'host' IDENTIFIED BY 'password';
 ```
 grant all privileges on database_name.* to 'user_name'@'host' identified by 'user_password';
 ```
+
+
+### MySQL REPLACE
+
+```
+UPDATE `table_name` SET `field_name` = REPLACE(`field_name`,'from_str','to_str');
+```

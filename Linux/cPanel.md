@@ -14,3 +14,9 @@ for i in `ps aux | grep -i "cphulkd - process" | awk {'print $2'}` ;do kill -9 $
 ```
 /scripts/smtpmailgidonly on
 ```
+
+### 查看邮件日志
+
+```
+grep "your_keywork" /var/log/exim_mainlog* > /tmp/analyzelogs.txt && less /tmp/analyzelogs.txt
+```

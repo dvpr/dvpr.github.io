@@ -267,5 +267,7 @@
 <pre><code>CREATE USER 'user_name'@'host' IDENTIFIED BY 'password';</code></pre>
 <h3>修改权限</h3>
 <pre><code>grant all privileges on database_name.* to 'user_name'@'host' identified by 'user_password';</code></pre>
+<h3>MySQL REPLACE</h3>
+<pre><code>UPDATE `table_name` SET `field_name` = REPLACE(`field_name`,'from_str','to_str');</code></pre>
 </body>
 </html>
