@@ -7,260 +7,86 @@
     <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <style type="text/css">
-        ::-webkit-scrollbar {
-            display: none;
-        }
-
-        a {
-            border-bottom: 1px dashed #bbb;
-            color: #333;
-            padding-bottom: 5px;
-        }
 
         body {
-            -webkit-font-smoothing: antialiased;
-            background: #fff;
-            padding: 20px;
-            background-color: rgb(255, 255, 255);
-        }
-
-        code {
-            -webkit-font-smoothing: subpixel-antialiased;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            margin: 0 0 5px 0;
-        }
-
-        div.odd {
-            background: #eee;
-        }
-
-        html {
-            overflow: -moz-scrollbars-none;
-        }
-
-        pre {
-            margin: 0;
-            white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
-            white-space: -o-pre-wrap; /* Opera */
-            white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
-            word-wrap: break-word; /* IE 5.5+ */
+            padding-top: 70px;
         }
 
         /*
          *
-         * span
+         * markdown-output
          *
          */
 
-        span.secondary {
-            color: #777;
-        }
-
-        span.highlight {
-            background: #285;
-            color: #fff;
-            padding: 2px 5px;
-        }
-
-        /*
-         *
-         * td
-         *
-         */
-
-        div.td {
-            float: left;
-            width: 35%;
-        }
-
-        div.td div {
-            padding: 20px;
-        }
-
-        /*
-         *
-         * head
-         *
-         */
-
-        div.head {
-            background: #eee;
-        }
-
-        /*
-         *
-         * head
-         *
-         */
-
-        div.body {
-            bottom: 0;
-            left: 0;
-            overflow: scroll;
-            position: absolute;
-            right: 0;
-            top: 128px;
-        }
-
-        /*
-         *
-         * nav
-         *
-         */
-
-        div.nav {
-            background: #222;
-            color: #fff;
-            padding: 10px 20px 0 20px;
-        }
-
-        div.nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        div.nav li {
-            background: #333;
-            border-bottom-width: 0;
-            float: left;
-            margin-right: 10px;
-            padding: 15px 20px;
-        }
-
-        div.nav li a {
-            border: none;
-            color: #fff;
-            padding: 0;
-        }
-
-        div.nav li.active {
-            background: #eee;
-        }
-
-        div.nav li.active a {
-            color: #333;
-        }
-
-        div.nav li.first {
-            background: none;
-            padding: 15px 10px 0 0
-        }
-
-        div.nav li.external {
-            background: none;
-        }
-
-        div.nav li.external a {
-            color: #6be;
-        }
-
-        /*
-         *
-         * output
-         *
-         */
-
-        .markdown-output a {
-            border: none;
-            color: #59b;
-            padding: 0;
-        }
-
-        .markdown-output a code {
-            color: #59b;
-        }
-
-        .markdown-output blockquote {
-            background: none;
-            border-left: 3px solid #777;
-            color: #777;
-            padding: 0 0 0 10px;
-        }
-
-        .markdown-output code {
-            background: #eee;
-            border: 1px solid #ddd;
-            padding: 0 5px 1px 5px;
-        }
-
-        .markdown-output h1, .markdown-output h2, .markdown-output h3, .markdown-output h4, .markdown-output h5, .markdown-output h6 {
-            line-height: normal;
-            margin: 20px 0;
-        }
-
-        .markdown-output h1 { padding: 0px 0px 10px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); color: rgb(0, 0, 0); }
-        .markdown-output h2 { padding: 0px 0px 10px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); color: rgb(0, 0, 0); }
+        .markdown-output h1,
+        .markdown-output h2 {
+            padding: 0px 0px 10px;
+            border-bottom: 1px solid #EEE;
+         }
 
         .markdown-output hr {
             background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC") repeat-x 0 0;
             border: 0 none;
-            color: #ccc;
+            color: #CCC;
             height: 4px;
             padding: 0;
             margin: 15px 0;
         }
 
-        .markdown-output div.footnotes {
-            font-size: 14px;
-        }
-
         .markdown-output pre {
-            border: 1px solid rgb(17, 18, 22);
-            background: rgb(39, 43, 51);
-            border-radius: 3px;
-            color: #abb2c0;
-            margin-bottom: 10px;
-            padding: 10px;
+            background: #272B33;
+            color: #ABB2C0;
         }
 
-        .markdown-output pre code {
-            background: none;
-            border: none;
-            padding: 0;
-
-        }
-
-        .markdown-output table {
-            border-width: 1px 0 0 1px;
-            border-color: #bbb;
-            border-style: solid;
-        }
-
-        .markdown-output table td, .markdown-output table th {
-            border-width: 0 1px 1px 0;
-            border-color: #bbb;
-            border-style: solid;
-            padding: 10px;
-        }
-
-        /*
-         *
-         * prettify
-         *
-         */
-
-        span.tag {
-            color: #b19;
-        }
-
-        span.atn {
-            color: #975;
-        }
-
-        span.pun {
-            color: #b19;
-        }
-
-        span.atv {
-            color: #559;
-        }
     </style>
 </head>
-<body class="markdown-output">
-    <h2>Cloud</h2>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">AppleStar</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/PHP">PHP</a></li>
+            <li><a href="/MySQL">MySQL</a></li>
+            <li><a href="/Linux">Linux</a></li>
+            <li><a href="/Cloud">Cloud</a></li>
+            <li><a href="/MAC">MAC</a></li>
+            <li><a href="/Windows">Windows</a></li>
+            <li><a href="/SEO">SEO</a></li>
+            <li><a href="/Words">Words</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+        <div class="markdown-output">
+            <h2>Cloud</h2>
 <h3><a href="./OpenShift.html">OpenShift</a></h3>
+        </div>
+
+        <hr>
+        <footer>
+            <p>© AppleStar</p>
+        </footer>
+    </div>
+
 </body>
 </html>
