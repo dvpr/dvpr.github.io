@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Markdown</title>
+    <title>Aliyun_CentOS.html - AppleStar</title>
     <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <style type="text/css">
@@ -44,7 +44,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?db7dabaf88a801d50f2ffa63a65e69f5";
+      hm.src = "//hm.baidu.com/hm.js?25764820c090e79dc1c1aa32bc065cf2";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -89,189 +89,7 @@
 
     <div class="container">
         <div class="markdown-output">
-            <h2>Aliyun CentOS</h2>
-<h3>添加yum源</h3>
-<pre><code>rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm</code></pre>
-<h3>服务器部署记录</h3>
-<ul>
-<li>
-<h5>查看信息</h5>
-<p>cat /etc/redhat-release，查看版本
-uname -a – 显示版本和内核信息
-rpm -q kernel – 显示内核版本
-yum -y update – 升级所有应用版本，更新CentOS到最新镜像版本</p>
-</li>
-<li>
-<h5>安装</h5>
-<p>yum install mysql mysql-server                          //安装Mysql
-chkconfig --levels 235 mysqld on                        //Mysql开机启动
-/etc/init.d/mysqld start                                //运行mysql
-mysql_secure_installation-----------------不好使         //Mysql安装向导
-mysqladmin -u root password xx                          //设置mysql密码
-yum install httpd                                       //安装Apache
-chkconfig --levels 235 httpd on                         //Apache开机启动
-/etc/init.d/httpd start                                 //启动Apache
-访问域名
-apache preloadpage---------------干啥用啊
-yum install php/php53                                   //安装php
-/etc/init.d/httpd restart                               //重启Apache
-yum search php                                          //搜索php相关模块
-yum install php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc  //安装php模块
-/etc/init.d/httpd restart                               //重启Apache</p>
-</li>
-<li>
-<p><a href="http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users">VSFTP</a> 安装ftp</p>
-<p>yum install vsftpd db4-utils</p>
-<p><a href="http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users?action=AttachFile&amp;do=get&amp;target=vsftpd_virtual_config_withTLS.sh">vsftpd_virtual_config_withTLS</a> 下载配置脚本</p>
-<p>chkconfig --levels 235 vsftpd on
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 21 -j ACCEPT
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 64000:65535 -j ACCEPT
-vim /etc/vsftpd/vsftpd.conf  //修改主机ip
-/etc/init.d/vsftpd restart   //重启vsftp  </p>
-</li>
-<li>
-<h5>配置FTP</h5>
-<p>修改ftp路径
-/etc/vsftpd/users //编辑相应用户文件</p>
-</li>
-</ul>
-<h3>配置apache、mysql、php</h3>
-<ul>
-<li>
-<p>apache 配置</p>
-<pre><code>#vi /etc/httpd/conf/httpd.conf</code></pre>
-<pre><code>#Servername www.example.com  80 修改为： Servername www.mglog.net  80</code></pre>
-<p>(指定为你自己的域名，如果没有域名，设置为localhost)</p>
-<pre><code>ServerTokens  OS  修改为： ServerTokens Prod</code></pre>
-<p>(大约在44行，在出现错误页的时候不显示服务器操作系统名称)</p>
-<pre><code>ServerSignature On  修改为： ServerSignature Off</code></pre>
-<p>(大约在536行，在错误页中不显示Apache版本)</p>
-<pre><code>--------------------Options Indexes FollowSymLinks 修改为：Options Includes ExecCGI FollowSymLinks</code></pre>
-<p>(大约在在331行，允许服务器执行CGI及SSI，禁止列出目录)  </p>
-<pre><code>---------------------#AddHandler cgi-script .cgi 修改为：AddHandler cgi-script .cgi .pl</code></pre>
-<p>(大约在在796行， 允许扩展名为.pl的CGI脚本运行)  </p>
-<pre><code>-------------------AllowOverride None  修改为：AllowOverride All</code></pre>
-<p>(大约在338行，允许.htaccess)</p>
-<pre><code>-------------------AddDefaultCharset UTF-8 修改为：AddDefaultCharset GB2312</code></pre>
-<p>(大约在，在759行 添加GB2312为默认编码)  </p>
-<pre><code>------------------ Options Indexes MultiViews FollowSymLinks 修改为</code></pre>
-<p>(不在浏览器上显示树状目录结构，大约在554行)  </p>
-<pre><code>DirectoryIndex index.html index.html.var  修 改为：DirectoryIndex index.html index.htm Default.html Default.htm index.php Default.php index.html.var</code></pre>
-<p>(设置默认首页文件，增加index.php，约在在402行)  </p>
-<pre><code>--------------------- KeepAlive Off 修改为：KeepAlive On</code></pre>
-<p>(允许程序性联机 约在76行)  </p>
-<pre><code>MaxKeepAliveRequests 100 修改为：MaxKeepAliveRequests 1000</code></pre>
-<p>(增加同时连接数，约在83行)</p>
-<pre><code>:wq!     #保存退出</code></pre>
-</li>
-<li>
-<p>php配置  </p>
-<pre><code># vi /etc/php.ini</code></pre>
-<pre><code>date.timezone = PRC             #在946行 把前面的分号去掉，改为date.timezone = PRC</code></pre>
-<pre><code>disable_functions  =passthru,exec,system,chroot,scandir,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,openlog,syslog,readlink,symlink,popepassthru,stream_socket_server,escapeshellcmd,dll,popen,disk_free_space,checkdnsrr,checkdnsrr,getservbyname,getservbyport,disk_total_space,posix_ctermid,posix_get_last_error,posix_getcwd, posix_getegid,posix_geteuid,posix_getgid,  posix_getgrgid,posix_getgrnam,posix_getgroups,posix_getlogin,posix_getpgid,posix_getpgrp,posix_getpid,  posix_getppid,posix_getpwnam,posix_getpwuid, posix_getrlimit,  posix_getsid,posix_getuid,posix_isatty,  posix_kill,posix_mkfifo,posix_setegid,posix_seteuid,posix_setgid, posix_setpgid,posix_setsid,posix_setuid,posix_strerror,posix_times,posix_ttyname,posix_uname     #在386行 列出PHP可以禁用的函数，如果某些程序需要用到这个函数，可以删除，取消禁用</code></pre>
-<pre><code>expose_php = Off              #在432行 禁止显示php版本的信息</code></pre>
-<pre><code>magic_quotes_gpc = On           #在745行 打开magic_quotes_gpc来防止SQL注入</code></pre>
-<pre><code>-------------------------------short_open_tag = ON  #在229行支持php短标签</code></pre>
-<pre><code>open_basedir = .:/tmp/           #在380行</code></pre>
-<p>设置表示允许访问当前目录(即PHP脚本文件所在之目录)和/tmp/目录,可以防止php木马跨站,如果改了之后安装程序有问题，可以注销此行，或者直接写上程序的目录/data/web/:/tmp/</p>
-<pre><code>:wq!                       #保存退出</code></pre>
-<pre><code>/etc/init.d/mysqld restart    # 重启Mysql</code></pre>
-<pre><code>/etc/init.d/httpd  restart    # 重启Apache</code></pre>
-</li>
-</ul>
-<h3>配置防火墙，开启80、3306端口</h3>
-<ul>
-<li>
-<p>防火墙添加80、3306  </p>
-<pre><code>#vim /etc/sysconfig/iptables     #打开此表</code></pre>
-<pre><code># Firewall configuration written by system-config-firewall</code></pre>
-<pre><code># Manual customization of this file is not recommended.</code></pre>
-<p>*filter</p>
-<pre><code>:INPUT ACCEPT [0:0]
-:FORWARD ACCEPT [0:0]
-:OUTPUT ACCEPT [0:0]  
--A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
--A INPUT -p icmp -j ACCEPT
--A INPUT -i lo -j ACCEPT  
--A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
--A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
-#添加  
--A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT  
-#添加  
--A INPUT -j REJECT --reject-with icmp-host-prohibited
--A FORWARD -j REJECT --reject-with icmp-host-prohibited
-COMMIT  
-/etc/init.d/iptables restart</code></pre>
-</li>
-<li>
-<p>关闭 SELINUX  </p>
-<pre><code># vi /etc/selinux/config</code></pre>
-<p>把下面两项注释掉</p>
-<pre><code>#SELINUX=enforcing   #注释掉
-#SELINUX=targeted    #注释掉
-SELINUX=disabled     #增加</code></pre>
-<pre><code>:wq!  # 保存退出</code></pre>
-<pre><code># shutdown -r now</code></pre>
-</li>
-</ul>
-<h3><a href="https://www.digitalocean.com/community/articles/how-to-add-swap-on-centos-6">添加SWAP</a></h3>
-<ul>
-<li>
-<h5>Check for Swap Space</h5>
-<p>Before we proceed to set up a swap file, we need to check if any swap files have been enabled by looking at the summary of swap usage.</p>
-<pre><code>  swapon -s</code></pre>
-<p>If nothing is returned, the summary is empty and no swap file exists.</p>
-</li>
-<li>
-<h5>Check the File System</h5>
-<p>After we know that we do not have a swap file enabled, we can check how much space we have on the server with the df command. The swap file will take 512MB— since we are only using up about 7% of the /dev/hda, we can proceed.</p>
-<pre><code>df
-Filesystem           1K-blocks      Used Available Use% Mounted on
-/dev/hda              20642428   1347968  18245884   7% /</code></pre>
-</li>
-<li>
-<h5>Create and Enable the Swap File</h5>
-<p>Now it’s time to create the swap file itself using the dd command :</p>
-<pre><code>sudo dd if=/dev/zero of=/swapfile bs=1024 count=512k</code></pre>
-<p>“of=/swapfile” designates the file’s name. In this case the name is swapfile.</p>
-<p>Subsequently we are going to prepare the swap file by creating a linux swap area:</p>
-<pre><code>sudo mkswap /swapfile</code></pre>
-<p>The results display:</p>
-<pre><code>Setting up swapspace version 1, size = 536866 kB</code></pre>
-<p>Finish up by activating the swap file:</p>
-<pre><code>sudo swapon /swapfile</code></pre>
-<p>You will then be able to see the new swap file when you view the swap summary.</p>
-<pre><code>  swapon -s
-  Filename              Type        Size    Used    Priority
-  /swapfile                               file      524280  0   -1</code></pre>
-<p>This file will last on the server until the machine reboots. You can ensure that the swap is permanent by adding it to the fstab file.</p>
-<p>Open up the file:</p>
-<pre><code>  sudo nano /etc/fstab</code></pre>
-<p>Paste in the following line:</p>
-<pre><code>  /swapfile          swap            swap    defaults        0 0</code></pre>
-<p>阿里云默认是不让用户使用swap的。
-我们需要编辑/etc/rc.d/rc.local文件，将文件中的swapoff行注释或删掉。</p>
-<pre><code>#swapoff -a</code></pre>
-<p>To prevent the file from being world-readable, you should set up the correct permissions on the swap file:</p>
-<pre><code>chown root:root /swapfile
-chmod 0600 /swapfile</code></pre>
-<p>How To Configure Swappiness
-The operating system kernel can adjust how often it relies on swap through a configuration parameter known as swappiness. To find the current swappiness settings, type:</p>
-<pre><code>cat /proc/sys/vm/swappiness
-60</code></pre>
-<p>Swapiness can be a value from 0 to 100. Swappiness near 100 means that the operating system will swap often and usually, too soon. Although swap provides extra resources, RAM is much faster than swap space. Any time something is moved from RAM to swap, it slows down.</p>
-<p>A swappiness value of 0 means that the operating will only rely on swap when it absolutely needs to. We can adjust the swappiness with the sysctl command:</p>
-<pre><code>sysctl vm.swappiness=10
-vm.swappiness=10</code></pre>
-<p>If we check the system swappiness again, we can confirm that the setting was applied:</p>
-<pre><code>cat /proc/sys/vm/swappiness
-10</code></pre>
-<p>To make your VPS automatically apply this setting every time it boots up, you can add the setting to the /etc/sysctl.conf file:
-sudo nano /etc/sysctl.conf
-Search for the vm.swappiness setting.  Uncomment and change it as necessary.</p>
-<pre><code>vm.swappiness=10</code></pre>
-</li>
-</ul>
+            {data}
         </div>
 
         <hr>

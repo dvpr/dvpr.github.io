@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Markdown</title>
+    <title>cPanel.html - AppleStar</title>
     <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <style type="text/css">
@@ -44,7 +44,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?db7dabaf88a801d50f2ffa63a65e69f5";
+      hm.src = "//hm.baidu.com/hm.js?25764820c090e79dc1c1aa32bc065cf2";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -89,15 +89,7 @@
 
     <div class="container">
         <div class="markdown-output">
-            <h2>cPanel</h2>
-<h3>无法登录WHM</h3>
-<p>关闭cPHulk</p>
-<pre><code>for i in `ps aux | grep -i "cphulkd - process" | awk {'print $2'}` ;do kill -9 $i ;done
-/usr/local/cpanel/bin/cphulk_pam_ctl --disable</code></pre>
-<h3>Can't enable SMTP Restrictions</h3>
-<pre><code>/scripts/smtpmailgidonly on</code></pre>
-<h3>查看邮件日志</h3>
-<pre><code>grep "your_keywork" /var/log/exim_mainlog* &gt; /tmp/analyzelogs.txt &amp;&amp; less /tmp/analyzelogs.txt</code></pre>
+            {data}
         </div>
 
         <hr>
