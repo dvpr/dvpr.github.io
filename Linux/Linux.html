@@ -89,7 +89,20 @@
 
     <div class="container">
         <div class="markdown-output">
-            {data}
+            <h2>Linux</h2>
+<h3>IUS yum源</h3>
+<h5>快捷安装</h5>
+<pre><code>wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/ius-release-1-2.ius.el5.noarch.rpm
+wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/epel-release-1-1.ius.el5.noarch.rpm
+rpm -Uvh ius-release*.rpm epel-release*.rpm</code></pre>
+<h5>yum包信息</h5>
+<pre><code>https://dl.iuscommunity.org/pub/</code></pre>
+<h3>Linux 监控命令</h3>
+<h5>查看apache连接数</h5>
+<pre><code>watch -n 1 -d "pgrep httpd|wc -l"</code></pre>
+<h5>查看MySQL连接数</h5>
+<pre><code>mysqladmin -uuser -p processlist
+mysqladmin -uuser -p status</code></pre>
         </div>
 
         <hr>

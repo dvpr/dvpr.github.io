@@ -89,7 +89,206 @@
 
     <div class="container">
         <div class="markdown-output">
-            {data}
+            <h2>Coding style and standards</h2>
+<h3>文件格式</h3>
+<hr />
+<p>文件统一使用UTF-8编码</p>
+<h3>缩进和每行代码的长度</h3>
+<hr />
+<p>使用制表符完成缩进，制表符的长度为4。</p>
+<p>每行代码的长度没有硬性标准，可根据该行的性质和代码的可读性自行把握。</p>
+<h3>赋值语句</h3>
+<hr />
+<p>赋值语句的等号前后都至少要有一个空格</p>
+<p>示例:</p>
+<pre><code>$var = 0;</code></pre>
+<p>在多个相关的赋值语句中，使用制表符将等号对齐以增加代码的可读性</p>
+<p>示例:</p>
+<pre><code>$short          = 0;
+$long_variable  = $short;</code></pre>
+<h3>流程控制语句</h3>
+<hr />
+<p>在流程控制语句中，关键词、参数、花括号之间应该有一个空格以便与函数调用格式区分</p>
+<p>在任何时候都必须使用花括号，以增加代码的可读性，避免添加新行时造成的逻辑错误</p>
+<p>if语句</p>
+<p>示例:</p>
+<pre><code>if ((condition1) || (condition2)) {
+    action1();
+} elseif ((condition3) &amp;&amp; (condition4)) {
+    action2();
+} else {
+    defaultAction();
+    anotherAction();
+}</code></pre>
+<p>在页面布局中使用流程控制的替代语法，条件语句逻辑运算符也应该使用大写的单词（AND，OR，等），而不是使用符号（$，|，等）</p>
+<p>示例:</p>
+<pre><code>if ((condition1) OR (condition2)) :
+    action1();
+elseif ((condition3) AND (condition4)) :
+    action2();
+else :
+    defaultAction();
+    anotherAction();
+endif;
+
+foreach ($array as $element) :
+    echo $element;
+endforeach;</code></pre>
+<p>switch语句</p>
+<p>示例:</p>
+<pre><code>switch (condition) {
+    case 1:
+        doAction1();
+        break;
+
+    case 2:
+        doAction2();
+        break;
+
+    default:
+        doDefaultAction();
+        break;
+}</code></pre>
+<p>使用缩进代替case语句的花括号来增加代码的可读性</p>
+<p>case语句中条件和冒号之间不能有空格</p>
+<h3>函数调用</h3>
+<hr />
+<p>函数名和圆括号之间不能有空格</p>
+<p>圆括号和第一个参数以及最后一个参数之间不能有空格</p>
+<p>参数和逗号之间不能有空格（多个参数的情况下）</p>
+<p>每个参数的逗号后要有一个空格（多个参数的情况下）</p>
+<p>示例:</p>
+<pre><code>$var = foo($bar, $baz, $quux);</code></pre>
+<h3>函数声明</h3>
+<hr />
+<p>函数或类的声明遵循“one true brace”原则（开始的花括号单独占一行，而不是跟在其他语句后面）</p>
+<p>示例:</p>
+<pre><code>function fooFunction($arg1, $arg2 = '')
+{
+    if (condition) {
+        statement;
+    }
+    return $val;
+}
+
+class fooClass
+{
+    function fooMethod($arg1)
+    {
+        if ($arg) {
+            $result = true;
+        } else {
+            $result = false;
+        }
+        return $result;
+    }
+}</code></pre>
+<p>有默认值的参数要放在参数列表的最后</p>
+<p>当函数有返回值时，必须保证函数返回一个有意义的值</p>
+<p>示例:</p>
+<pre><code>function connect(&amp;$dsn, $persistent = false)
+{
+    if (is_array($dsn)) {
+        $dsninfo = &amp;$dsn;
+    } else {
+        $dsninfo = DB::parseDSN($dsn);
+    }
+
+    if (!$dsninfo OR !$dsninfo['phptype']) {
+        return $this-&gt;raiseError();
+    }
+
+    return true;
+}</code></pre>
+<h3>注释</h3>
+<hr />
+<p>类，属性和方法，函数，常量都应该提供适当的DocBlocks。</p>
+<p>所有的包名使用小写字母表示用&quot;.&quot;连接</p>
+<p>类</p>
+<p>示例:</p>
+<pre><code>/**
+ * 类的简短描述
+ *
+ * 类的详细描述(可选)
+ *
+ * @package         packagename
+ * @subpackage      subpackagename
+ * @author          &lt;作者&gt;
+ * @since           &lt;起始版本&gt;
+ * @deprecated      --不被推荐的过期的(可选)
+ */</code></pre>
+<p>属性</p>
+<p>示例:</p>
+<pre><code>/**
+ * 简短描述
+ *
+ * @var 类型
+ */</code></pre>
+<p>函数和方法</p>
+<p>示例:</p>
+<pre><code>/**
+ * 简短描述
+ *
+ * @since   &lt;起始版本&gt;
+ * @param   &lt;类型&gt;  &lt;变量名&gt; &lt;描述&gt;  --参数
+ * @return  &lt;类型&gt;  &lt;描述&gt;  --返回值
+ */</code></pre>
+<p>保证适当的非文档注释量（原则:当你看到一段代码，然后想:“Wow, I don't want to try and describe that”，那么你就应该在你忘记程序的工作流程之前为这段代码添加非文档注释） 内联的类文件的注释应遵循PHPDoc惯例，详见http://www.phpdoc.org/</p>
+<h3>PHP标签</h3>
+<hr />
+<p>使用&lt;?php ?&gt;不要使用&lt;? ?&gt;</p>
+<p>当文件中只包含php代码时不要使用结束标记?&gt;</p>
+<h3>SQL语句</h3>
+<hr />
+<p>关键词必须大写，其他字符必须小写</p>
+<p>SQL语句中不能包含回车符</p>
+<p>使用缩进来提高SQL语句可读性</p>
+<p>使用单引号提高执行效率</p>
+<p>所有整型和浮点型变量都要进行强制类型转换</p>
+<p>所有字符变量使用Quote()方法</p>
+<p>所有表明使用#_前缀</p>
+<p>示例:</p>
+<pre><code>$state = 1;
+$name  = 'bill';
+$query = 'SELECT COUNT( c.id ) AS num_articles, u.id, u.username'.
+    ' FROM #__content AS c'.
+    ' LEFT JOIN #__users AS u ON u.id = c.created_by'.
+    ' WHERE c.state = '.(int) $state
+    '  AND u.id IS NOT NULL'.
+    '  AND u.username &lt;&gt; '.$db-&gt;Quote( $name ).
+    ' GROUP BY u.id'.
+    '  HAVING COUNT( c.id ) &gt; 0';</code></pre>
+<h3>命名约定</h3>
+<hr />
+<p>类</p>
+<p>类要以描述性的名称命名</p>
+<p>类名使用完整单词不要使用缩写</p>
+<p>类名首字母大写</p>
+<p>类名使用CamelCase拼写法</p>
+<p>类名可以使用全部大写的特殊名词（eg HTML,XML）</p>
+<p>框架类，都是以大写的H开头（eg HApplication，HModel）</p>
+<p>函数和方法</p>
+<p>函数和方法使用 &quot;studly caps&quot; 样式命名</p>
+<p>名字的首字母应该是小写，每一个新单词应该以大写字母开头</p>
+<p>示例:</p>
+<pre><code>connect();
+getData();
+buildSomeWidget();</code></pre>
+<p>类的私有成员以_开头，单词间以_连接，全部小写</p>
+<p>示例:</p>
+<pre><code>class HFooBar
+{
+    private $_status = null;
+
+    protected $field_name = null;
+
+    protected function _sort()
+    {
+    }
+}</code></pre>
+<p>常量</p>
+<p>全部大写，单词间以<em>连接，使用所在的类或包做为前缀 例如HError类中的常量都以&quot;HERROR</em>&quot;做为前缀</p>
+<p>全局变量 以下划线开头，连接类名或包名，再连接下划线和变量名（eg $_HERROR_LEVELS）</p>
         </div>
 
         <hr>
