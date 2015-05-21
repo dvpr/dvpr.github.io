@@ -1,357 +1,271 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <title>MySQL</title>
-      <style>.markdown-preview { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; line-height: 1.6; overflow: scroll; box-sizing: border-box; padding: 20px; background-color: rgb(255, 255, 255); }
-.markdown-preview code { color: rgb(51, 51, 51); }
-.markdown-preview code, .markdown-preview tt, .markdown-preview pre.editor-colors { font-size: 12px; font-family: Consolas, 'Liberation Mono', Courier, monospace; }
-.markdown-preview a, .markdown-preview a code { color: rgb(65, 131, 196); }
-.markdown-preview ol > li { list-style-type: decimal; }
-.markdown-preview ul > li { list-style-type: disc; }
-.markdown-preview li > pre.editor-colors { display: inline-block; vertical-align: top; width: 100%; }
-.markdown-preview li:last-child > pre.editor-colors { margin-bottom: 0px; }
-.markdown-preview > :first-child { margin-top: 0px !important; }
-.markdown-preview > :last-child { margin-bottom: 0px !important; }
-.markdown-preview a.absent { color: rgb(204, 0, 0); }
-.markdown-preview a.anchor { display: block; padding-left: 30px; margin-left: -30px; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px; }
-.markdown-preview h1, .markdown-preview h2, .markdown-preview h3, .markdown-preview h4, .markdown-preview h5, .markdown-preview h6 { font-family: 'Helvetica Neue', Helvetica, sans-serif; margin: 20px 0px 10px; padding: 0px 0px 10px; font-weight: bold; -webkit-font-smoothing: antialiased; cursor: text; position: relative; }
-.markdown-preview h1 .octicon-link, .markdown-preview h2 .octicon-link, .markdown-preview h3 .octicon-link, .markdown-preview h4 .octicon-link, .markdown-preview h5 .octicon-link, .markdown-preview h6 .octicon-link { display: none; color: rgb(0, 0, 0); }
-.markdown-preview h1:hover a.anchor, .markdown-preview h2:hover a.anchor, .markdown-preview h3:hover a.anchor, .markdown-preview h4:hover a.anchor, .markdown-preview h5:hover a.anchor, .markdown-preview h6:hover a.anchor { text-decoration: none; line-height: 1; padding-left: 0px; margin-left: -22px; top: 15%; }
-.markdown-preview h1:hover a.anchor .octicon-link, .markdown-preview h2:hover a.anchor .octicon-link, .markdown-preview h3:hover a.anchor .octicon-link, .markdown-preview h4:hover a.anchor .octicon-link, .markdown-preview h5:hover a.anchor .octicon-link, .markdown-preview h6:hover a.anchor .octicon-link { display: inline-block; }
-.markdown-preview h1 tt, .markdown-preview h2 tt, .markdown-preview h3 tt, .markdown-preview h4 tt, .markdown-preview h5 tt, .markdown-preview h6 tt, .markdown-preview h1 code, .markdown-preview h2 code, .markdown-preview h3 code, .markdown-preview h4 code, .markdown-preview h5 code, .markdown-preview h6 code { font-size: inherit; }
-.markdown-preview h1 { font-size: 28px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); color: rgb(0, 0, 0); }
-.markdown-preview h2 { font-size: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); color: rgb(0, 0, 0); }
-.markdown-preview h3 { font-size: 18px; }
-.markdown-preview h4 { font-size: 16px; }
-.markdown-preview h5 { font-size: 14px; }
-.markdown-preview h6 { color: rgb(119, 119, 119); font-size: 14px; }
-.markdown-preview p, .markdown-preview blockquote, .markdown-preview ul, .markdown-preview ol, .markdown-preview dl, .markdown-preview table, .markdown-preview pre.editor-colors { margin: 15px 0px; }
-.markdown-preview hr { border: 0px none; color: rgb(204, 204, 204); height: 4px; padding: 0px; margin: 15px 0px; background: url('data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC') 0px 0px repeat-x transparent; }
-.markdown-preview > h2:first-child, .markdown-preview > h1:first-child, .markdown-preview > h1:first-child + h2, .markdown-preview > h3:first-child, .markdown-preview > h4:first-child, .markdown-preview > h5:first-child, .markdown-preview > h6:first-child { margin-top: 0px; padding-top: 0px; }
-.markdown-preview a:first-child h1, .markdown-preview a:first-child h2, .markdown-preview a:first-child h3, .markdown-preview a:first-child h4, .markdown-preview a:first-child h5, .markdown-preview a:first-child h6 { margin-top: 0px; padding-top: 0px; }
-.markdown-preview h1 + p, .markdown-preview h2 + p, .markdown-preview h3 + p, .markdown-preview h4 + p, .markdown-preview h5 + p, .markdown-preview h6 + p { margin-top: 0px; }
-.markdown-preview li p.first { display: inline-block; }
-.markdown-preview ul, .markdown-preview ol { padding-left: 30px; }
-.markdown-preview ul.no-list, .markdown-preview ol.no-list { list-style-type: none; padding: 0px; }
-.markdown-preview ul li > :first-child, .markdown-preview ol li > :first-child, .markdown-preview ul li ul:first-of-type, .markdown-preview ol li ul:first-of-type { margin-top: 0px; }
-.markdown-preview ul ul, .markdown-preview ul ol, .markdown-preview ol ol, .markdown-preview ol ul { margin-bottom: 0px; }
-.markdown-preview dl { padding: 0px; }
-.markdown-preview dl dt { font-size: 14px; font-weight: bold; font-style: italic; padding: 0px; margin: 15px 0px 5px; }
-.markdown-preview dl dt:first-child { padding: 0px; }
-.markdown-preview dl dt > :first-child { margin-top: 0px; }
-.markdown-preview dl dt > :last-child { margin-bottom: 0px; }
-.markdown-preview dl dd { margin: 0px 0px 15px; padding: 0px 15px; }
-.markdown-preview dl dd > :first-child { margin-top: 0px; }
-.markdown-preview dl dd > :last-child { margin-bottom: 0px; }
-.markdown-preview blockquote { border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
-.markdown-preview blockquote > :first-child { margin-top: 0px; }
-.markdown-preview blockquote > :last-child { margin-bottom: 0px; }
-.markdown-preview blockquote p { font-size: 16px; line-height: 1.5; }
-.markdown-preview table th { font-weight: bold; }
-.markdown-preview table th, .markdown-preview table td { border: 1px solid rgb(204, 204, 204); padding: 6px 13px; }
-.markdown-preview table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
-.markdown-preview table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
-.markdown-preview img { max-width: 100%; }
-.markdown-preview span.frame { display: block; overflow: hidden; }
-.markdown-preview span.frame > span { border: 1px solid rgb(221, 221, 221); display: block; float: left; overflow: hidden; margin: 13px 0px 0px; padding: 7px; width: auto; }
-.markdown-preview span.frame span img { display: block; float: left; }
-.markdown-preview span.frame span span { clear: both; color: rgb(51, 51, 51); display: block; padding: 5px 0px 0px; }
-.markdown-preview span.align-center { display: block; overflow: hidden; clear: both; }
-.markdown-preview span.align-center > span { display: block; overflow: hidden; margin: 13px auto 0px; text-align: center; }
-.markdown-preview span.align-center span img { margin: 0px auto; text-align: center; }
-.markdown-preview span.align-right { display: block; overflow: hidden; clear: both; }
-.markdown-preview span.align-right > span { display: block; overflow: hidden; margin: 13px 0px 0px; text-align: right; }
-.markdown-preview span.align-right span img { margin: 0px; text-align: right; }
-.markdown-preview span.float-left { display: block; margin-right: 13px; overflow: hidden; float: left; }
-.markdown-preview span.float-left span { margin: 13px 0px 0px; }
-.markdown-preview span.float-right { display: block; margin-left: 13px; overflow: hidden; float: right; }
-.markdown-preview span.float-right > span { display: block; overflow: hidden; margin: 13px auto 0px; text-align: right; }
-.markdown-preview code, .markdown-preview tt { margin: 0px 2px; padding: 0px 5px; border: 1px solid rgb(234, 234, 234); border-radius: 3px; text-shadow: none; background-color: rgb(248, 248, 248); }
-.markdown-preview code { white-space: nowrap; }
-.markdown-preview pre.editor-colors { font-size: 13px; line-height: 19px; overflow: auto; padding: 6px 10px; border-radius: 3px; border: 1px solid rgb(18, 20, 23); background: rgb(41, 44, 51); }
-.markdown-preview kbd { border-radius: 2px; border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(204, 204, 204) rgb(204, 204, 204) rgb(221, 221, 221); padding: 1px 4px; line-height: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-image: linear-gradient(rgb(241, 241, 241), rgb(221, 221, 221)); background-color: rgb(221, 221, 221); background-repeat: repeat-x; }
-.markdown-preview .emoji { height: 20px; width: 20px; }
-.bracket-matcher .region {
-  border-bottom: 1px dotted lime;
-  position: absolute;
-}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <style type="text/css">
+        ::-webkit-scrollbar {
+            display: none;
+        }
 
-.spell-check-misspelling .region {
-  border-bottom: 1px dashed rgba(250, 128, 114, 0.5);
-}
+        a {
+            border-bottom: 1px dashed #bbb;
+            color: #333;
+            padding-bottom: 5px;
+        }
 
-pre.editor-colors,
-.host {
-  background-color: #292c33;
-  color: #95a2bb;
-}
-pre.editor-colors .line.cursor-line,
-.host .line.cursor-line {
-  background-color: rgba(153, 187, 255, 0.04);
-}
-pre.editor-colors .invisible,
-.host .invisible {
-  color: #95a2bb;
-}
-pre.editor-colors .cursor,
-.host .cursor {
-  border-left: 2px solid #3d7af5;
-}
-pre.editor-colors .selection .region,
-.host .selection .region {
-  background-color: #3f454f;
-}
-pre.editor-colors .bracket-matcher .region,
-.host .bracket-matcher .region {
-  border-bottom: 1px solid #3d7af5;
-  box-sizing: border-box;
-  background-color: #363b44;
-}
-pre.editor-colors .invisible-character,
-.host .invisible-character {
-  color: rgba(149, 162, 187, 0.15);
-}
-pre.editor-colors .indent-guide,
-.host .indent-guide {
-  color: rgba(149, 162, 187, 0.15);
-}
-pre.editor-colors .wrap-guide,
-.host .wrap-guide {
-  background-color: rgba(149, 162, 187, 0.15);
-}
-pre.editor-colors .gutter .line-number,
-.host .gutter .line-number {
-  color: #5a5b5e;
-  -webkit-font-smoothing: antialiased;
-}
-pre.editor-colors .gutter .line-number.git-line-removed:before,
-.host .gutter .line-number.git-line-removed:before {
-  bottom: -3px;
-}
-pre.editor-colors .gutter .line-number.git-line-removed:after,
-.host .gutter .line-number.git-line-removed:after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  width: 25px;
-  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
-  pointer-events: none;
-}
-pre.editor-colors .gutter .line-number.cursor-line,
-.host .gutter .line-number.cursor-line {
-  color: #95a2bb;
-  background-color: #2d3139;
-}
-pre.editor-colors .gutter .line-number.cursor-line-no-selection,
-.host .gutter .line-number.cursor-line-no-selection {
-  background-color: transparent;
-}
-pre.editor-colors .gutter .line-number .icon-right,
-.host .gutter .line-number .icon-right {
-  color: #95a2bb;
-}
-pre.editor-colors .gutter .line-number .icon-right,
-.host .gutter .line-number .icon-right {
-  color: #95a2bb;
-}
-pre.editor-colors .gutter .line-number.folded,
-.host .gutter .line-number.folded,
-pre.editor-colors .gutter .line-number:after,
-.host .gutter .line-number:after,
-pre.editor-colors .fold-marker:after,
-.host .fold-marker:after {
-  color: #95a2bb;
-}
-.comment {
-  color: #5f6b85;
-  font-style: italic;
-}
-.entity.name.type {
-  color: #d9bd86;
-}
-.entity.other.inherited-class {
-  color: #88b379;
-}
-.keyword {
-  color: #b27ecd;
-}
-.keyword.control {
-  color: #b27ecd;
-}
-.keyword.operator {
-  color: #95a2bb;
-}
-.keyword.other.special-method {
-  color: #66a5df;
-}
-.keyword.other.unit {
-  color: #d49a67;
-}
-.storage {
-  color: #b27ecd;
-}
-.constant {
-  color: #d49a67;
-}
-.constant.character.escape {
-  color: #59b3c5;
-}
-.constant.numeric {
-  color: #d49a67;
-}
-.constant.other.color {
-  color: #59b3c5;
-}
-.constant.other.symbol {
-  color: #59b3c5;
-}
-.variable {
-  color: #bf6e7c;
-}
-.variable.interpolation {
-  color: #8f5355;
-}
-.variable.parameter.function {
-  color: #95a2bb;
-}
-.invalid.illegal {
-  background-color: #bf6e7c;
-  color: #292c33;
-}
-.string {
-  color: #88b379;
-}
-.string.regexp {
-  color: #59b3c5;
-}
-.string.regexp .source.ruby.embedded {
-  color: #f18217;
-}
-.string.other.link {
-  color: #bf6e7c;
-}
-.punctuation.definition.comment {
-  color: #5f6b85;
-}
-.punctuation.definition.parameters,
-.punctuation.definition.array {
-  color: #95a2bb;
-}
-.punctuation.definition.heading,
-.punctuation.definition.identity {
-  color: #66a5df;
-}
-.punctuation.definition.bold {
-  color: #d9bd86;
-  font-weight: bold;
-}
-.punctuation.definition.italic {
-  color: #b27ecd;
-  font-style: italic;
-}
-.punctuation.section.embedded {
-  color: #8f5355;
-}
-.support.class {
-  color: #d9bd86;
-}
-.support.function {
-  color: #59b3c5;
-}
-.support.function.any-method {
-  color: #66a5df;
-}
-.entity.name.function {
-  color: #66a5df;
-}
-.entity.name.class,
-.entity.name.type.class {
-  color: #d9bd86;
-}
-.entity.name.section {
-  color: #66a5df;
-}
-.entity.name.tag {
-  color: #bf6e7c;
-}
-.entity.other.attribute-name {
-  color: #d49a67;
-}
-.entity.other.attribute-name.id {
-  color: #66a5df;
-}
-.meta.class {
-  color: #d9bd86;
-}
-.meta.link {
-  color: #d49a67;
-}
-.meta.require {
-  color: #66a5df;
-}
-.meta.selector {
-  color: #b27ecd;
-}
-.meta.separator {
-  background-color: #373b41;
-  color: #95a2bb;
-}
-.meta.tag {
-  color: #95a2bb;
-}
-.none {
-  color: #95a2bb;
-}
-.markup.bold {
-  color: #d49a67;
-  font-weight: bold;
-}
-.markup.changed {
-  color: #b27ecd;
-}
-.markup.deleted {
-  color: #bf6e7c;
-}
-.markup.italic {
-  color: #b27ecd;
-  font-style: italic;
-}
-.markup.heading .punctuation.definition.heading {
-  color: #66a5df;
-}
-.markup.inserted {
-  color: #88b379;
-}
-.markup.list {
-  color: #bf6e7c;
-}
-.markup.quote {
-  color: #d49a67;
-}
-.markup.raw.inline {
-  color: #88b379;
-}
-.source.gfm .markup {
-  -webkit-font-smoothing: auto;
-}
-.source.gfm .markup.heading {
-  color: #bf6e7c;
-}
-.source.gfm .markup.link {
-  color: #b27ecd;
-}
-.source.gfm .link .entity {
-  color: #66a5df;
-}
-.ruby.symbol > .punctuation {
-  color: inherit;
-}
-</style>
-  </head>
-  <body class='markdown-preview'><h2 id="mysql">MySQL</h2>
-<h3 id="-">多表删除</h3>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>SELECT&nbsp;CONCAT(&quot;DROP&nbsp;TABLE&nbsp;&quot;,&nbsp;GROUP_CONCAT(table_name),&nbsp;&quot;;&quot;)&nbsp;FROM&nbsp;information_schema.tables&nbsp;WHERE&nbsp;table_schema&nbsp;=&nbsp;&quot;DATABASE_NAME&quot;&nbsp;AND&nbsp;table_name&nbsp;LIKE&nbsp;&quot;PREFIX_TABLE_NAME%&quot;;</span></span></span></div></pre><h3 id="-">创建用户</h3>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>CREATE&nbsp;USER&nbsp;&#39;user_name&#39;@&#39;host&#39;&nbsp;IDENTIFIED&nbsp;BY&nbsp;&#39;password&#39;;</span></span></span></div></pre><h3 id="-">修改权限</h3>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>grant&nbsp;all&nbsp;privileges&nbsp;on&nbsp;database_name.*&nbsp;to&nbsp;&#39;user_name&#39;@&#39;host&#39;&nbsp;identified&nbsp;by&nbsp;&#39;user_password&#39;;</span></span></span></div></pre></body>
+        body {
+            -webkit-font-smoothing: antialiased;
+            background: #fff;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        code {
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 0 5px 0;
+        }
+
+        div.odd {
+            background: #eee;
+        }
+
+        html {
+            overflow: -moz-scrollbars-none;
+        }
+
+        pre {
+            margin: 0;
+            white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+            white-space: -o-pre-wrap; /* Opera */
+            white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+            word-wrap: break-word; /* IE 5.5+ */
+        }
+
+        /*
+         *
+         * span
+         *
+         */
+
+        span.secondary {
+            color: #777;
+        }
+
+        span.highlight {
+            background: #285;
+            color: #fff;
+            padding: 2px 5px;
+        }
+
+        /*
+         *
+         * td
+         *
+         */
+
+        div.td {
+            float: left;
+            width: 35%;
+        }
+
+        div.td div {
+            padding: 20px;
+        }
+
+        /*
+         *
+         * head
+         *
+         */
+
+        div.head {
+            background: #eee;
+        }
+
+        /*
+         *
+         * head
+         *
+         */
+
+        div.body {
+            bottom: 0;
+            left: 0;
+            overflow: scroll;
+            position: absolute;
+            right: 0;
+            top: 128px;
+        }
+
+        /*
+         *
+         * nav
+         *
+         */
+
+        div.nav {
+            background: #222;
+            color: #fff;
+            padding: 10px 20px 0 20px;
+        }
+
+        div.nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        div.nav li {
+            background: #333;
+            border-bottom-width: 0;
+            float: left;
+            margin-right: 10px;
+            padding: 15px 20px;
+        }
+
+        div.nav li a {
+            border: none;
+            color: #fff;
+            padding: 0;
+        }
+
+        div.nav li.active {
+            background: #eee;
+        }
+
+        div.nav li.active a {
+            color: #333;
+        }
+
+        div.nav li.first {
+            background: none;
+            padding: 15px 10px 0 0
+        }
+
+        div.nav li.external {
+            background: none;
+        }
+
+        div.nav li.external a {
+            color: #6be;
+        }
+
+        /*
+         *
+         * output
+         *
+         */
+
+        .markdown-output a {
+            border: none;
+            color: #59b;
+            padding: 0;
+        }
+
+        .markdown-output a code {
+            color: #59b;
+        }
+
+        .markdown-output blockquote {
+            background: none;
+            border-left: 3px solid #777;
+            color: #777;
+            padding: 0 0 0 10px;
+        }
+
+        .markdown-output code {
+            background: #eee;
+            border: 1px solid #ddd;
+            padding: 0 5px 1px 5px;
+        }
+
+        .markdown-output h1, .markdown-output h2, .markdown-output h3, .markdown-output h4, .markdown-output h5, .markdown-output h6 {
+            line-height: normal;
+            margin: 20px 0;
+        }
+
+        .markdown-output h1 { padding: 0px 0px 10px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); color: rgb(0, 0, 0); }
+        .markdown-output h2 { padding: 0px 0px 10px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); color: rgb(0, 0, 0); }
+
+        .markdown-output hr {
+            background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC") repeat-x 0 0;
+            border: 0 none;
+            color: #ccc;
+            height: 4px;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .markdown-output div.footnotes {
+            font-size: 14px;
+        }
+
+        .markdown-output pre {
+            border: 1px solid rgb(17, 18, 22);
+            background: rgb(39, 43, 51);
+            border-radius: 3px;
+            color: #abb2c0;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .markdown-output pre code {
+            background: none;
+            border: none;
+            padding: 0;
+
+        }
+
+        .markdown-output table {
+            border-width: 1px 0 0 1px;
+            border-color: #bbb;
+            border-style: solid;
+        }
+
+        .markdown-output table td, .markdown-output table th {
+            border-width: 0 1px 1px 0;
+            border-color: #bbb;
+            border-style: solid;
+            padding: 10px;
+        }
+
+        /*
+         *
+         * prettify
+         *
+         */
+
+        span.tag {
+            color: #b19;
+        }
+
+        span.atn {
+            color: #975;
+        }
+
+        span.pun {
+            color: #b19;
+        }
+
+        span.atv {
+            color: #559;
+        }
+    </style>
+</head>
+<body class="markdown-output">
+    <h2>MySQL</h2>
+<h3>多表删除</h3>
+<pre><code>SELECT CONCAT("DROP TABLE ", GROUP_CONCAT(table_name), ";") FROM information_schema.tables WHERE table_schema = "DATABASE_NAME" AND table_name LIKE "PREFIX_TABLE_NAME%";</code></pre>
+<h3>创建用户</h3>
+<pre><code>CREATE USER 'user_name'@'host' IDENTIFIED BY 'password';</code></pre>
+<h3>修改权限</h3>
+<pre><code>grant all privileges on database_name.* to 'user_name'@'host' identified by 'user_password';</code></pre>
+</body>
 </html>
