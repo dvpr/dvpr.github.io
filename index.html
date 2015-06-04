@@ -69,7 +69,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input id="search" type="text" class="form-control" placeholder="Search">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
@@ -112,6 +112,46 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://overapi.com/static/js/jquery.quicksearch.js"></script>
+    <script type="text/javascript">
+
+        $('#search').quicksearch('.board-card li', {
+            onAfter: function () {
+                var $cards = $('.board-card');
+                var $boards = $('.board');
+                var inactiveOffset = [];
+
+                $cards.each(function (index) {
+                    var inLi = $(this).find('li:not(.inactive)');
+                    if (!inLi.length) {
+                        $(this).children('h3').addClass('inactive');
+                    } else {
+                        inactiveOffset.push($(inLi[0]).offset().top);
+                        $(this).children('h3').removeClass('inactive');
+                    }
+                });
+
+
+                scrollTimeout = setTimeout(function(){
+                    inactiveOffset.sort(function(a,b){return a-b;});
+
+                    if(inactiveOffset[0]<150){
+                        $('html,body').animate({ scrollTop: 0}, 400, 'swing');
+                    }else{
+                        $('html,body').animate({ scrollTop: inactiveOffset[0]-80}, 400, 'swing');
+                    }
+                },500);
+                clearTimeout(scrollTimeout);
+            }
+            ,hide: function () {
+                $(this).addClass('inactive')
+            }
+            ,show: function () {
+                $(this).removeClass('inactive')
+            }
+        });
+
+    </script>
 
 </body>
 </html>

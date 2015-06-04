@@ -34,3 +34,9 @@ start explorer
 ```
 
 [脚本下载](/assets/windows/clean_icon_cache.zip) ***解压后运行***
+
+### Thunderbird 配置文件
+
+```
+thunderbird.exe -profilemanager
+```
