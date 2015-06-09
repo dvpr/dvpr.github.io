@@ -2,6 +2,8 @@
 
 ###I foucs on:
 
+###[Developer](/Developer)
+
 ###[PHP](/PHP)
 
 ###[MySQL](/MySQL)
