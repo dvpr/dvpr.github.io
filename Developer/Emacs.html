@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emacs.html - AppleStar</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <style type="text/css">
+
+        body {
+            padding-top: 70px;
+        }
+
+        /*
+         *
+         * markdown-output
+         *
+         */
+
+        .markdown-output h1,
+        .markdown-output h2 {
+            padding: 0px 0px 10px;
+            border-bottom: 1px solid #EEE;
+         }
+
+        .markdown-output hr {
+            background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC") repeat-x 0 0;
+            border: 0 none;
+            color: #CCC;
+            height: 4px;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .markdown-output pre {
+            background: #272B33;
+            color: #ABB2C0;
+        }
+
+    </style>
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?25764820c090e79dc1c1aa32bc065cf2";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://applestar.net">AppleStar</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="navbar" class="collapse navbar-collapse">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/PHP">PHP</a></li>
+            <li><a href="/MySQL">MySQL</a></li>
+            <li><a href="/Linux">Linux</a></li>
+            <li><a href="/Cloud">Cloud</a></li>
+            <li><a href="/MAC">MAC</a></li>
+            <li><a href="/Windows">Windows</a></li>
+            <li><a href="/SEO">SEO</a></li>
+            <li><a href="/Words">Words</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+        <div class="markdown-output">
+            <h2>Emacs</h2>
+<h3>一些默认快捷键</h3>
+<pre><code>C-代表按住Ctrl键
+M-代表按住Alt键，也可以用按一下ESC放开代替</code></pre>
+<h5>最先要记住的</h5>
+<pre><code>M-x &lt;cmd&gt;      输入指令执行，在输入时用Tab可以自动补全或列出项目
+C-g            取消当前操作指令
+C-h k &lt;key&gt;    查看当前按键绑定的指令及介绍</code></pre>
+<h5>移动插入点（光标）</h5>
+<pre><code>C-n/p/b/f      到 下一行、上一行、前一字符、后一字符
+M-b/f          到 前、后一单词
+C-a/e          到 行首、末
+M-a/e          到 句首、末
+M-&lt;/&gt;          到 文件首、末
+C-v/M-v        下、上翻屏
+C-l            循环 将当前光标行显示在窗口下、中、上位置</code></pre>
+<pre><code>C-u &lt;num&gt; &lt;xx&gt; 重复执行之后的 xx 命令 num 次，不输入num默认为4
+C-u C-v        向下滚动4行</code></pre>
+<h5>编辑</h5>
+<pre><code>Back/C-d       删除 前、后字符
+M-Back/M-d     移除 前、后单词
+C-k/M-k        移除到 行末、句末</code></pre>
+<pre><code>C-/            undo/redo
+C-x u          undo/redo</code></pre>
+<pre><code>C-w            剪切
+C-y            召回（粘贴）（粘贴移除的、复制、剪切的内容）
+C-c            复制（emacs一般也默认定制了与OS的剪切复制粘贴相同的快捷键）</code></pre>
+<h5>查找</h5>
+<pre><code>C-s
+  C-s          查找下一个
+  C-r          查找上一下
+  C-g          一次返回，二次结束查找
+  回车         停止到当前查找到的内容</code></pre>
+<h5>替换</h5>
+<pre><code>M-%</code></pre>
+<h5>标记</h5>
+<pre><code>M-@</code></pre>
+<h5>文件操作</h5>
+<pre><code>C-x C-c        退出emacs
+
+C-x C-f        打开文件
+C-x C-s        保存文件
+C-x C-v        在当前缓冲区重新打开一个文件，可以用于清除undo历史!!
+
+C-x 1          最大化当前缓冲，关闭其它
+C-x 2/3        垂直、水平创建新缓冲区
+C-x o          切换到其它缓冲区
+
+C-x C-b        列出缓冲区
+C-x b          提示输入缓冲区名称，切换当前窗口的缓冲区
+C-x k          删除当前缓冲区
+
+C-j            换行回车，有些模式下比较直接回车好用，有增加缩进之类的功能</code></pre>
+        </div>
+
+        <hr>
+        <footer>
+            <p>© AppleStar</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
