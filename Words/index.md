@@ -6,4 +6,6 @@
 
 ###[Apple](./Apple.html)
 
+###[Funny](./Funny.html)
+
 ###[郭德纲](./郭德纲.html)
