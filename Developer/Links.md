@@ -3,6 +3,9 @@
 ### Markdown
 > http://vduor.com/assets/markdown
 
+### 开发人员速查手册
+> http://overapi.com/
+
 ### 通过demo学习OpenStack开发所需的基础知识
 > http://segmentfault.com/a/1190000002940724
 > 
