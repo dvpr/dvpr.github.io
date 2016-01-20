@@ -8,13 +8,13 @@
 
 ### 通过demo学习OpenStack开发所需的基础知识
 > http://segmentfault.com/a/1190000002940724
-> 
+>
 > http://segmentfault.com/a/1190000003718598
-> 
+>
 > http://segmentfault.com/a/1190000003718606
-> 
+>
 > http://segmentfault.com/a/1190000003810294
-> 
+>
 > http://segmentfault.com/a/1190000004004179
 
 ### 一篇文章入门Python生态系统
@@ -40,3 +40,6 @@
 
 ### 看完这篇报道，你们都想去 GitHub 上班了
 > http://techcrunch.cn/2015/11/22/at-github-you-dont-need-no-stinkin-office-but-there-is-a-nice-one-if-you-do/
+
+### Swift 方法的多面性
+>http://objccn.io/issue-16-3
