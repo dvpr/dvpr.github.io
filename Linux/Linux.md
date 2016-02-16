@@ -31,6 +31,8 @@ mysqladmin -uuser -p processlist
 mysqladmin -uuser -p status
 ```
 
+### Linux 命令备忘
+
 ##### ubuntu解压zip文件乱码
 
 ```
