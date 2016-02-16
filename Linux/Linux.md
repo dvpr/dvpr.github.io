@@ -30,3 +30,9 @@ watch -n 1 -d "pgrep httpd|wc -l"
 mysqladmin -uuser -p processlist
 mysqladmin -uuser -p status
 ```
+
+##### ubuntu解压zip文件乱码
+
+```
+unzip -O CP936 xxx.zip (用GBK, GB18030也可以)
+```
