@@ -2,6 +2,8 @@
 
 ###[Symfony](./Symfony.html)
 
+###[Laravel](./Laravel.html)
+
 ###[Discuz](./Discuz.html)
 
 ###[Oracle](./Oracle.html)
