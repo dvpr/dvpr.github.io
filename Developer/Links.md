@@ -43,3 +43,6 @@
 
 ### Swift 方法的多面性
 >http://objccn.io/issue-16-3
+
+### “HTTPS”安全在哪里？
+>http://bugly.qq.com/bbs/forum.php?&mod=viewthread&tid=1074
