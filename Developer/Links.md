@@ -46,3 +46,12 @@
 
 ### “HTTPS”安全在哪里？
 >http://bugly.qq.com/bbs/forum.php?&mod=viewthread&tid=1074
+
+### 100个弹框设计小结
+>https://isux.tencent.com/100%E4%B8%AA%E5%BC%B9%E6%A1%86%E8%AE%BE%E8%AE%A1%E5%B0%8F%E7%BB%93.html
+
+### 高性能服务器架构思路
+>http://wetest.qq.com/lab/view/?id=80
+
+### 微信通讯协议的学习
+>http://www.biaodianfu.com/weixin.html
