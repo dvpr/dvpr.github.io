@@ -1,3 +1,3 @@
-##Cloud
+## Cloud
 
-###[OpenShift](./OpenShift.html)
+### [OpenShift](./OpenShift.html)
