@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cPanel.html - AppleStar</title>
+    <title>cPanel - AppleStar</title>
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <style type="text/css">
@@ -92,14 +92,25 @@
     <div class="container">
         <div class="markdown-output">
             <h2>cPanel</h2>
+
 <h3>无法登录WHM</h3>
+
 <p>关闭cPHulk</p>
+
 <pre><code>for i in `ps aux | grep -i "cphulkd - process" | awk {'print $2'}` ;do kill -9 $i ;done
-/usr/local/cpanel/bin/cphulk_pam_ctl --disable</code></pre>
+/usr/local/cpanel/bin/cphulk_pam_ctl --disable
+</code></pre>
+
 <h3>Can't enable SMTP Restrictions</h3>
-<pre><code>/scripts/smtpmailgidonly on</code></pre>
+
+<pre><code>/scripts/smtpmailgidonly on
+</code></pre>
+
 <h3>查看邮件日志</h3>
-<pre><code>grep "your_keywork" /var/log/exim_mainlog* &gt; /tmp/analyzelogs.txt &amp;&amp; less /tmp/analyzelogs.txt</code></pre>
+
+<pre><code>grep "your_keywork" /var/log/exim_mainlog* &gt; /tmp/analyzelogs.txt &amp;&amp; less /tmp/analyzelogs.txt
+</code></pre>
+
         </div>
 
         <div id="disqus_thread"></div>
@@ -118,7 +129,7 @@
 
         <hr>
         <footer>
-            <p>© AppleStar</p>
+            <p>&copy; AppleStar</p>
         </footer>
     </div>
 

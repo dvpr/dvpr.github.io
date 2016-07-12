@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Windows.html - AppleStar</title>
+    <title>Windows - AppleStar</title>
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <style type="text/css">
@@ -92,7 +92,9 @@
     <div class="container">
         <div class="markdown-output">
             <h2>Windows</h2>
+
 <h3>清理系统图标缓存数据库脚本</h3>
+
 <pre><code>rem 关闭Windows外壳程序explorer
 
 taskkill /f /im explorer.exe
@@ -120,10 +122,16 @@ echo y|reg delete "HKEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\C
 
 rem 重启Windows外壳程序explorer
 
-start explorer</code></pre>
+start explorer
+</code></pre>
+
 <p><a href="/assets/windows/clean_icon_cache.zip">脚本下载</a> <strong><em>解压后运行</em></strong></p>
+
 <h3>Thunderbird 配置文件</h3>
-<pre><code>thunderbird.exe -profilemanager</code></pre>
+
+<pre><code>thunderbird.exe -profilemanager
+</code></pre>
+
         </div>
 
         <div id="disqus_thread"></div>
@@ -142,7 +150,7 @@ start explorer</code></pre>
 
         <hr>
         <footer>
-            <p>© AppleStar</p>
+            <p>&copy; AppleStar</p>
         </footer>
     </div>
 

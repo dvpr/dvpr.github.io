@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MySQL.html - AppleStar</title>
+    <title>MySQL - AppleStar</title>
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <style type="text/css">
@@ -92,14 +92,27 @@
     <div class="container">
         <div class="markdown-output">
             <h2>MySQL</h2>
+
 <h3>多表删除</h3>
-<pre><code>SELECT CONCAT("DROP TABLE ", GROUP_CONCAT(table_name), ";") FROM information_schema.tables WHERE table_schema = "DATABASE_NAME" AND table_name LIKE "PREFIX_TABLE_NAME%";</code></pre>
+
+<pre><code>SELECT CONCAT("DROP TABLE ", GROUP_CONCAT(table_name), ";") FROM information_schema.tables WHERE table_schema = "DATABASE_NAME" AND table_name LIKE "PREFIX_TABLE_NAME%";
+</code></pre>
+
 <h3>创建用户</h3>
-<pre><code>CREATE USER 'user_name'@'host' IDENTIFIED BY 'password';</code></pre>
+
+<pre><code>CREATE USER 'user_name'@'host' IDENTIFIED BY 'password';
+</code></pre>
+
 <h3>修改权限</h3>
-<pre><code>grant all privileges on database_name.* to 'user_name'@'host' identified by 'user_password';</code></pre>
+
+<pre><code>grant all privileges on database_name.* to 'user_name'@'host' identified by 'user_password';
+</code></pre>
+
 <h3>MySQL REPLACE</h3>
-<pre><code>UPDATE `table_name` SET `field_name` = REPLACE(`field_name`,'from_str','to_str');</code></pre>
+
+<pre><code>UPDATE `table_name` SET `field_name` = REPLACE(`field_name`,'from_str','to_str');
+</code></pre>
+
         </div>
 
         <div id="disqus_thread"></div>
@@ -118,7 +131,7 @@
 
         <hr>
         <footer>
-            <p>© AppleStar</p>
+            <p>&copy; AppleStar</p>
         </footer>
     </div>
 
