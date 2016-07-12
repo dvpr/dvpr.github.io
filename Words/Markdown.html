@@ -275,17 +275,17 @@ end tell
 
 <h3>Links</h3>
 
-<p>This is <a href="http://dvpr.xyz/" title="Title">an example</a> inline link.</p>
+<p>This is <a target="_blank" href="http://dvpr.xyz/" title="Title">an example</a> inline link.</p>
 
-<p><a href="http://example.me/">This link</a> has no title attribute.</p>
+<p><a target="_blank" href="http://example.me/">This link</a> has no title attribute.</p>
 
-<p>See my <a href="/about/">About</a> page for details.</p>
+<p>See my <a target="_blank" href="/about/">About</a> page for details.</p>
 
 <h3>Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link</h3>
 
-<p>This is <a href="http://example.com/longish/path/to/resource/here" title="Optional Title Here">an example</a> reference-style link.</p>
+<p>This is <a target="_blank" href="http://example.com/longish/path/to/resource/here" title="Optional Title Here">an example</a> reference-style link.</p>
 
-<p>This is <a href="http://example.com/longish/path/to/resource/here" title="Optional Title Here">an example</a> reference-style link.</p>
+<p>This is <a target="_blank" href="http://example.com/longish/path/to/resource/here" title="Optional Title Here">an example</a> reference-style link.</p>
 
 <p>That is:</p>
 
@@ -304,11 +304,11 @@ end tell
 [foo3]: http://example.com/  (Optional Title Here)
 </code></pre>
 
-<p>This is <a href="http://example.com/" title="Optional Title Here">an example foo1</a> reference-style link.</p>
+<p>This is <a target="_blank" href="http://example.com/" title="Optional Title Here">an example foo1</a> reference-style link.</p>
 
-<p>This is <a href="http://example.com/" title="Optional Title Here">an example foo2</a> reference-style link.</p>
+<p>This is <a target="_blank" href="http://example.com/" title="Optional Title Here">an example foo2</a> reference-style link.</p>
 
-<p>This is <a href="http://example.com/" title="Optional Title Here">an example foo3</a> reference-style link.</p>
+<p>This is <a target="_blank" href="http://example.com/" title="Optional Title Here">an example foo3</a> reference-style link.</p>
 
 <h3>Note: There is a known bug in Markdown.pl 1.0.1 which prevents single quotes from being used to delimit link titles.</h3>
 
@@ -331,8 +331,8 @@ end tell
 [link text][A]
 </code></pre>
 
-<p><a href="http://dvpr.me" title="dvpr.me">link text</a>
-<a href="http://dvpr.me" title="dvpr.me">link text</a></p>
+<p><a target="_blank" href="http://dvpr.me" title="dvpr.me">link text</a>
+<a target="_blank" href="http://dvpr.me" title="dvpr.me">link text</a></p>
 
 <p>are equivalent.</p>
 
@@ -342,7 +342,7 @@ end tell
 [dvpr]: http://dvpr.me "dvpr.me"
 </code></pre>
 
-<p><a href="http://dvpr.me" title="dvpr.me">dvpr</a></p>
+<p><a target="_blank" href="http://dvpr.me" title="dvpr.me">dvpr</a></p>
 
 <h3>Because link names may contain spaces, this shortcut even works for multiple words in the link text</h3>
 
@@ -350,7 +350,7 @@ end tell
 [AppleStar dvpr]: http://dvpr.me "dvpr.me"
 </code></pre>
 
-<p><a href="http://dvpr.me" title="dvpr.me">AppleStar dvpr</a></p>
+<p><a target="_blank" href="http://dvpr.me" title="dvpr.me">AppleStar dvpr</a></p>
 
 <h2>Emphasis</h2>
 
@@ -414,11 +414,11 @@ end tell
 
 <h3>Automatic Links</h3>
 
-<p><a href="http://dvpr.me/">http://dvpr.me/</a></p>
+<p><a target="_blank" href="http://dvpr.me/">http://dvpr.me/</a></p>
 
 <p>Automatic links for email addresses work similarly, except that Markdown will also perform a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots</p>
 
-<p><a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#120;&#64;&#100;vp&#x72;&#x2e;&#109;&#x65;">&#120;&#64;&#100;vp&#x72;&#x2e;&#109;&#x65;</a></p>
+<p><a target="_blank" href="&#109;&#x61;i&#108;&#116;&#x6f;&#x3a;&#120;&#x40;&#x64;&#x76;&#112;&#114;&#46;&#109;&#101;">&#120;&#x40;&#x64;&#x76;&#112;&#114;&#46;&#109;&#101;</a></p>
 
 <h2>Backslash Escapes</h2>
 
