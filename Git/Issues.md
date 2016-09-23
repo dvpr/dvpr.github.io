@@ -13,3 +13,12 @@
 > ```
 > coding... here
 > ```
+
+
+> Push to multiple remote locations
+
+> ```
+> remote add all _remote_url_1_
+> remote set-url --add all _remote_url_2_
+> git push all --all
+> ```
