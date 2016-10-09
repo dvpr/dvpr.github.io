@@ -38,3 +38,9 @@ mysqladmin -uuser -p status
 ```
 unzip -O CP936 xxx.zip (用GBK, GB18030也可以)
 ```
+
+##### du 显示隐藏目录
+
+```
+du -sch .[!.]* * | sort -h
+```
