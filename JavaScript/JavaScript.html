@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shortcut - AppleStar</title>
+    <title>MAC - AppleStar</title>
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <style type="text/css">
@@ -92,172 +92,41 @@
 
     <div class="container">
         <div class="markdown-output">
-            <h2>NERDTree</h2>
+            <h2>MAC</h2>
 
-<pre><code>ctrl + w + h   光标 focus 左侧树形目录
-ctrl + w + l   光标 focus 右侧文件显示窗口
-ctrl + w + w   光标自动在左右侧窗口切换
-ctrl + w + r   移动当前窗口的布局位置
+<h3>系统变慢</h3>
 
-o              在已有窗口中打开文件、目录或书签，并跳到该窗口
-go             已有窗口 中打开文件、目录或书签，但不跳到该窗口
-t              在新 Tab 中打开选中文件/书签，并跳到新 Tab
-T              在新 Tab 中打开选中文件/书签，但不跳到新 Tab
-i              split 一个新窗口打开选中文件，并跳到该窗口
-gi             split 一个新窗口打开选中文件，但不跳到该窗口
-s              vsplit 一个新窗口打开选中文件，并跳到该窗口
-gs             vsplit 一个新 窗口打开选中文件，但不跳到该窗口
-!              执行当前文件
-O              递归打开选中 结点下的所有目录
-x              合拢选中结点的父目录
-X              递归 合拢选中结点下的所有目录
-e              Edit the current dif
-D              删除当前书签
+<ol>
+<li><p>用CleanMyMac清理系统垃圾；</p></li>
+<li><p>重置NVRAM；</p>
 
-P              跳到根结点
-p              跳到父结点
-K              跳到当前目录下同级的第一个结点
-J              跳到当前目录下同级的最后一个结点
-k              跳到当前目录下同级的前一个结点
-j              跳到当前目录下同级的后一个结点
+<blockquote>
+  <p>方法是： <br />
+  1、彻底关闭电脑后连接上电源适配器； <br />
+  2、开机，在显示灰屏前同时按住Command+Option+P+R 键，直到听见三次以上启动声后松开这些键。 <br />
+  3、电脑启动后速度就恢复了</p>
+</blockquote></li>
+<li><p>修复权限；</p></li>
+<li><p>删掉无用多余的软件，也可用CleanMyMac。</p></li>
+</ol>
 
-C              将选中目录或选中文件的父目录设为根结点
-u              将当前根结点的父目录设为根目录，并变成合拢原根结点
-U              将当前根结点的父目录设为根目录，但保持展开原根结点
-r              递归刷新选中目录
-R              递归刷新根结点
-m              显示文件系统菜单
-cd             将 CWD 设为选中目录
+<blockquote>
+  <p>进到资源库→找到“Preference”→清空里面的东西。<strong>这样做等同于重装</strong></p>
+</blockquote>
 
-I              切换是否显示隐藏文件
-f              切换是否使用文件过滤器
-F              切换是否显示文件
-B              切换是否显示书签
+<h5>OS X：关于 OS X 恢复功能</h5>
 
-q              关闭 NerdTree 窗口
-?              切换是否显示 Quick Help
-</code></pre>
+<blockquote>
+  <p><a target="_blank" href="http://www.apple.com/cn/osx/recovery/">链接</a> 只要在启动过程中按住 Command-R，OS X 恢复功能便会立即运行。它可让你从常用工具中进行选择：你可以运行磁盘工具来检查或修复硬盘，擦除硬盘并重装新的 OS X，或从 Time Machine 的备份中恢复你的 Mac。你还可使用 Safari 获得 Apple 在线技术支持。如果 OS X 恢复功能出现问题，它会自动通过互联网连接到 Apple。</p>
+</blockquote>
 
-<h5>切换标签页</h5>
+<h3>U盘重装</h3>
 
-<pre><code>:tabnew [++opt选项] ［＋cmd］ 文件      建立对指定文件新的tab
-:tabc          关闭当前的 tab
-:tabo          关闭所有其他的 tab
-:tabs          查看所有打开的 tab
-:tabp          前一个 tab
-:tabn          后一个 tab
-</code></pre>
-
-<h5>标准模式下：</h5>
-
-<pre><code>gT             前一个 tab
-gt             后一个 tab
-</code></pre>
-
-<h2>w3m</h2>
-
-<pre><code>T              打开一个新标签页
-Esc-t          打开所有标签页，供你选择，使用jk来上下移动
-{/}            在标签页中切换
-U              输入新的网址
-B              后退
-Ctrl+q         关闭当前标签页
-/              向后查找当前页
-?              向前查找当前页
-</code></pre>
-
-<h5>Search</h5>
-
-<pre><code>/,C-s          Search forward
-?,C-r          Search backward
-n              Search next
-N              Search previous
-C-w            Toggle wrap search mode
-</code></pre>
-
-<h2>Emacs</h2>
-
-<h3>一些默认快捷键</h3>
-
-<pre><code>C-代表按住Ctrl键
-M-代表按住Alt键，也可以用按一下ESC放开代替
-</code></pre>
-
-<h5>最先要记住的</h5>
-
-<pre><code>M-x &lt;cmd&gt;      输入指令执行，在输入时用Tab可以自动补全或列出项目
-C-g            取消当前操作指令
-C-h k &lt;key&gt;    查看当前按键绑定的指令及介绍
-</code></pre>
-
-<h5>移动插入点（光标）</h5>
-
-<pre><code>C-n/p/b/f      到 下一行、上一行、前一字符、后一字符
-M-b/f          到 前、后一单词
-C-a/e          到 行首、末
-M-a/e          到 句首、末
-M-&lt;/&gt;          到 文件首、末
-C-v/M-v        下、上翻屏
-C-l            循环 将当前光标行显示在窗口下、中、上位置
-</code></pre>
-
-<pre><code>C-u &lt;num&gt; &lt;xx&gt; 重复执行之后的 xx 命令 num 次，不输入num默认为4
-C-u C-v        向下滚动4行
-</code></pre>
-
-<h5>编辑</h5>
-
-<pre><code>Back/C-d       删除 前、后字符
-M-Back/M-d     移除 前、后单词
-C-k/M-k        移除到 行末、句末
-</code></pre>
-
-<pre><code>C-/            undo/redo
-C-x u          undo/redo
-</code></pre>
-
-<pre><code>C-w            剪切
-C-y            召回（粘贴）（粘贴移除的、复制、剪切的内容）
-C-c            复制（emacs一般也默认定制了与OS的剪切复制粘贴相同的快捷键）
-</code></pre>
-
-<h5>查找</h5>
-
-<pre><code>C-s
-  C-s          查找下一个
-  C-r          查找上一下
-  C-g          一次返回，二次结束查找
-  回车         停止到当前查找到的内容
-</code></pre>
-
-<h5>替换</h5>
-
-<pre><code>M-%
-</code></pre>
-
-<h5>标记</h5>
-
-<pre><code>M-@
-</code></pre>
-
-<h5>文件操作</h5>
-
-<pre><code>C-x C-c        退出emacs
-
-C-x C-f        打开文件
-C-x C-s        保存文件
-C-x C-v        在当前缓冲区重新打开一个文件，可以用于清除undo历史!!
-
-C-x 1          最大化当前缓冲，关闭其它
-C-x 2/3        垂直、水平创建新缓冲区
-C-x o          切换到其它缓冲区
-
-C-x C-b        列出缓冲区
-C-x b          提示输入缓冲区名称，切换当前窗口的缓冲区
-C-x k          删除当前缓冲区
-
-C-j            换行回车，有些模式下比较直接回车好用，有增加缩进之类的功能
-</code></pre>
+<blockquote>
+  <p>下好山狮的dmg镜像，用mac里的磁盘工具把映像恢复到U盘上</p>
+  
+  <p>然后把U盘和移动硬盘连到电脑上，开机，用U盘启动，用里面的磁盘工具把移动硬盘重分区，选GUID分区表，类型选Mac OS日志式（以上步骤是因为我有洁癖装系统前必格盘），然后正常装系统到移动硬盘就好啦</p>
+</blockquote>
 
         </div>
 

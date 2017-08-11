@@ -64,6 +64,7 @@ gt             后一个 tab
 ```
 
 
+
 ## w3m
 
 ```
@@ -76,6 +77,17 @@ Ctrl+q         关闭当前标签页
 /              向后查找当前页
 ?              向前查找当前页
 ```
+
+##### Search
+
+```
+/,C-s          Search forward
+?,C-r          Search backward
+n              Search next
+N              Search previous
+C-w            Toggle wrap search mode
+```
+
 
 
 ## Emacs
