@@ -4,17 +4,17 @@
 
 1.	在网站根目录下的子目录uc_server/data中找到文件config.inc.php，打开它，找到类似以下代码：
 
-	```
-	define('UC_FOUNDERPW', '256955f2e034sad74f0e2953572ea360');
-	define('UC_FOUNDERSALT', '217804');
-	```
+```
+define('UC_FOUNDERPW', '256955f2e034sad74f0e2953572ea360');
+define('UC_FOUNDERSALT', '217804');
+```
 
 2.	然后用以下代码替换上述代码：
 
-	```
-	define('UC_FOUNDERPW', '047099adb883dc19616dae0ef2adc5b6');
-	define('UC_FOUNDERSALT', '311254');
-	```
+```
+define('UC_FOUNDERPW', '047099adb883dc19616dae0ef2adc5b6');
+define('UC_FOUNDERSALT', '311254');
+```
 
 3.	修改完后，Ucenter创始人的密码就变为: 123456789　
 

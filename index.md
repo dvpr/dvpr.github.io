@@ -1,4 +1,4 @@
-## AppleStar Notes here2.
+## AppleStar Notes here.
 
 ### I foucs on:
 
