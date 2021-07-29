@@ -93,7 +93,7 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <p>##Coding style and standards</p><p>###文件格式</p><hr><p>文件统一使用UTF-8编码</p><p>###缩进和每行代码的长度</p><hr><p>使用制表符完成缩进，制表符的长度为4。</p><p>每行代码的长度没有硬性标准，可根据该行的性质和代码的可读性自行把握。</p><p>###赋值语句</p><hr><p>赋值语句的等号前后都至少要有一个空格</p><p>示例:</p><p>$var = 0;</p><p>在多个相关的赋值语句中，使用制表符将等号对齐以增加代码的可读性</p><p>示例:</p><p>$short = 0; $long_variable = $short;</p><p>###流程控制语句</p><hr><p>在流程控制语句中，关键词、参数、花括号之间应该有一个空格以便与函数调用格式区分</p><p>在任何时候都必须使用花括号，以增加代码的可读性，避免添加新行时造成的逻辑错误</p><p>if语句</p><p>示例:</p><p>if ((condition1) || (condition2)) { action1(); } elseif ((condition3) &amp;&amp; (condition4)) { action2(); } else { defaultAction(); anotherAction(); }</p><p>在页面布局中使用流程控制的替代语法，条件语句逻辑运算符也应该使用大写的单词（AND，OR，等），而不是使用符号（$，|，等）</p><p>示例:</p><p>if ((condition1) OR (condition2)) : action1(); elseif ((condition3) AND (condition4)) : action2(); else : defaultAction(); anotherAction(); endif;</p><p>foreach ($array as $element) : echo $element; endforeach;</p><p>switch语句</p><p>示例:</p><p>switch (condition) { case 1: doAction1(); break;</p><p>case 2: doAction2(); break;</p><p>default: doDefaultAction(); break; }</p><p>使用缩进代替case语句的花括号来增加代码的可读性</p><p>case语句中条件和冒号之间不能有空格</p><p>###函数调用</p><hr><p>函数名和圆括号之间不能有空格</p><p>圆括号和第一个参数以及最后一个参数之间不能有空格</p><p>参数和逗号之间不能有空格（多个参数的情况下）</p><p>每个参数的逗号后要有一个空格（多个参数的情况下）</p><p>示例:</p><p>$var = foo($bar, $baz, $quux);</p><p>###函数声明</p><hr><p>函数或类的声明遵循“one true brace”原则（开始的花括号单独占一行，而不是跟在其他语句后面）</p><p>示例:</p><p>function fooFunction($arg1, $arg2 = '') { if (condition) { statement; } return $val; }</p><p>class fooClass { function fooMethod($arg1) { if ($arg) { $result = true; } else { $result = false; } return $result; } }</p><p>有默认值的参数要放在参数列表的最后</p><p>当函数有返回值时，必须保证函数返回一个有意义的值</p><p>示例:</p><p>function connect(&amp;$dsn, $persistent = false) { if (is_array($dsn)) { $dsninfo = &$dsn; } else { $dsninfo = DB::parseDSN($dsn); }</p><p>if (!$dsninfo OR !$dsninfo['phptype']) { return $this-&gt;raiseError(); }</p><p>return true; }</p><p>###注释</p><hr><p>类，属性和方法，函数，常量都应该提供适当的DocBlocks。</p><p>所有的包名使用小写字母表示用"."连接</p><p>类</p><p>示例:</p><p>/*<em> <em> 类的简短描述 </em> <em> 类的详细描述(可选) </em> <em> @package packagename </em> @subpackage subpackagename </em> @author <作者>
+            <h2>Coding style and standards</h2><h3>文件格式</h3><hr><p>文件统一使用UTF-8编码</p><h3>缩进和每行代码的长度</h3><hr><p>使用制表符完成缩进，制表符的长度为4。</p><p>每行代码的长度没有硬性标准，可根据该行的性质和代码的可读性自行把握。</p><h3>赋值语句</h3><hr><p>赋值语句的等号前后都至少要有一个空格</p><p>示例:</p><p>$var = 0;</p><p>在多个相关的赋值语句中，使用制表符将等号对齐以增加代码的可读性</p><p>示例:</p><p>$short = 0; $long_variable = $short;</p><h3>流程控制语句</h3><hr><p>在流程控制语句中，关键词、参数、花括号之间应该有一个空格以便与函数调用格式区分</p><p>在任何时候都必须使用花括号，以增加代码的可读性，避免添加新行时造成的逻辑错误</p><p>if语句</p><p>示例:</p><p>if ((condition1) || (condition2)) { action1(); } elseif ((condition3) &amp;&amp; (condition4)) { action2(); } else { defaultAction(); anotherAction(); }</p><p>在页面布局中使用流程控制的替代语法，条件语句逻辑运算符也应该使用大写的单词（AND，OR，等），而不是使用符号（$，|，等）</p><p>示例:</p><p>if ((condition1) OR (condition2)) : action1(); elseif ((condition3) AND (condition4)) : action2(); else : defaultAction(); anotherAction(); endif;</p><p>foreach ($array as $element) : echo $element; endforeach;</p><p>switch语句</p><p>示例:</p><p>switch (condition) { case 1: doAction1(); break;</p><p>case 2: doAction2(); break;</p><p>default: doDefaultAction(); break; }</p><p>使用缩进代替case语句的花括号来增加代码的可读性</p><p>case语句中条件和冒号之间不能有空格</p><h3>函数调用</h3><hr><p>函数名和圆括号之间不能有空格</p><p>圆括号和第一个参数以及最后一个参数之间不能有空格</p><p>参数和逗号之间不能有空格（多个参数的情况下）</p><p>每个参数的逗号后要有一个空格（多个参数的情况下）</p><p>示例:</p><p>$var = foo($bar, $baz, $quux);</p><h3>函数声明</h3><hr><p>函数或类的声明遵循“one true brace”原则（开始的花括号单独占一行，而不是跟在其他语句后面）</p><p>示例:</p><p>function fooFunction($arg1, $arg2 = '') { if (condition) { statement; } return $val; }</p><p>class fooClass { function fooMethod($arg1) { if ($arg) { $result = true; } else { $result = false; } return $result; } }</p><p>有默认值的参数要放在参数列表的最后</p><p>当函数有返回值时，必须保证函数返回一个有意义的值</p><p>示例:</p><p>function connect(&amp;$dsn, $persistent = false) { if (is_array($dsn)) { $dsninfo = &$dsn; } else { $dsninfo = DB::parseDSN($dsn); }</p><p>if (!$dsninfo OR !$dsninfo['phptype']) { return $this-&gt;raiseError(); }</p><p>return true; }</p><h3>注释</h3><hr><p>类，属性和方法，函数，常量都应该提供适当的DocBlocks。</p><p>所有的包名使用小写字母表示用"."连接</p><p>类</p><p>示例:</p><p>/*<em> <em> 类的简短描述 </em> <em> 类的详细描述(可选) </em> <em> @package packagename </em> @subpackage subpackagename </em> @author <作者>
      * @since           <起始版本>
      * @deprecated      --不被推荐的过期的(可选)
      */
@@ -122,7 +122,7 @@
 
 保证适当的非文档注释量（原则:当你看到一段代码，然后想:“Wow, I don't want to try and describe that”，那么你就应该在你忘记程序的工作流程之前为这段代码添加非文档注释） 内联的类文件的注释应遵循PHPDoc惯例，详见http://www.phpdoc.org/
 
-###PHP标签
+### PHP标签
 
 ************************************************************************
 
@@ -130,7 +130,7 @@
 
 当文件中只包含php代码时不要使用结束标记?>
 
-###SQL语句
+### SQL语句
 
 ************************************************************************
 
@@ -161,7 +161,7 @@ SQL语句中不能包含回车符
         ' GROUP BY u.id'.
         '  HAVING COUNT( c.id ) > 0';
 
-###命名约定
+### 命名约定
 
 ************************************************************************
 

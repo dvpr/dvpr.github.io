@@ -1,6 +1,6 @@
-##Symfony
+## Symfony
 
-###安装记录
+### 安装记录
 
 Preparing project...
 
@@ -20,7 +20,7 @@ Preparing project...
 
 Start...
 
-###常用命令行
+### 常用命令行
 
 ```
 php app/console generate:bundle --namespace=Ens/JobeetBundle --format=yml                               //创建程序
@@ -32,7 +32,7 @@ php app/console cache:clear --env=dev                                           
 php app/console doctrine:generate:crud --entity=EnsJobeetBundle:Job --route-prefix=ens_job --with-write --format=yml
 ```
 
-###添加excel bundle
+### 添加excel bundle
 
 ```
 php ../composer.phar update liuggio/excelbundle

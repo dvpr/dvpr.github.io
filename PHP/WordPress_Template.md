@@ -1,6 +1,6 @@
-##WordPress 模版资源
+## WordPress 模版资源
 
-###国外
+### 国外
 
 > <https://wordpress.org/themes/>
 
@@ -18,10 +18,10 @@
 
 > <http://themeforest.net/category/wordpress>
 
-###国内
+### 国内
 
 > <http://www.toptheme.org/>
 
 > <http://www.iztwp.com/>
 
-###精选
+### 精选

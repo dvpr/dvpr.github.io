@@ -1,6 +1,6 @@
-##Joomla 模版资源
+## Joomla 模版资源
 
-###国外
+### 国外
 
 > <http://www.shape5.com/demo/index.php>
 
@@ -18,7 +18,7 @@
 
 > <http://www.joomlashine.com/joomla-templates.html>
 
-###国内
+### 国内
 
 > <http://www.motostore.com.cn/>
 
@@ -31,7 +31,7 @@
 > <http://mb.shopex.cn/>
 
 
-###精选
+### 精选
 
 > <http://demo.gavick.com/joomla15/mar2009/>
 

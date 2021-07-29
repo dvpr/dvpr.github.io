@@ -1,6 +1,6 @@
-##Laravel
+## Laravel
 
-###常用命令行
+### 常用命令行
 
 ```
 php artisan migrate //执行数据迁移

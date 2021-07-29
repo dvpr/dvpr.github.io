@@ -1,6 +1,6 @@
-##Discuz
+## Discuz
 
-###修改创始人密码
+### 修改创始人密码
 
 1.	在网站根目录下的子目录uc_server/data中找到文件config.inc.php，打开它，找到类似以下代码：
 
@@ -18,7 +18,7 @@
 
 3.	修改完后，Ucenter创始人的密码就变为: 123456789　
 
-###Discuz X 开启防CC攻击
+### Discuz X 开启防CC攻击
 
 在config/config_global.php文件中有如下代码：
 

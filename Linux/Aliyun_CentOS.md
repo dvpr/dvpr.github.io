@@ -1,11 +1,11 @@
-##Aliyun CentOS
+## Aliyun CentOS
 
-###添加yum源
+### 添加yum源
 ```
 rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
 ```
 
-###服务器部署记录
+### 服务器部署记录
 
 - 查看信息
     ```
@@ -54,7 +54,7 @@ rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
     /etc/vsftpd/users //编辑相应用户文件
     ```
 
-###配置apache、mysql、php
+### 配置apache、mysql、php
 
 - apache 配置
 
@@ -176,7 +176,7 @@ rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
     /etc/init.d/httpd  restart    # 重启Apache
     ```
 
-###配置防火墙，开启80、3306端口
+### 配置防火墙，开启80、3306端口
 
 - 防火墙添加80、3306
 
@@ -232,9 +232,9 @@ rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
     # shutdown -r now
     ```
 
-###[添加SWAP](https://www.digitalocean.com/community/articles/how-to-add-swap-on-centos-6)
+### [添加SWAP](https://www.digitalocean.com/community/articles/how-to-add-swap-on-centos-6)
 
-- #####Check for Swap Space
+- ##### Check for Swap Space
 
     Before we proceed to set up a swap file, we need to check if any swap files have been enabled by looking at the summary of swap usage.
 
@@ -242,7 +242,7 @@ rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
 
     If nothing is returned, the summary is empty and no swap file exists.
 
-- #####Check the File System
+- ##### Check the File System
 
     After we know that we do not have a swap file enabled, we can check how much space we have on the server with the df command. The swap file will take 512MB— since we are only using up about 7% of the /dev/hda, we can proceed.
 
@@ -250,7 +250,7 @@ rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
         Filesystem           1K-blocks      Used Available Use% Mounted on
         /dev/hda              20642428   1347968  18245884   7% /
 
-- #####Create and Enable the Swap File
+- ##### Create and Enable the Swap File
 
     Now it’s time to create the swap file itself using the dd command :
 

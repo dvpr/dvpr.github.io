@@ -93,8 +93,8 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <p>##Aliyun CentOS</p><p>###添加yum源</p><pre><code>rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
-</code></pre><p>###服务器部署记录</p><ul><li>查看信息 <code></code>` cat /etc/redhat-release，查看版本 uname -a – 显示版本和内核信息 rpm -q kernel – 显示内核版本 yum -y update – 升级所有应用版本，更新CentOS到最新镜像版本 <code></code>`</li></ul><ul><li>安装基础软件 <code></code>` yum install mysql mysql-server //安装Mysql chkconfig --levels 235 mysqld on //Mysql开机启动 /etc/init.d/mysqld start //运行mysql mysql<em>secure</em>installation-----------------不好使 //Mysql安装向导 mysqladmin -u root password xx //设置mysql密码 yum install httpd //安装Apache chkconfig --levels 235 httpd on //Apache开机启动 /etc/init.d/httpd start //启动Apache 访问域名 apache preloadpage---------------干啥用啊 yum install php/php53 //安装php /etc/init.d/httpd restart //重启Apache yum search php //搜索php相关模块 yum install php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc //安装php模块 /etc/init.d/httpd restart //重启Apache <code></code>`</li></ul><ul><li><a href="http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users">VSFTP</a> 安装ftp <code></code>` yum install vsftpd db4-utils <code></code>` <a href="http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users?action=AttachFile&do=get&target=vsftpd_virtual_config_withTLS.sh">vsftpd<em>virtual</em>config_withTLS</a> 下载配置脚本 <code></code>` chkconfig --levels 235 vsftpd on iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 21 -j ACCEPT iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 64000:65535 -j ACCEPT vim /etc/vsftpd/vsftpd.conf //修改主机ip /etc/init.d/vsftpd restart //重启vsftp <code></code>`</li></ul><ul><li>配置FTP</li></ul><p>修改ftp路径 <code></code>` /etc/vsftpd/users //编辑相应用户文件 <code></code>`</p><p>###配置apache、mysql、php</p><ul><li>apache 配置</li></ul><pre><code>    #vi /etc/httpd/conf/httpd.conf
+            <h2>Aliyun CentOS</h2><h3>添加yum源</h3><pre><code>rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
+</code></pre><h3>服务器部署记录</h3><ul><li>查看信息 <code></code>` cat /etc/redhat-release，查看版本 uname -a – 显示版本和内核信息 rpm -q kernel – 显示内核版本 yum -y update – 升级所有应用版本，更新CentOS到最新镜像版本 <code></code>`</li></ul><ul><li>安装基础软件 <code></code>` yum install mysql mysql-server //安装Mysql chkconfig --levels 235 mysqld on //Mysql开机启动 /etc/init.d/mysqld start //运行mysql mysql<em>secure</em>installation-----------------不好使 //Mysql安装向导 mysqladmin -u root password xx //设置mysql密码 yum install httpd //安装Apache chkconfig --levels 235 httpd on //Apache开机启动 /etc/init.d/httpd start //启动Apache 访问域名 apache preloadpage---------------干啥用啊 yum install php/php53 //安装php /etc/init.d/httpd restart //重启Apache yum search php //搜索php相关模块 yum install php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc //安装php模块 /etc/init.d/httpd restart //重启Apache <code></code>`</li></ul><ul><li><a href="http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users">VSFTP</a> 安装ftp <code></code>` yum install vsftpd db4-utils <code></code>` <a href="http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users?action=AttachFile&do=get&target=vsftpd_virtual_config_withTLS.sh">vsftpd<em>virtual</em>config_withTLS</a> 下载配置脚本 <code></code>` chkconfig --levels 235 vsftpd on iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 21 -j ACCEPT iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 64000:65535 -j ACCEPT vim /etc/vsftpd/vsftpd.conf //修改主机ip /etc/init.d/vsftpd restart //重启vsftp <code></code>`</li></ul><ul><li>配置FTP</li></ul><p>修改ftp路径 <code></code>` /etc/vsftpd/users //编辑相应用户文件 <code></code>`</p><h3>配置apache、mysql、php</h3><ul><li>apache 配置</li></ul><pre><code>    #vi /etc/httpd/conf/httpd.conf
     ```
 
     ```
@@ -211,7 +211,7 @@
     /etc/init.d/httpd  restart    # 重启Apache
     ```
 
-###配置防火墙，开启80、3306端口
+### 配置防火墙，开启80、3306端口
 
 - 防火墙添加80、3306
 
@@ -267,9 +267,9 @@
     # shutdown -r now
     ```
 
-###[添加SWAP](https://www.digitalocean.com/community/articles/how-to-add-swap-on-centos-6)
+### [添加SWAP](https://www.digitalocean.com/community/articles/how-to-add-swap-on-centos-6)
 
-- #####Check for Swap Space
+- ##### Check for Swap Space
 
     Before we proceed to set up a swap file, we need to check if any swap files have been enabled by looking at the summary of swap usage.
 
@@ -277,7 +277,7 @@
 
     If nothing is returned, the summary is empty and no swap file exists.
 
-- #####Check the File System
+- ##### Check the File System
 
     After we know that we do not have a swap file enabled, we can check how much space we have on the server with the df command. The swap file will take 512MB— since we are only using up about 7% of the /dev/hda, we can proceed.
 
@@ -285,7 +285,7 @@
         Filesystem           1K-blocks      Used Available Use% Mounted on
         /dev/hda              20642428   1347968  18245884   7% /
 
-- #####Create and Enable the Swap File
+- ##### Create and Enable the Swap File
 
     Now it’s time to create the swap file itself using the dd command :
 
