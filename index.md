@@ -1,21 +1,21 @@
-##AppleStar Notes here.
+## AppleStar Notes here.
 
-###I foucs on:
+### I foucs on:
 
-###[Developer](/Developer)
+### [Developer](/Developer)
 
-###[PHP](/PHP)
+### [PHP](/PHP)
 
-###[MySQL](/MySQL)
+### [MySQL](/MySQL)
 
-###[Linux](/Linux)
+### [Linux](/Linux)
 
-###[Cloud](/Cloud)
+### [Cloud](/Cloud)
 
-###[MAC](/MAC)
+### [MAC](/MAC)
 
-###[Windows](/Windows)
+### [Windows](/Windows)
 
-###[SEO](/SEO)
+### [SEO](/SEO)
 
-###[Words](/Words)
+### [Words](/Words)
