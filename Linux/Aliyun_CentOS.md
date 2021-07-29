@@ -236,88 +236,118 @@ SELINUX=disabled     #增加
 
 ### [添加SWAP](https://www.digitalocean.com/community/articles/how-to-add-swap-on-centos-6)
 
-##### ##### Check for Swap Space
+##### Check for Swap Space
 
     Before we proceed to set up a swap file, we need to check if any swap files have been enabled by looking at the summary of swap usage.
 
+```
           swapon -s
+```
 
     If nothing is returned, the summary is empty and no swap file exists.
 
-##### ##### Check the File System
+##### Check the File System
 
     After we know that we do not have a swap file enabled, we can check how much space we have on the server with the df command. The swap file will take 512MB— since we are only using up about 7% of the /dev/hda, we can proceed.
 
+```
         df
         Filesystem           1K-blocks      Used Available Use% Mounted on
         /dev/hda              20642428   1347968  18245884   7% /
+```
 
-##### ##### Create and Enable the Swap File
+##### Create and Enable the Swap File
 
     Now it’s time to create the swap file itself using the dd command :
 
+```
         sudo dd if=/dev/zero of=/swapfile bs=1024 count=512k
+```
 
     “of=/swapfile” designates the file’s name. In this case the name is swapfile.
 
     Subsequently we are going to prepare the swap file by creating a linux swap area:
 
+```
         sudo mkswap /swapfile
+```
 
     The results display:
 
+```
         Setting up swapspace version 1, size = 536866 kB
+```
 
     Finish up by activating the swap file:
 
+```
         sudo swapon /swapfile
+```
 
     You will then be able to see the new swap file when you view the swap summary.
 
+```
         swapon -s
         Filename				Type		Size	Used	Priority
         /swapfile                               file		524280	0	-1
+```
 
     This file will last on the server until the machine reboots. You can ensure that the swap is permanent by adding it to the fstab file.
 
     Open up the file:
 
+```
         sudo nano /etc/fstab
+```
 
     Paste in the following line:
 
+```
         /swapfile          swap            swap    defaults        0 0
+```
 
     阿里云默认是不让用户使用swap的。
     我们需要编辑/etc/rc.d/rc.local文件，将文件中的swapoff行注释或删掉。
 
+```
         #swapoff -a
+```
 
     To prevent the file from being world-readable, you should set up the correct permissions on the swap file:
 
+```
         chown root:root /swapfile
         chmod 0600 /swapfile
+```
 
     How To Configure Swappiness
     The operating system kernel can adjust how often it relies on swap through a configuration parameter known as swappiness. To find the current swappiness settings, type:
 
+```
         cat /proc/sys/vm/swappiness
         60
+```
 
     Swapiness can be a value from 0 to 100. Swappiness near 100 means that the operating system will swap often and usually, too soon. Although swap provides extra resources, RAM is much faster than swap space. Any time something is moved from RAM to swap, it slows down.
 
     A swappiness value of 0 means that the operating will only rely on swap when it absolutely needs to. We can adjust the swappiness with the sysctl command:
 
+```
         sysctl vm.swappiness=10
         vm.swappiness=10
+```
 
     If we check the system swappiness again, we can confirm that the setting was applied:
 
+```
         cat /proc/sys/vm/swappiness
         10
+```
 
     To make your VPS automatically apply this setting every time it boots up, you can add the setting to the /etc/sysctl.conf file:
     sudo nano /etc/sysctl.conf
     Search for the vm.swappiness setting.  Uncomment and change it as necessary.
 
+```
         vm.swappiness=10
+```
