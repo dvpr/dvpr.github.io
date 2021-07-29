@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coding_style_and_standards - AppleStar</title>
+    <title>Dvpr - AppleStar</title>
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <style type="text/css">
-
         body {
             padding-top: 70px;
         }
 
         /*
-         *
          * markdown-output
-         *
          */
 
         .markdown-output h1,
         .markdown-output h2 {
             padding: 0px 0px 10px;
             border-bottom: 1px solid #EEE;
-         }
+        }
 
         .markdown-output hr {
             background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC") repeat-x 0 0;
@@ -37,373 +35,193 @@
             background: #272B33;
             color: #ABB2C0;
         }
-
     </style>
 
     <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?eee701d069f86af639828e3b497ec4d6";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eee701d069f86af639828e3b497ec4d6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
     </script>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6899248995924234" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="http://applestar.net">AppleStar</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div id="navbar" class="collapse navbar-collapse">
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://applestar.net">AppleStar</a>
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/Cloud">Cloud</a></li>
-            <li><a href="/Developer">Developer</a></li>
-            <li><a href="/Git">Git</a></li>
-            <li><a href="/Linux">Linux</a></li>
-            <li><a href="/MAC">MAC</a></li>
-            <li><a href="/MySQL">MySQL</a></li>
-            <li><a href="/PHP">PHP</a></li>
-            <li><a href="/SEO">SEO</a></li>
-            <li><a href="/Windows">Windows</a></li>
-            <li><a href="/Words">Words</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="navbar" class="collapse navbar-collapse">
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/Cloud">Cloud</a></li>
+                    <li><a href="/Developer">Developer</a></li>
+                    <li><a href="/Git">Git</a></li>
+                    <li><a href="/Linux">Linux</a></li>
+                    <li><a href="/MAC">MAC</a></li>
+                    <li><a href="/MySQL">MySQL</a></li>
+                    <li><a href="/PHP">PHP</a></li>
+                    <li><a href="/SEO">SEO</a></li>
+                    <li><a href="/Windows">Windows</a></li>
+                    <li><a href="/Words">Words</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
     </nav>
 
     <div class="container">
         <div class="markdown-output">
-            <h2>Coding style and standards</h2>
+            <!-- /markdown-output -->
+            <p>##Coding style and standards</p><p>###文件格式 <strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong> 文件统一使用UTF-8编码</p><p>###缩进和每行代码的长度 <strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong> 使用制表符完成缩进，制表符的长度为4。 每行代码的长度没有硬性标准，可根据该行的性质和代码的可读性自行把握。</p><p>###赋值语句 <strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong> 赋值语句的等号前后都至少要有一个空格 示例: $var = 0; 在多个相关的赋值语句中，使用制表符将等号对齐以增加代码的可读性 示例: $short = 0; $long_variable = $short;</p><p>###流程控制语句 <strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong> 在流程控制语句中，关键词、参数、花括号之间应该有一个空格以便与函数调用格式区分 在任何时候都必须使用花括号，以增加代码的可读性，避免添加新行时造成的逻辑错误 if语句 示例: if ((condition1) || (condition2)) { action1(); } elseif ((condition3) &amp;&amp; (condition4)) { action2(); } else { defaultAction(); anotherAction(); } 在页面布局中使用流程控制的替代语法，条件语句逻辑运算符也应该使用大写的单词（AND，OR，等），而不是使用符号（$，|，等） 示例: if ((condition1) OR (condition2)) : action1(); elseif ((condition3) AND (condition4)) : action2(); else : defaultAction(); anotherAction(); endif; foreach ($array as $element) : echo $element; endforeach; switch语句 示例: switch (condition) { case 1: doAction1(); break; case 2: doAction2(); break; default: doDefaultAction(); break; } 使用缩进代替case语句的花括号来增加代码的可读性 case语句中条件和冒号之间不能有空格</p><p>###函数调用 <strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong> 函数名和圆括号之间不能有空格 圆括号和第一个参数以及最后一个参数之间不能有空格 参数和逗号之间不能有空格（多个参数的情况下） 每个参数的逗号后要有一个空格（多个参数的情况下） 示例: $var = foo($bar, $baz, $quux);</p><p>###函数声明 <strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong> 函数或类的声明遵循“one true brace”原则（开始的花括号单独占一行，而不是跟在其他语句后面） 示例: function fooFunction($arg1, $arg2 = '') { if (condition) { statement; } return $val; } class fooClass { function fooMethod($arg1) { if ($arg) { $result = true; } else { $result = false; } return $result; } } 有默认值的参数要放在参数列表的最后 当函数有返回值时，必须保证函数返回一个有意义的值 示例: function connect(&amp;$dsn, $persistent = false) { if (is_array($dsn)) { $dsninfo = &$dsn; } else { $dsninfo = DB::parseDSN($dsn); } if (!$dsninfo OR !$dsninfo['phptype']) { return $this-&gt;raiseError(); } return true; }</p><p>###注释 <strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong> 类，属性和方法，函数，常量都应该提供适当的DocBlocks。 所有的包名使用小写字母表示用"."连接 类 示例: /*<em> <em> 类的简短描述 </em> <em> 类的详细描述(可选) </em> <em> @package packagename </em> @subpackage subpackagename </em> @author <作者>
+     * @since           <起始版本>
+     * @deprecated      --不被推荐的过期的(可选)
+     */
 
-<h3>文件格式</h3>
+属性
 
-<hr />
+示例:
 
-<p>文件统一使用UTF-8编码</p>
+    /**
+     * 简短描述
+     *
+     * @var 类型
+     */
 
-<h3>缩进和每行代码的长度</h3>
+函数和方法
 
-<hr />
+示例:
 
-<p>使用制表符完成缩进，制表符的长度为4。</p>
+    /**
+     * 简短描述
+     *
+     * @since   <起始版本>
+     * @param   <类型>  <变量名> <描述>  --参数
+     * @return  <类型>  <描述>  --返回值
+     */
 
-<p>每行代码的长度没有硬性标准，可根据该行的性质和代码的可读性自行把握。</p>
+保证适当的非文档注释量（原则:当你看到一段代码，然后想:“Wow, I don't want to try and describe that”，那么你就应该在你忘记程序的工作流程之前为这段代码添加非文档注释） 内联的类文件的注释应遵循PHPDoc惯例，详见http://www.phpdoc.org/
 
-<h3>赋值语句</h3>
+###PHP标签
 
-<hr />
+************************************************************************
 
-<p>赋值语句的等号前后都至少要有一个空格</p>
+使用<?php ?>不要使用<? ?>
 
-<p>示例:</p>
+当文件中只包含php代码时不要使用结束标记?>
 
-<pre><code>$var = 0;
-</code></pre>
+###SQL语句
 
-<p>在多个相关的赋值语句中，使用制表符将等号对齐以增加代码的可读性</p>
+************************************************************************
 
-<p>示例:</p>
+关键词必须大写，其他字符必须小写
 
-<pre><code>$short          = 0;
-$long_variable  = $short;
-</code></pre>
+SQL语句中不能包含回车符
 
-<h3>流程控制语句</h3>
+使用缩进来提高SQL语句可读性
 
-<hr />
+使用单引号提高执行效率
 
-<p>在流程控制语句中，关键词、参数、花括号之间应该有一个空格以便与函数调用格式区分</p>
+所有整型和浮点型变量都要进行强制类型转换
 
-<p>在任何时候都必须使用花括号，以增加代码的可读性，避免添加新行时造成的逻辑错误</p>
+所有字符变量使用Quote()方法
 
-<p>if语句</p>
+所有表明使用#_前缀
 
-<p>示例:</p>
+示例:
 
-<pre><code>if ((condition1) || (condition2)) {
-    action1();
-} elseif ((condition3) &amp;&amp; (condition4)) {
-    action2();
-} else {
-    defaultAction();
-    anotherAction();
-}
-</code></pre>
+    $state = 1;
+    $name  = 'bill';
+    $query = 'SELECT COUNT( c.id ) AS num_articles, u.id, u.username'.
+        ' FROM #__content AS c'.
+        ' LEFT JOIN #__users AS u ON u.id = c.created_by'.
+        ' WHERE c.state = '.(int) $state
+        '  AND u.id IS NOT NULL'.
+        '  AND u.username <> '.$db->Quote( $name ).
+        ' GROUP BY u.id'.
+        '  HAVING COUNT( c.id ) > 0';
 
-<p>在页面布局中使用流程控制的替代语法，条件语句逻辑运算符也应该使用大写的单词（AND，OR，等），而不是使用符号（$，|，等）</p>
+###命名约定
 
-<p>示例:</p>
+************************************************************************
 
-<pre><code>if ((condition1) OR (condition2)) :
-    action1();
-elseif ((condition3) AND (condition4)) :
-    action2();
-else :
-    defaultAction();
-    anotherAction();
-endif;
+类
 
-foreach ($array as $element) :
-    echo $element;
-endforeach;
-</code></pre>
+类要以描述性的名称命名
 
-<p>switch语句</p>
+类名使用完整单词不要使用缩写
 
-<p>示例:</p>
+类名首字母大写
 
-<pre><code>switch (condition) {
-    case 1:
-        doAction1();
-        break;
+类名使用CamelCase拼写法
 
-    case 2:
-        doAction2();
-        break;
+类名可以使用全部大写的特殊名词（eg HTML,XML）
 
-    default:
-        doDefaultAction();
-        break;
-}
-</code></pre>
+框架类，都是以大写的H开头（eg HApplication，HModel）
 
-<p>使用缩进代替case语句的花括号来增加代码的可读性</p>
+函数和方法
 
-<p>case语句中条件和冒号之间不能有空格</p>
+函数和方法使用 "studly caps" 样式命名
 
-<h3>函数调用</h3>
+名字的首字母应该是小写，每一个新单词应该以大写字母开头
 
-<hr />
+示例:
 
-<p>函数名和圆括号之间不能有空格</p>
+    connect();
+    getData();
+    buildSomeWidget();
 
-<p>圆括号和第一个参数以及最后一个参数之间不能有空格</p>
+类的私有成员以_开头，单词间以_连接，全部小写
 
-<p>参数和逗号之间不能有空格（多个参数的情况下）</p>
+示例:
 
-<p>每个参数的逗号后要有一个空格（多个参数的情况下）</p>
-
-<p>示例:</p>
-
-<pre><code>$var = foo($bar, $baz, $quux);
-</code></pre>
-
-<h3>函数声明</h3>
-
-<hr />
-
-<p>函数或类的声明遵循“one true brace”原则（开始的花括号单独占一行，而不是跟在其他语句后面）</p>
-
-<p>示例:</p>
-
-<pre><code>function fooFunction($arg1, $arg2 = '')
-{
-    if (condition) {
-        statement;
-    }
-    return $val;
-}
-
-class fooClass
-{
-    function fooMethod($arg1)
+    class HFooBar
     {
-        if ($arg) {
-            $result = true;
-        } else {
-            $result = false;
+        private $_status = null;
+
+        protected $field_name = null;
+
+        protected function _sort()
+        {
         }
-        return $result;
-    }
-}
-</code></pre>
-
-<p>有默认值的参数要放在参数列表的最后</p>
-
-<p>当函数有返回值时，必须保证函数返回一个有意义的值</p>
-
-<p>示例:</p>
-
-<pre><code>function connect(&amp;$dsn, $persistent = false)
-{
-    if (is_array($dsn)) {
-        $dsninfo = &amp;$dsn;
-    } else {
-        $dsninfo = DB::parseDSN($dsn);
     }
 
-    if (!$dsninfo OR !$dsninfo['phptype']) {
-        return $this-&gt;raiseError();
-    }
+常量
 
-    return true;
-}
-</code></pre>
+全部大写，单词间以_连接，使用所在的类或包做为前缀 例如HError类中的常量都以"HERROR_"做为前缀
 
-<h3>注释</h3>
-
-<hr />
-
-<p>类，属性和方法，函数，常量都应该提供适当的DocBlocks。</p>
-
-<p>所有的包名使用小写字母表示用"."连接</p>
-
-<p>类</p>
-
-<p>示例:</p>
-
-<pre><code>/**
- * 类的简短描述
- *
- * 类的详细描述(可选)
- *
- * @package         packagename
- * @subpackage      subpackagename
- * @author          &lt;作者&gt;
- * @since           &lt;起始版本&gt;
- * @deprecated      --不被推荐的过期的(可选)
- */
-</code></pre>
-
-<p>属性</p>
-
-<p>示例:</p>
-
-<pre><code>/**
- * 简短描述
- *
- * @var 类型
- */
-</code></pre>
-
-<p>函数和方法</p>
-
-<p>示例:</p>
-
-<pre><code>/**
- * 简短描述
- *
- * @since   &lt;起始版本&gt;
- * @param   &lt;类型&gt;  &lt;变量名&gt; &lt;描述&gt;  --参数
- * @return  &lt;类型&gt;  &lt;描述&gt;  --返回值
- */
-</code></pre>
-
-<p>保证适当的非文档注释量（原则:当你看到一段代码，然后想:“Wow, I don't want to try and describe that”，那么你就应该在你忘记程序的工作流程之前为这段代码添加非文档注释） 内联的类文件的注释应遵循PHPDoc惯例，详见http://www.phpdoc.org/</p>
-
-<h3>PHP标签</h3>
-
-<hr />
-
-<p>使用<?php ?>不要使用<? ?></p>
-
-<p>当文件中只包含php代码时不要使用结束标记?></p>
-
-<h3>SQL语句</h3>
-
-<hr />
-
-<p>关键词必须大写，其他字符必须小写</p>
-
-<p>SQL语句中不能包含回车符</p>
-
-<p>使用缩进来提高SQL语句可读性</p>
-
-<p>使用单引号提高执行效率</p>
-
-<p>所有整型和浮点型变量都要进行强制类型转换</p>
-
-<p>所有字符变量使用Quote()方法</p>
-
-<p>所有表明使用#_前缀</p>
-
-<p>示例:</p>
-
-<pre><code>$state = 1;
-$name  = 'bill';
-$query = 'SELECT COUNT( c.id ) AS num_articles, u.id, u.username'.
-    ' FROM #__content AS c'.
-    ' LEFT JOIN #__users AS u ON u.id = c.created_by'.
-    ' WHERE c.state = '.(int) $state
-    '  AND u.id IS NOT NULL'.
-    '  AND u.username &lt;&gt; '.$db-&gt;Quote( $name ).
-    ' GROUP BY u.id'.
-    '  HAVING COUNT( c.id ) &gt; 0';
-</code></pre>
-
-<h3>命名约定</h3>
-
-<hr />
-
-<p>类</p>
-
-<p>类要以描述性的名称命名</p>
-
-<p>类名使用完整单词不要使用缩写</p>
-
-<p>类名首字母大写</p>
-
-<p>类名使用CamelCase拼写法</p>
-
-<p>类名可以使用全部大写的特殊名词（eg HTML,XML）</p>
-
-<p>框架类，都是以大写的H开头（eg HApplication，HModel）</p>
-
-<p>函数和方法</p>
-
-<p>函数和方法使用 "studly caps" 样式命名</p>
-
-<p>名字的首字母应该是小写，每一个新单词应该以大写字母开头</p>
-
-<p>示例:</p>
-
-<pre><code>connect();
-getData();
-buildSomeWidget();
-</code></pre>
-
-<p>类的私有成员以<em>开头，单词间以</em>连接，全部小写</p>
-
-<p>示例:</p>
-
-<pre><code>class HFooBar
-{
-    private $_status = null;
-
-    protected $field_name = null;
-
-    protected function _sort()
-    {
-    }
-}
-</code></pre>
-
-<p>常量</p>
-
-<p>全部大写，单词间以<em>连接，使用所在的类或包做为前缀 例如HError类中的常量都以"HERROR</em>"做为前缀</p>
-
-<p>全局变量 以下划线开头，连接类名或包名，再连接下划线和变量名（eg $<em>HERROR</em>LEVELS）</p>
-
+全局变量 以下划线开头，连接类名或包名，再连接下划线和变量名（eg $_HERROR_LEVELS）
+</p>
+            <!-- /.markdown-output -->
         </div>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6899248995924234"
+            crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+            data-ad-client="ca-pub-6899248995924234" data-ad-slot="6246636856"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
 
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -411,13 +229,14 @@ buildSomeWidget();
             var disqus_shortname = 'dvpr';
 
             /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
+            (function () {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+                rel="nofollow">comments powered by Disqus.</a></noscript>
 
         <hr>
         <footer>
@@ -432,4 +251,5 @@ buildSomeWidget();
     <script src="//cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
