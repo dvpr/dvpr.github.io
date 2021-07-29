@@ -1,7 +1,8 @@
 ## Developer
 
-### [Emacs](./Emacs.html)
-
 ### [Links](./Links.html)
 
+### [Emacs](./Emacs.html)
+
 ### [Vim](./Vim.html)
+
