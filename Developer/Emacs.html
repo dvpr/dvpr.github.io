@@ -93,80 +93,36 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h2>Emacs &gt; "emacs是一个伪装成编辑器的操作系统" &gt; 所有的操作都是指令,都是去执行LISP函数,增加各种插件就是增加LISP的函数来调用.</h2><h3>一些默认快捷键</h3><pre><code>C-代表按住Ctrl键
+            <h2>Emacs</h2><blockquote><p>"emacs是一个伪装成编辑器的操作系统"</p></blockquote><blockquote><p>所有的操作都是指令,都是去执行LISP函数,增加各种插件就是增加LISP的函数来调用.</p></blockquote><h3>一些默认快捷键</h3><pre><code>C-代表按住Ctrl键
 M-代表按住Alt键，也可以用按一下ESC放开代替
-```
-
-#####最先要记住的
-
-```
-M-x &lt;cmd&gt;      输入指令执行，在输入时用Tab可以自动补全或列出项目
+</code></pre><p>#####最先要记住的</p><pre><code>M-x &lt;cmd&gt;      输入指令执行，在输入时用Tab可以自动补全或列出项目
 C-g            取消当前操作指令
 C-h k &lt;key&gt;    查看当前按键绑定的指令及介绍
-```
-
-#####移动插入点（光标）
-
-```
-C-n/p/b/f      到 下一行、上一行、前一字符、后一字符
+</code></pre><p>#####移动插入点（光标）</p><pre><code>C-n/p/b/f      到 下一行、上一行、前一字符、后一字符
 M-b/f          到 前、后一单词
 C-a/e          到 行首、末
 M-a/e          到 句首、末
 M-&lt;/&gt;          到 文件首、末
 C-v/M-v        下、上翻屏
 C-l            循环 将当前光标行显示在窗口下、中、上位置
-```
-
-```
-C-u &lt;num&gt; &lt;xx&gt; 重复执行之后的 xx 命令 num 次，不输入num默认为4
+</code></pre><pre><code>C-u &lt;num&gt; &lt;xx&gt; 重复执行之后的 xx 命令 num 次，不输入num默认为4
 C-u C-v        向下滚动4行
-```
-
-#####编辑
-
-```
-Back/C-d       删除 前、后字符
+</code></pre><p>#####编辑</p><pre><code>Back/C-d       删除 前、后字符
 M-Back/M-d     移除 前、后单词
 C-k/M-k        移除到 行末、句末
-```
-
-```
-C-/            undo/redo
+</code></pre><pre><code>C-/            undo/redo
 C-x u          undo/redo
-```
-
-```
-C-w            剪切
+</code></pre><pre><code>C-w            剪切
 C-y            召回（粘贴）（粘贴移除的、复制、剪切的内容）
 C-c            复制（emacs一般也默认定制了与OS的剪切复制粘贴相同的快捷键）
-```
-
-#####查找
-
-```
-C-s
+</code></pre><p>#####查找</p><pre><code>C-s
   C-s          查找下一个
   C-r          查找上一下
   C-g          一次返回，二次结束查找
   回车         停止到当前查找到的内容
-```
-
-#####替换
-
-```
-M-%
-```
-
-#####标记
-
-```
-M-@
-```
-
-#####文件操作
-
-```
-C-x C-c        退出emacs
+</code></pre><p>#####替换</p><pre><code>M-%
+</code></pre><p>#####标记</p><pre><code>M-@
+</code></pre><p>#####文件操作</p><pre><code>C-x C-c        退出emacs
 
 C-x C-f        打开文件
 C-x C-s        保存文件
@@ -181,7 +137,6 @@ C-x b          提示输入缓冲区名称，切换当前窗口的缓冲区
 C-x k          删除当前缓冲区
 
 C-j            换行回车，有些模式下比较直接回车好用，有增加缩进之类的功能
-```
 </code></pre>
             <!-- /.markdown-output -->
         </div>

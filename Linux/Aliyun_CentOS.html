@@ -94,63 +94,7 @@
         <div class="markdown-output">
             <!-- /markdown-output -->
             <p>##Aliyun CentOS</p><p>###添加yum源</p><pre><code>rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
-```
-
-###服务器部署记录
-
-- 查看信息
-    ```
-    cat /etc/redhat-release，查看版本
-    uname -a – 显示版本和内核信息
-    rpm -q kernel – 显示内核版本
-    yum -y update – 升级所有应用版本，更新CentOS到最新镜像版本
-    ```
-
-- 安装基础软件
-    ```
-    yum install mysql mysql-server                          //安装Mysql
-    chkconfig --levels 235 mysqld on                        //Mysql开机启动
-    /etc/init.d/mysqld start                                //运行mysql
-    mysql_secure_installation-----------------不好使         //Mysql安装向导
-    mysqladmin -u root password xx                          //设置mysql密码
-    yum install httpd                                       //安装Apache
-    chkconfig --levels 235 httpd on                         //Apache开机启动
-    /etc/init.d/httpd start                                 //启动Apache
-    访问域名
-    apache preloadpage---------------干啥用啊
-    yum install php/php53                                   //安装php
-    /etc/init.d/httpd restart                               //重启Apache
-    yum search php                                          //搜索php相关模块
-    yum install php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc  //安装php模块
-    /etc/init.d/httpd restart                               //重启Apache
-    ```
-
-- [VSFTP](http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users) 安装ftp
-    ```
-    yum install vsftpd db4-utils
-    ```
-    [vsftpd_virtual_config_withTLS](http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users?action=AttachFile&amp;do=get&amp;target=vsftpd_virtual_config_withTLS.sh) 下载配置脚本
-    ```
-    chkconfig --levels 235 vsftpd on
-    iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 21 -j ACCEPT
-    iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 64000:65535 -j ACCEPT
-    vim /etc/vsftpd/vsftpd.conf  //修改主机ip
-    /etc/init.d/vsftpd restart   //重启vsftp
-    ```
-
-- 配置FTP
-
-    修改ftp路径
-    ```
-    /etc/vsftpd/users //编辑相应用户文件
-    ```
-
-###配置apache、mysql、php
-
-- apache 配置
-
-    ```
-    #vi /etc/httpd/conf/httpd.conf
+</code></pre><p>###服务器部署记录</p><ul><li>查看信息 <code></code>` cat /etc/redhat-release，查看版本 uname -a – 显示版本和内核信息 rpm -q kernel – 显示内核版本 yum -y update – 升级所有应用版本，更新CentOS到最新镜像版本 <code></code>`</li></ul><ul><li>安装基础软件 <code></code>` yum install mysql mysql-server //安装Mysql chkconfig --levels 235 mysqld on //Mysql开机启动 /etc/init.d/mysqld start //运行mysql mysql<em>secure</em>installation-----------------不好使 //Mysql安装向导 mysqladmin -u root password xx //设置mysql密码 yum install httpd //安装Apache chkconfig --levels 235 httpd on //Apache开机启动 /etc/init.d/httpd start //启动Apache 访问域名 apache preloadpage---------------干啥用啊 yum install php/php53 //安装php /etc/init.d/httpd restart //重启Apache yum search php //搜索php相关模块 yum install php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc //安装php模块 /etc/init.d/httpd restart //重启Apache <code></code>`</li></ul><ul><li><a href="http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users">VSFTP</a> 安装ftp <code></code>` yum install vsftpd db4-utils <code></code>` <a href="http://wiki.centos.org/HowTos/Chroot_Vsftpd_with_non-system_users?action=AttachFile&do=get&target=vsftpd_virtual_config_withTLS.sh">vsftpd<em>virtual</em>config_withTLS</a> 下载配置脚本 <code></code>` chkconfig --levels 235 vsftpd on iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 21 -j ACCEPT iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 64000:65535 -j ACCEPT vim /etc/vsftpd/vsftpd.conf //修改主机ip /etc/init.d/vsftpd restart //重启vsftp <code></code>`</li></ul><ul><li>配置FTP</li></ul><p>修改ftp路径 <code></code>` /etc/vsftpd/users //编辑相应用户文件 <code></code>`</p><p>###配置apache、mysql、php</p><ul><li>apache 配置</li></ul><pre><code>    #vi /etc/httpd/conf/httpd.conf
     ```
 
     ```

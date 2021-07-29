@@ -96,42 +96,12 @@
             <h2>Linux</h2><h3>IUS yum源</h3><h5>快捷安装</h5><pre><code>wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/ius-release-1-2.ius.el5.noarch.rpm
 wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/epel-release-1-1.ius.el5.noarch.rpm
 rpm -Uvh ius-release*.rpm epel-release*.rpm
-```
-
-##### yum包信息
-
-```
-https://dl.iuscommunity.org/pub/
-```
-
-### Linux 监控命令
-
-##### 查看apache连接数
-
-```
-watch -n 1 -d "pgrep httpd|wc -l"
-```
-
-##### 查看MySQL连接数
-
-```
-mysqladmin -uuser -p processlist
+</code></pre><h5>yum包信息</h5><pre><code>https://dl.iuscommunity.org/pub/
+</code></pre><h3>Linux 监控命令</h3><h5>查看apache连接数</h5><pre><code>watch -n 1 -d "pgrep httpd|wc -l"
+</code></pre><h5>查看MySQL连接数</h5><pre><code>mysqladmin -uuser -p processlist
 mysqladmin -uuser -p status
-```
-
-### Linux 命令备忘
-
-##### ubuntu解压zip文件乱码
-
-```
-unzip -O CP936 xxx.zip (用GBK, GB18030也可以)
-```
-
-##### du 显示隐藏目录
-
-```
-du -sch .[!.]* * | sort -h
-```
+</code></pre><h3>Linux 命令备忘</h3><h5>ubuntu解压zip文件乱码</h5><pre><code>unzip -O CP936 xxx.zip (用GBK, GB18030也可以)
+</code></pre><h5>du 显示隐藏目录</h5><pre><code>du -sch .[!.]* * | sort -h
 </code></pre>
             <!-- /.markdown-output -->
         </div>
