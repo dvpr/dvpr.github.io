@@ -27,7 +27,7 @@ UPDATE `table_name` SET `field_name` = REPLACE(`field_name`,'from_str','to_str')
 
 ### MySQL 权限备忘
 
-| Privilege | Grant Table Column | Context |
+| 权限 | 授权列名 | 作用范围 |
 | :----- | :----- | :----- |
 | ALL [PRIVILEGES] | Synonym for “all privileges” | Server administration |
 | ALTER | Alter_priv | Tables |
