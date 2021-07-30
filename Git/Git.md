@@ -1,6 +1,6 @@
 ## Git
 
-##### Git commit tags
+##### Conventional Commits
 
 ```
 feat：新功能（feature）
