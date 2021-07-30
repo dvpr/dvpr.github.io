@@ -44,3 +44,9 @@ unzip -O CP936 xxx.zip (用GBK, GB18030也可以)
 ```
 du -sch .[!.]* * | sort -h
 ```
+
+##### SSH Proxy
+
+```
+ssh -N -D1088 root@8.211.161.160
+```
