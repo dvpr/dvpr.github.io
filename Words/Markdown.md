@@ -237,12 +237,12 @@ are equivalent.
 ### Because link names may contain spaces, this shortcut even works for multiple words in the link text
 
 ```
-[AppleStar dvpr][]
-[AppleStar dvpr]: http://dvpr.me "dvpr.me"
+[dvpr][]
+[dvpr]: http://dvpr.me "dvpr.me"
 ```
 
-[AppleStar dvpr][]
-[AppleStar dvpr]: http://dvpr.me "dvpr.me"
+[dvpr][]
+[dvpr]: http://dvpr.me "dvpr.me"
 
 ## Emphasis
 
