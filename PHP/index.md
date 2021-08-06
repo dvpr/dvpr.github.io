@@ -1,16 +1,16 @@
 ## PHP
 
-### [Joomla_Template](./Joomla_Template.html)
+### [Coding_style_and_standards](./Coding_style_and_standards.html)
 
-### [Laravel](./Laravel.html)
-
-### [Discuz](./Discuz.html)
+### [WordPress_Template](./WordPress_Template.html)
 
 ### [Oracle](./Oracle.html)
 
 ### [Symfony](./Symfony.html)
 
-### [WordPress_Template](./WordPress_Template.html)
+### [Laravel](./Laravel.html)
 
-### [Coding_style_and_standards](./Coding_style_and_standards.html)
+### [Discuz](./Discuz.html)
+
+### [Joomla_Template](./Joomla_Template.html)
 
