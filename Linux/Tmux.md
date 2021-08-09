@@ -1,5 +1,5 @@
 ## Tmux
-## 终端多窗口神器
+> 终端多窗口神器
 
 ### 默认快捷键前缀
 ### Default prefix key
@@ -57,7 +57,7 @@ Ctrl + b <number>
 Ctrl + b z
 ```
 
-##### 进入复制模式
+##### 进入复制模式 - 游走于历史输出中
 ##### Enter copy mode
 ```
 Ctrl + b [
