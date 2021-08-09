@@ -95,7 +95,25 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h2>MySQL</h2><h3><a href="./MaxScale.html">MaxScale</a></h3><h3><a href="./MySQL.html">MySQL</a></h3>
+            <h2>MaxScale</h2><h5>Watch log</h5><pre><code>watch tail /path/to/log
+</code></pre><p>Demo:</p><pre><code>2021-08-09 10:34:58   info   : Pinging 'server2', idle for 301 seconds
+2021-08-09 10:34:58   info   : (2) Response to COM_CHANGE_USER is OK, writing stored query                                                   
+2021-08-09 10:35:23   info   : Pinging 'server1', idle for 301 seconds
+2021-08-09 10:35:23   info   : (2) Response to COM_CHANGE_USER is OK, writing stored query                                                   
+2021-08-09 10:35:46   info   : Server variables loaded from 'server2', next update in 600 seconds.                                           
+2021-08-09 10:38:23   info   : Server variables loaded from 'server1', next update in 600 seconds.
+2021-08-09 10:39:59   info   : Pinging 'server2', idle for 301 seconds
+2021-08-09 10:39:59   info   : (2) Response to COM_CHANGE_USER is OK, writing stored query
+2021-08-09 10:40:24   info   : Pinging 'server1', idle for 301 seconds
+2021-08-09 10:40:24   info   : (2) Response to COM_CHANGE_USER is OK, writing stored query
+2021-08-09 10:47:30   info   : (2) [readwritesplit] (Read-Write-Service) Reply complete, last reply from server2
+2021-08-09 10:47:30   info   : (2) (Read-Write-Service) &gt; Autocommit: [enabled], trx is [not open], cmd: (0x04) COM_FIELD_LIST, plen: 34, type: QUERY_TYPE_READ, stmt:
+2021-08-09 10:47:30   info   : (2) [readwritesplit] (Read-Write-Service) Route query to slave: server2 &lt;
+2021-08-09 10:47:30   info   : (2) [readwritesplit] (Read-Write-Service) Reply complete, last reply from server2
+2021-08-09 10:47:30   info   : (2) (Read-Write-Service) &gt; Autocommit: [enabled], trx is [not open], cmd: (0x04) COM_FIELD_LIST, plen: 43, type: QUERY_TYPE_READ, stmt:
+2021-08-09 10:47:30   info   : (2) [readwritesplit] (Read-Write-Service) Route query to slave: server2 &lt;
+2021-08-09 10:47:30   info   : (2) [readwritesplit] (Read-Write-Service) Reply complete, last reply from server2
+</code></pre>
             <!-- /.markdown-output -->
         </div>
 
