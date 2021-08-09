@@ -7,6 +7,18 @@
 Ctrl + b
 ```
 
+##### 列出会话
+##### List sessions
+```
+tmux ls
+```
+
+##### 暂存并推出会话
+##### Detach tmux
+```
+Ctrl + b d
+```
+
 ##### Pane 进入全屏
 ##### Pane enter full screen
 ```
