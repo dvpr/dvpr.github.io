@@ -25,10 +25,42 @@ Ctrl + b d
 tmux attach -t <session-name>
 ```
 
+##### 拆分窗口
+##### Splitting the window
+```
+Ctrl + b % (横向拆分/splits the current pane into two horizontally)
+Ctrl + b " (纵向拆分/splits the current pane into two vertically)
+```
+
+##### Pane间切换
+##### The active pane changed between the panes in a window
+```
+Ctrl + b q (显示Pane编号/prints the pane numbers)
+Ctrl + b q <number> (切换到指定编号Pane/change to pane number)
+```
+
+##### 新建Window
+##### Create new window
+```
+Ctrl + b c
+```
+
+##### Window间切换
+##### The active window changed between the windows
+```
+Ctrl + b <number>
+```
+
 ##### Pane 进入全屏
 ##### Pane enter full screen
 ```
 Ctrl + b z
+```
+
+##### 进入复制模式
+##### Enter copy mode
+```
+Ctrl + b [
 ```
 
 ### Tmux 命令进入命令行模式
