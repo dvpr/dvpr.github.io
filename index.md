@@ -2,20 +2,28 @@
 
 ### I foucs on:
 
+### [Cloud](/Cloud)
+
 ### [Developer](/Developer)
 
-### [PHP](/PHP)
+### [Docker](/Docker)
 
-### [MySQL](/MySQL)
+### [Git](/Git)
+
+### [JavaScript](/JavaScript)
 
 ### [Linux](/Linux)
 
-### [Cloud](/Cloud)
-
 ### [MAC](/MAC)
 
-### [Windows](/Windows)
+### [MySQL](/MySQL)
+
+### [PHP](/PHP)
 
 ### [SEO](/SEO)
+
+### [Swift](/Swift)
+
+### [Windows](/Windows)
 
 ### [Words](/Words)
