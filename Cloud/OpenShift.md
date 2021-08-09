@@ -1,7 +1,7 @@
 ## OpenShift
 
-### After install
 ### 安装完应用后的文字
+### After install
 
 What about ~/data folder?
 
