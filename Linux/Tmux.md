@@ -13,10 +13,16 @@ Ctrl + b
 tmux ls
 ```
 
-##### 暂存并推出会话
+##### 暂存并退出会话
 ##### Detach tmux
 ```
 Ctrl + b d
+```
+
+##### 重新进入会话
+##### Attaches to an existing session
+```
+tmux attach -t <session-name>
 ```
 
 ##### Pane 进入全屏
