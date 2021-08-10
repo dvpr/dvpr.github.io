@@ -22,6 +22,8 @@
 
 ### [PHP](/PHP)
 
+### [Ruby](/Ruby)
+
 ### [SEO](/SEO)
 
 ### [Swift](/Swift)
