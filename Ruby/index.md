@@ -1,2 +1,4 @@
 ## Ruby
 
+### [Rails](./Rails.html)
+
