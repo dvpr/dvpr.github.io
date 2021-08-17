@@ -1,8 +1,10 @@
 ## Linux
 
 ### IUS yum源
+### IUS yum sources
 
 ##### 快捷安装
+##### Install
 
 ```
 wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/ius-release-1-2.ius.el5.noarch.rpm
@@ -11,6 +13,7 @@ rpm -Uvh ius-release*.rpm epel-release*.rpm
 ```
 
 ##### yum包信息
+##### IUS packages List
 
 ```
 https://dl.iuscommunity.org/pub/
@@ -18,13 +21,15 @@ https://dl.iuscommunity.org/pub/
 
 ### Linux 监控命令
 
-##### 查看apache连接数
+##### 查看Apache连接数
+##### List Apache connections
 
 ```
 watch -n 1 -d "pgrep httpd|wc -l"
 ```
 
 ##### 查看MySQL连接数
+##### List MySQL connections
 
 ```
 mysqladmin -uuser -p processlist
@@ -32,8 +37,10 @@ mysqladmin -uuser -p status
 ```
 
 ### Linux 命令备忘
+### Linux commands
 
 ##### ubuntu解压zip文件乱码
+##### unzip setting character encoding
 
 ```
 unzip -O CP936 xxx.zip (用GBK, GB18030也可以)
