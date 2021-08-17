@@ -40,13 +40,22 @@ unzip -O CP936 xxx.zip (用GBK, GB18030也可以)
 ```
 
 ##### du 显示隐藏目录
+##### du show hidden files
 
 ```
 du -sch .[!.]* * | sort -h
 ```
 
+##### SSH 代理转发
 ##### SSH Proxy
 
 ```
 ssh -N -D1088 root@8.211.161.160
+```
+
+##### 生成 SSH key
+##### Generate SSH key
+
+```
+ssh-keygen -t rsa -C "your_email_address"
 ```
