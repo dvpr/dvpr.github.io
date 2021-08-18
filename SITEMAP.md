@@ -136,8 +136,6 @@
 
 - [郭德纲](/Words/郭德纲.html)
 
-- [dvpr](/dvpr.html)
-
 - [index](/index.html)
 
 - [shortcut](/shortcut.html)
