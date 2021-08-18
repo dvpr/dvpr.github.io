@@ -98,7 +98,7 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h2>File</h2><h3>列出制定目录文件列表</h3><h5>List files in path</h5><pre><code>import Foundation
+            <h2>File</h2><blockquote><p>文件操作</p></blockquote><h3>列出制定目录文件列表</h3><h5>List files in path</h5><pre><code>import Foundation
 
 let manger = FileManager.default
 let url = URL(string: "/path/to/your/path")
@@ -111,7 +111,7 @@ while let element = enumerator?.nextObject() as? URL {
 </code></pre><h3>列出指定目录文件列表，是否包含子目录，按文件名排序</h3><h5>List files in path order include/exclude sub folders</h5><pre><code>import Foundation
 
 let manger = FileManager.default
-let url = URL(string: "/Users/dvpr/Developer/workspace/git/dvpr.github.io")
+let url = URL(string: "/path/to/your/path")
 
 // include sub folders
 let enumerator = manger.enumerator(at: url!, includingPropertiesForKeys: nil, options: .skipsHiddenFiles, errorHandler: nil)

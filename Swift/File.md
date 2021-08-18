@@ -1,4 +1,5 @@
 ## File
+> 文件操作
 
 ### 列出制定目录文件列表
 ##### List files in path
@@ -23,7 +24,7 @@ while let element = enumerator?.nextObject() as? URL {
 import Foundation
 
 let manger = FileManager.default
-let url = URL(string: "/Users/dvpr/Developer/workspace/git/dvpr.github.io")
+let url = URL(string: "/path/to/your/path")
 
 // include sub folders
 let enumerator = manger.enumerator(at: url!, includingPropertiesForKeys: nil, options: .skipsHiddenFiles, errorHandler: nil)
