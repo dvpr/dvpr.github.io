@@ -98,7 +98,7 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h2>File</h2><h5>List files in path</h5><pre><code>import Foundation
+            <h2>File</h2><h3>列出制定目录文件列表</h3><h5>List files in path</h5><pre><code>import Foundation
 
 let manger = FileManager.default
 let url = URL(string: "/path/to/your/path")
@@ -108,7 +108,37 @@ let enumerator = manger.enumerator(at: url!, includingPropertiesForKeys: nil, op
 while let element = enumerator?.nextObject() as? URL {
     print(element)
 }
-</code></pre><h5>Read content of file</h5><pre><code>import Foundation
+</code></pre><h3>列出指定目录文件列表，是否包含子目录，按文件名排序</h3><h5>List files in path order include/exclude sub folders</h5><pre><code>import Foundation
+
+let manger = FileManager.default
+let url = URL(string: "/Users/dvpr/Developer/workspace/git/dvpr.github.io")
+
+// include sub folders
+let enumerator = manger.enumerator(at: url!, includingPropertiesForKeys: nil, options: .skipsHiddenFiles, errorHandler: nil)
+
+// order by name
+var enumeratorArray: [URL] = []
+while let element = enumerator?.nextObject() as? URL { enumeratorArray.append(element) }
+let enumeratorSorted = enumeratorArray.sorted(by: {(s1, s2) in
+    return s1.path &lt; s2.path
+})
+
+for item in enumeratorSorted {
+    print(item)
+}
+
+// exclude sub folders
+let items: [URL] = try! manger.contentsOfDirectory(at: url!, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+
+// order by name
+let itemsSorted = items.sorted(by: {(s1, s2) in
+    return s1.path &lt; s2.path
+})
+
+for item in itemsSorted {
+    print(item)
+}
+</code></pre><h5>读取文件内容</h5><h5>Read content of file</h5><pre><code>import Foundation
 
 let manager = FileManager.default
 
