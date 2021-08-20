@@ -110,6 +110,8 @@
 
 - [File](/Swift/File.html)
 
+- [Perfect](/Swift/Perfect.html)
+
 - [Snippets](/Swift/Snippets.html)
 
 - [index](/Swift/index.html)
@@ -140,5 +142,5 @@
 
 - [shortcut](/shortcut.html)
 
-57Pages
+58Pages
 
