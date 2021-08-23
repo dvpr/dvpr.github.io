@@ -12,8 +12,17 @@ test：增加测试
 chore：构建过程或辅助工具的变动
 ```
 
+##### 储存登录信息
 ##### Store password
 
 ```
 git config credential.helper store
+```
+
+##### 删除本地Add文件或文件夹
+##### Delete local add file/folder
+
+```
+git rm --cached path_to_your_file
+git rm -f --cached path_to_your_folder
 ```
