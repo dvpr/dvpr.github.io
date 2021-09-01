@@ -22,3 +22,11 @@ rails g migration your_migration_name # for short
 rails g migration add_group_id_to_users
 rails g migration create_groups name:string level:integer # with fields
 ```
+
+##### Migration回滚
+##### Migration rollback
+```
+rake db:rollback # rollback step 1
+rake db:rollback STEP=n # rollback step n
+rake db:migrate:down VERSION=version_number # rollback to version_number
+```

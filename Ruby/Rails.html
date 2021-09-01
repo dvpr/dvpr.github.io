@@ -106,6 +106,9 @@ rails g migration your_migration_name # for short
 # example
 rails g migration add_group_id_to_users
 rails g migration create_groups name:string level:integer # with fields
+</code></pre><h5>Migration回滚</h5><h5>Migration rollback</h5><pre><code>rake db:rollback # rollback step 1
+rake db:rollback STEP=n # rollback step n
+rake db:migrate:down VERSION=version_number # rollback to version_number
 </code></pre>
             <!-- /.markdown-output -->
         </div>
