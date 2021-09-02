@@ -109,6 +109,7 @@ rails g migration create_groups name:string level:integer # with fields
 </code></pre><h5>Migration回滚</h5><h5>Migration rollback</h5><pre><code>rake db:rollback # rollback step 1
 rake db:rollback STEP=n # rollback step n
 rake db:migrate:down VERSION=version_number # rollback to version_number
+</code></pre><h5>创建或更新一条数据</h5><h5>Update or create a record in Active Record.</h5><pre><code>ModelName.find_or_initialize_by(feild1: feild1_of_find_by, feild2: feild2_of_find_by).update_attributes!(feild_need_update: feild_need_update_value)
 </code></pre>
             <!-- /.markdown-output -->
         </div>

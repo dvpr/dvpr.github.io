@@ -30,3 +30,9 @@ rake db:rollback # rollback step 1
 rake db:rollback STEP=n # rollback step n
 rake db:migrate:down VERSION=version_number # rollback to version_number
 ```
+
+##### 创建或更新一条数据
+##### Update or create a record in Active Record.
+```
+ModelName.find_or_initialize_by(feild1: feild1_of_find_by, feild2: feild2_of_find_by).update_attributes!(feild_need_update: feild_need_update_value)
+```
