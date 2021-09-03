@@ -1,6 +1,7 @@
 ## Windows
 
-### 清理系统图标缓存数据库脚本
+##### 清理系统图标缓存数据库脚本
+##### Clean icon cache
 
 ```
 rem 关闭Windows外壳程序explorer
@@ -35,8 +36,15 @@ start explorer
 
 [脚本下载](/assets/windows/clean_icon_cache.zip) ***解压后运行***
 
-### Thunderbird 配置文件
+##### Thunderbird 配置文件
+##### Thunderbird config on startup
 
 ```
 thunderbird.exe -profilemanager
+```
+
+##### 个人版Xshell申请地址
+##### Xshell Free for Non-Commercial Use Only
+```
+[https://www.netsarang.com/en/free-for-home-school](https://www.netsarang.com/en/free-for-home-schoo)
 ```
