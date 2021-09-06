@@ -8,7 +8,7 @@ rails g scaffold your_scaffold_name # for short
 ```
 
 ##### 删除scaffolding
-##### generate scaffolding
+##### destroy scaffolding
 ```
 rails destroy scaffold your_scaffold_name
 ```
