@@ -19,6 +19,13 @@ rpm -Uvh ius-release*.rpm epel-release*.rpm
 https://dl.iuscommunity.org/pub/
 ```
 
+##### DD 硬盘克隆
+##### DD command clone a disk
+
+```
+dd if=/dev/sda of=/root/output.img status=progress conv=notrunc,noerror bs=8M
+```
+
 ### Linux 监控命令
 
 ##### 查看Apache连接数
