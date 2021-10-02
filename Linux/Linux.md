@@ -19,6 +19,12 @@ rpm -Uvh ius-release*.rpm epel-release*.rpm
 https://dl.iuscommunity.org/pub/
 ```
 
+##### SSH Key 生成
+##### SSH Key generate
+```
+ssh-keygen -t rsa -b 1024 -C "dvpr@me.com"
+```
+
 ##### DD 硬盘克隆
 ##### DD command clone a disk
 
