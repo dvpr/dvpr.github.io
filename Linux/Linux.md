@@ -19,6 +19,13 @@ rpm -Uvh ius-release*.rpm epel-release*.rpm
 https://dl.iuscommunity.org/pub/
 ```
 
+##### Skip SSL 证书检查
+##### Skip certificate check
+```
+wget --no-check-certificate https://your-domain.com
+curl -k https://your-domain.com
+```
+
 ##### SSH Key 生成
 ##### SSH Key generate
 ```
