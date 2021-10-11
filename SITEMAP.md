@@ -98,6 +98,8 @@
 
 - [Rails](/Ruby/Rails.html)
 
+- [Ruby](/Ruby/Ruby.html)
+
 - [index](/Ruby/index.html)
 
 ### SEO
@@ -144,5 +146,5 @@
 
 - [shortcut](/shortcut.html)
 
-59Pages
+60Pages
 
