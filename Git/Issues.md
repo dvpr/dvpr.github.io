@@ -25,3 +25,11 @@ remote add all _remote_url_1_
 remote set-url --add all _remote_url_2_
 git push all --all
 ```
+
+------
+
+> Not possible to fast-forward
+
+```
+git pull origin your_branch_name --rebase
+```
