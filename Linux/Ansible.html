@@ -98,7 +98,18 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h2>Linux</h2><h3><a href="./Aliyun_CentOS.html">Aliyun_CentOS</a></h3><h3><a href="./Ansible.html">Ansible</a></h3><h3><a href="./Apache.html">Apache</a></h3><h3><a href="./Linux.html">Linux</a></h3><h3><a href="./Raspberry_Pi.html">Raspberry_Pi</a></h3><h3><a href="./SNMP.html">SNMP</a></h3><h3><a href="./Tmux.html">Tmux</a></h3><h3><a href="./cPanel.html">cPanel</a></h3>
+            <h2>Ansible</h2><blockquote><p>远程运维工具</p></blockquote><h3>Windows 客户机配置</h3><h3>Windows Guides</h3><h5>确认PowerShell(&gt;=3.0)和.Net(&gt;=4.0)版本</h5><h5>Ansible requires PowerShell 3.0 or newer and at least .NET 4.0 to be installed on the Windows host.</h5><pre><code class="language-powershell"># PowerShell
+$psversiontable
+</code></pre><h5>配置ansible脚本</h5><h5>The script for config Ansible</h5><pre><code class="language-powershell"># PowerShell
+cd c:\
+Invoke-WebRequest -Uri https://dvpr.me/assets/windows/ConfigureRemotingForAnsible.ps1 -OutFile ConfigureRemotingForAnsible.ps1
+set-ExecutionPolicy RemoteSigned 
+# set-ExecutionPolicy -ExecutionPolicy UNRESTRICTED # 可选
+.\ConfigureRemotingForAnsible.ps1 -SkipNetworkProfileCheck
+rm .\ConfigureRemotingForAnsible.ps1
+</code></pre><h5>打开5985端口</h5><h5>Open port 5985</h5><pre><code class="language-powershell"># PowerShell
+netsh advfirewall firewall add rule name="Win-RM-HTTP" dir=in localport=5985 protocol=TCP action=allow
+</code></pre>
             <!-- /.markdown-output -->
         </div>
 

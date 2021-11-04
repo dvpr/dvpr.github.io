@@ -44,6 +44,8 @@
 
 - [Aliyun_CentOS](/Linux/Aliyun_CentOS.html)
 
+- [Ansible](/Linux/Ansible.html)
+
 - [Apache](/Linux/Apache.html)
 
 - [Linux](/Linux/Linux.html)
@@ -148,5 +150,5 @@
 
 - [shortcut](/shortcut.html)
 
-61Pages
+62Pages
 

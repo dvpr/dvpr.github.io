@@ -2,6 +2,8 @@
 
 ### [Aliyun_CentOS](./Aliyun_CentOS.html)
 
+### [Ansible](./Ansible.html)
+
 ### [Apache](./Apache.html)
 
 ### [Linux](./Linux.html)
