@@ -98,9 +98,9 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h2>Ansible</h2><blockquote><p>远程运维工具</p></blockquote><h3>Windows 客户机配置</h3><h3>Windows Guides</h3><h5>确认PowerShell(&gt;=3.0)和.Net(&gt;=4.0)版本</h5><h5>Ansible requires PowerShell 3.0 or newer and at least .NET 4.0 to be installed on the Windows host.</h5><pre><code class="language-powershell"># PowerShell
+            <h2>Ansible</h2><blockquote><p>远程运维工具</p></blockquote><h3>Windows 客户机配置</h3><h3>Windows client configure</h3><h5>确认 PowerShell(&gt;=3.0) 和 .Net(&gt;=4.0) 版本</h5><h5>Ansible requires PowerShell 3.0 or newer and at least .NET 4.0 to be installed on the Windows host.</h5><pre><code class="language-powershell"># PowerShell
 $psversiontable
-</code></pre><h5>配置ansible脚本</h5><h5>The script for config Ansible</h5><pre><code class="language-powershell"># PowerShell
+</code></pre><h5>Ansible 配置脚本</h5><h5>The script for configure Ansible</h5><pre><code class="language-powershell"># PowerShell
 cd c:\
 Invoke-WebRequest -Uri https://dvpr.me/assets/windows/ConfigureRemotingForAnsible.ps1 -OutFile ConfigureRemotingForAnsible.ps1
 set-ExecutionPolicy RemoteSigned 

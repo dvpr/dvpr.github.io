@@ -4,9 +4,9 @@
 
 ### Windows 客户机配置
 
-### Windows Guides
+### Windows client configure
 
-##### 确认PowerShell(>=3.0)和.Net(>=4.0)版本
+##### 确认 PowerShell(>=3.0) 和 .Net(>=4.0) 版本
 
 ##### Ansible requires PowerShell 3.0 or newer and at least .NET 4.0 to be installed on the Windows host.
 
@@ -15,9 +15,9 @@
 $psversiontable
 ```
 
-##### 配置ansible脚本
+##### Ansible 配置脚本
 
-##### The script for config Ansible
+##### The script for configure Ansible
 
 ```powershell
 # PowerShell
