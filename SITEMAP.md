@@ -36,8 +36,6 @@
 
 - [JavaScript](/JavaScript/JavaScript.html)
 
-- [Light_Gallery](/JavaScript/Light_Gallery.html)
-
 - [index](/JavaScript/index.html)
 
 ### Linux
@@ -150,5 +148,5 @@
 
 - [shortcut](/shortcut.html)
 
-62Pages
+61Pages
 
