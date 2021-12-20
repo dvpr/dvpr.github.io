@@ -25,6 +25,39 @@ grant all privileges on database_name.* to 'user_name'@'host' identified by 'use
 UPDATE `table_name` SET `field_name` = REPLACE(`field_name`,'from_str','to_str');
 ```
 
+### Update CHARACTER every table in database
+### 更新数据库中每个表的CHARACTER
+
+```
+#!/bin/bash
+
+charset='utf8'
+
+MYSQL_HOST=your_mysql_host
+MYSQL_DB=your_database_name
+MYSQL_USER=your_database_user
+MYSQL_PASS=your_database_password
+
+echo "Changing charset of database: $MYSQL_DB"
+mysql -h$MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASS $MYSQL_DB -s -e "ALTER DATABASE $MYSQL_DB CHARACTER SET = $charset;"
+
+TABLES=$(echo SHOW TABLES | mysql -h$MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASS $MYSQL_DB)
+
+for table in $TABLES
+do
+  echo ''
+  echo "Changing charset of table: $table"
+  echo mysql -h$MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASS $MYSQL_DB -s -e "ALTER TABLE \`$table\` CHARACTER SET $charset"
+  mysql -h$MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASS $MYSQL_DB -s -e "ALTER TABLE \`$table\` CHARACTER SET $charset"
+
+  echo "Converting charset of table: $table"
+  mysql -h$MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASS $MYSQL_DB -s -e "ALTER TABLE $table CONVERT TO CHARACTER SET $charset"
+done
+
+echo ''
+echo 'Conversion done!'
+```
+
 ### MySQL 权限备忘
 
 | 权限 | 授权列名 | 作用范围 |
