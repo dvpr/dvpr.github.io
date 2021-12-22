@@ -101,6 +101,38 @@
             <h2>Docker</h2><h5>Docker清理空间</h5><h5>Clean</h5><pre><code>docker system prune -a
 </code></pre><h5>查看Docker空间占用</h5><h5>df</h5><pre><code>docker system df
 </code></pre><h5>Docker ps 查看完整信息</h5><h5>Docker ps display the full command along</h5><pre><code>docker ps --no-trunc
+</code></pre><h5>在树莓派中安装docker</h5><h5>How to install docker and docker-compose on Raspberry Pi</h5><pre><code># Update source
+sudo apt-get update &amp;&amp; sudo apt-get upgrade
+
+# Install docker by shell script
+curl -sSL https://get.docker.com | sh
+
+# Add user to docker group
+sudo usermod -aG docker [user_name]
+# Add current user to docker group
+sudo usermod -aG docker ${USER}
+# Check it
+groups ${USER}
+
+# Install docker-compose
+sudo apt-get install libffi-dev libssl-dev
+sudo apt install python3-dev
+sudo apt-get install -y python3 python3-pip
+sudo pip3 install docker-compose
+
+# Enable docker service on boot
+sudo systemctl enable docker
+
+# Run hello world
+docker run hello-world
+
+# Upgrade
+sudo apt-get upgrade
+
+# Uninstall
+sudo apt-get purge docker-ce
+sudo apt-get purge docker-ce-cli
+sudo rm -rf /var/lib/docker
 </code></pre>
             <!-- /.markdown-output -->
         </div>
