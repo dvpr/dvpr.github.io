@@ -26,3 +26,11 @@ git config credential.helper store
 git rm --cached path_to_your_file
 git rm -f --cached path_to_your_folder
 ```
+
+##### 彻底清理Git库中某个文件
+##### Clean file and history
+##### this exceeds GitHub's file size limit of 100 MB
+
+```
+git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch path_to_your_file'
+```

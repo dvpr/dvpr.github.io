@@ -108,6 +108,7 @@ chore：构建过程或辅助工具的变动
 </code></pre><h5>储存登录信息</h5><h5>Store password</h5><pre><code>git config credential.helper store
 </code></pre><h5>删除本地Add文件或文件夹</h5><h5>Delete local add file/folder</h5><pre><code>git rm --cached path_to_your_file
 git rm -f --cached path_to_your_folder
+</code></pre><h5>彻底清理Git库中某个文件</h5><h5>Clean file and history</h5><h5>this exceeds GitHub's file size limit of 100 MB</h5><pre><code>git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch path_to_your_file'
 </code></pre>
             <!-- /.markdown-output -->
         </div>
