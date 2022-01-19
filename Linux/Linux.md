@@ -80,8 +80,8 @@ du -sch .[!.]* * | sort -h
 ssh -N -D1088 root@8.211.161.160
 ```
 
-##### 生成 SSH key
-##### Generate SSH key
+### 生成 SSH key
+### Generate SSH key
 
 ```
 ssh-keygen -t rsa -C "your_email_address"
