@@ -13,20 +13,21 @@ CREATE USER 'user_name'@'host' IDENTIFIED BY 'password';
 ```
 
 ### 修改权限
+### Update privilege
 
 ```
 grant all privileges on database_name.* to 'user_name'@'host' identified by 'user_password';
 ```
 
-
+### 字符串替换
 ### MySQL REPLACE
 
 ```
 UPDATE `table_name` SET `field_name` = REPLACE(`field_name`,'from_str','to_str');
 ```
 
-### Update CHARACTER every table in database
 ### 更新数据库中每个表的CHARACTER
+### Update CHARACTER every table in database
 
 ```
 #!/bin/bash
@@ -59,6 +60,7 @@ echo 'Conversion done!'
 ```
 
 ### MySQL 权限备忘
+### MySQL privileges
 
 | 权限 | 授权列名 | 作用范围 |
 | :----- | :----- | :----- |
