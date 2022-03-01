@@ -28,6 +28,16 @@ grant all privileges on database_name.* to 'user_name'@'host' identified by 'use
 UPDATE `table_name` SET `field_name` = REPLACE(`field_name`,'from_str','to_str');
 ```
 
+### 忽略外键约束
+### Ignore FOREIGN KEY
+```
+SET FOREIGN_KEY_CHECKS = 0;
+
+TRUNCATE your_table_name;
+
+SET FOREIGN_KEY_CHECKS = 1;
+```
+
 ### 更新数据库中每个表的CHARACTER
 ### Update CHARACTER every table in database
 
