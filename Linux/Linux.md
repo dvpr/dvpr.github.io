@@ -19,6 +19,27 @@ rpm -Uvh ius-release*.rpm epel-release*.rpm
 https://dl.iuscommunity.org/pub/
 ```
 
+##### 压缩
+##### File compress
+```
+tar
+解包/decompress tar xvf your_file_name.tar
+打包/compress tar cvf your_file_name.tar path_name
+
+gz
+解压/decompress gunzip your_file_name.gz
+解压/decompress gzip -d your_file_name.gz
+压缩/compress gzip your_file_name
+
+tar.gz
+解压/decompress tar zxvf your_file_name.tar.gz
+压缩/compress tar zcvf your_file_name.tar.gz path_name
+
+zip
+解压/decompress unzip your_file_name.zip
+压缩/compress zip your_file_name.zip path_name
+```
+
 ##### Skip SSL 证书检查
 ##### Skip certificate check
 ```
