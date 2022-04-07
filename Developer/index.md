@@ -1,5 +1,7 @@
 ## Developer
 
+### [Developer](./Developer.html)
+
 ### [Emacs](./Emacs.html)
 
 ### [Interview](./Interview.html)

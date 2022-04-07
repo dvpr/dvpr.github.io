@@ -6,6 +6,8 @@
 
 ### Developer
 
+- [Developer](/Developer/Developer.html)
+
 - [Emacs](/Developer/Emacs.html)
 
 - [Interview](/Developer/Interview.html)
@@ -148,5 +150,5 @@
 
 - [shortcut](/shortcut.html)
 
-61Pages
+62Pages
 
