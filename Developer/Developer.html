@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dvpr</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcdn.net/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
+    <style type="text/css">
+        body {
+            padding-top: 70px;
+        }
+
+        /*
+         * markdown-output
+         */
+
+        .markdown-output h1,
+        .markdown-output h2 {
+            padding: 0px 0px 10px;
+            border-bottom: 1px solid #EEE;
+        }
+
+        .markdown-output hr {
+            background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC") repeat-x 0 0;
+            border: 0 none;
+            color: #CCC;
+            height: 4px;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .markdown-output pre {
+            background: #272B33;
+            color: #ABB2C0;
+        }
+    </style>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eee701d069f86af639828e3b497ec4d6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6899248995924234" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://dvpr.me">Developer!</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="navbar" class="collapse navbar-collapse">
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/Cloud">Cloud</a></li>
+                    <li><a href="/Developer">Developer</a></li>
+                    <li><a href="/Docker">Docker</a></li>
+                    <li><a href="/Git">Git</a></li>
+                    <li><a href="/JavaScript">JavaScript</a></li>
+                    <li><a href="/Linux">Linux</a></li>
+                    <li><a href="/MAC">MAC</a></li>
+                    <li><a href="/MySQL">MySQL</a></li>
+                    <li><a href="/PHP">PHP</a></li>
+                    <li><a href="/Ruby">Ruby</a></li>
+                    <li><a href="/SEO">SEO</a></li>
+                    <li><a href="/Swift">Swift</a></li>
+                    <li><a href="/Windows">Windows</a></li>
+                    <li><a href="/Words">Words</a></li>
+                    <li><a href="/SITEMAP.html">Sitemap</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+        <div class="markdown-output">
+            <!-- /markdown-output -->
+            <h1>Developer</h1><h2>作弊小抄</h2><h2>Cheat sheet</h2><h5>到底有多少个IP</h5><h5>How many IPs</h5><h6>公式</h6><h6>Formula</h6><pre><code>IPv4: 2^(64-x)-3
+IPv6：2^(128-x)-3
+</code></pre><h6>结果</h6><h6>Result</h6><pre><code>IPv4:
+
+/32(1)
+/31(2)
+/30(4)
+/29(8)
+/28(16)
+/27(32)
+/26(64)
+/25(128)
+/24(256)
+/23(512)
+/22(1024)
+/21(2048)
+/20(4096)
+/19(8192)
+/18(16384)
+/17(32768)
+/16(65536)
+/15(131072)
+/14(262144)
+/13(524288)
+/12(1048576)
+/11(2097152)
+/10(4194304)
+/9(8388608)
+/8(16777216)
+
+
+IPv6:
+
+::/128(1)
+::/127(2)
+::/126(4)
+::/125(8)
+::/124(16)
+::/123(32)
+::/122(64)
+::/121(128)
+::/120(256)
+::/119(512)
+::/118(1024)
+::/117(2048)
+::/116(4096)
+::/115(8192)
+::/114(16384)
+::/113(32768)
+::/112(65536)
+::/111(131072)
+::/110(262144)
+::/109(524288)
+::/108(1048576)
+::/107(2097152)
+::/106(4194304)
+::/105(8388608)
+::/104(16777216)
+::/103(33554432)
+::/102(67108864)
+::/101(134217728)
+::/100(268435456)
+::/99(536870912)
+::/98(1073741824)
+::/97(2147483648)
+::/96(4294967296)
+::/95(8589934592)
+::/94(17179869184)
+::/93(34359738368)
+::/92(68719476736)
+::/91(137438953472)
+::/90(274877906944)
+::/89(549755813888)
+::/88(1099511627776)
+::/87(2199023255552)
+::/86(4398046511104)
+::/85(8796093022208)
+::/84(17592186044416)
+::/83(35184372088832)
+::/82(70368744177664)
+::/81(140737488355328)
+::/80(281474976710656)
+::/79(562949953421312)
+::/78(1125899906842624)
+::/77(2251799813685248)
+::/76(4503599627370496)
+::/75(9007199254740992)
+::/74(18014398509481984)
+::/73(36028797018963968)
+::/72(72057594037927936)
+::/71(144115188075855872)
+::/70(288230376151711744)
+::/69(576460752303423488)
+::/68(1152921504606846976)
+::/67(2305843009213693952)
+::/66(4611686018427387904)
+::/65(9.2233720368548E+18)
+::/64(1.844674407371E+19)
+::/63(3.6893488147419E+19)
+::/62(7.3786976294838E+19)
+::/61(1.4757395258968E+20)
+::/60(2.9514790517935E+20)
+::/59(5.9029581035871E+20)
+::/58(1.1805916207174E+21)
+::/57(2.3611832414348E+21)
+::/56(4.7223664828696E+21)
+::/55(9.4447329657393E+21)
+::/54(1.8889465931479E+22)
+::/53(3.7778931862957E+22)
+::/52(7.5557863725914E+22)
+::/51(1.5111572745183E+23)
+::/50(3.0223145490366E+23)
+::/49(6.0446290980731E+23)
+::/48(1.2089258196146E+24)
+::/47(2.4178516392293E+24)
+::/46(4.8357032784585E+24)
+::/45(9.671406556917E+24)
+::/44(1.9342813113834E+25)
+::/43(3.8685626227668E+25)
+::/42(7.7371252455336E+25)
+::/41(1.5474250491067E+26)
+::/40(3.0948500982135E+26)
+::/39(6.1897001964269E+26)
+::/38(1.2379400392854E+27)
+::/37(2.4758800785708E+27)
+::/36(4.9517601571415E+27)
+::/35(9.903520314283E+27)
+::/34(1.9807040628566E+28)
+::/33(3.9614081257132E+28)
+::/32(7.9228162514264E+28)
+::/31(1.5845632502853E+29)
+::/30(3.1691265005706E+29)
+::/29(6.3382530011411E+29)
+::/28(1.2676506002282E+30)
+::/27(2.5353012004565E+30)
+::/26(5.0706024009129E+30)
+::/25(1.0141204801826E+31)
+::/24(2.0282409603652E+31)
+::/23(4.0564819207303E+31)
+::/22(8.1129638414607E+31)
+::/21(1.6225927682921E+32)
+::/20(3.2451855365843E+32)
+</code></pre>
+            <!-- /.markdown-output -->
+        </div>
+
+        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+            data-ad-client="ca-pub-6899248995924234" data-ad-slot="6246636856"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'dvpr';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+                rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        <hr>
+        <footer>
+            <p>&copy; dvpr.me</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
