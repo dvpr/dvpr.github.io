@@ -1,18 +1,22 @@
 # Developer
+<br />
 
-## 作弊小抄
-## Cheat sheet
+### 作弊小抄
+### Cheat sheet
+<br />
 
 ##### 到底有多少个IP
 ##### How many IPs
+<br />
 
 ###### 公式
 ###### Formula
-
 ```
 IPv4: 2^(64-x)-3
 IPv6：2^(128-x)-3
 ```
+
+<br />
 
 ###### 结果
 ###### Result
