@@ -4,6 +4,7 @@
 
 ##### Docker清理空间
 ##### Clean
+
 ```
 docker system prune -a
 ```
@@ -12,6 +13,7 @@ docker system prune -a
 
 ##### 查看Docker空间占用
 ##### df
+
 ```
 docker system df
 ```
@@ -20,6 +22,7 @@ docker system df
 
 ##### Docker ps 查看完整信息
 ##### Docker ps display the full command along
+
 ```
 docker ps --no-trunc
 ```
@@ -34,6 +37,7 @@ docker ps --no-trunc
 
 ##### 在树莓派中安装docker
 ##### How to install docker and docker-compose on Raspberry Pi
+
 ```
 # Update source
 sudo apt-get update && sudo apt-get upgrade

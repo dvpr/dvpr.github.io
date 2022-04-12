@@ -118,6 +118,18 @@ sudo apt install raspberrypi-ui-mods -y // install default Desktop Environment
 sudo apt install lightdm -y // restart on boot
 sudo reboot
 ```
+
+<br><br>
+
+##### 桌面环境开机启动软件
+##### Run software on boot on Desktop
+```
+sudo vi /etc/xdg/autostart/your_script_name.desktop
+
+[Desktop Entry]
+Name=Play a video
+Exec=mpv --fs your_video_path
+```
             <!-- /.markdown-output -->
         </div>
 
