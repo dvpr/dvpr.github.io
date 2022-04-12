@@ -98,9 +98,26 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h2>Raspberry Pi</h2><blockquote><p>树莓派</p></blockquote><h5>国内镜像站</h5><pre><code>[TUNA 镜像站（北京）](https://mirrors.tuna.tsinghua.edu.cn/raspberry-pi-os-images/&gt;)
-[SJTUG 镜像站（上海）](https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/&gt;)
-</code></pre>
+            <h2>树莓派</h2><blockquote><p>Raspberry Pi</p></blockquote><br><br>
+
+##### 国内镜像站
+
+```
+[TUNA 镜像站（北京）](https://mirrors.tuna.tsinghua.edu.cn/raspberry-pi-os-images)
+[SJTUG 镜像站（上海）](https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images)
+```
+
+<br><br>
+
+##### 安装桌面环境
+##### Install Desktop for Lit OS
+
+```
+sudo apt install xserver-xorg -y //install Xorg
+sudo apt install raspberrypi-ui-mods -y // install default Desktop Environment
+sudo apt install lightdm -y // restart on boot
+sudo reboot
+```
             <!-- /.markdown-output -->
         </div>
 

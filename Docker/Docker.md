@@ -1,25 +1,36 @@
 ## Docker
 
+<br><br>
+
 ##### Docker清理空间
 ##### Clean
-
 ```
 docker system prune -a
 ```
 
+<br><br>
+
 ##### 查看Docker空间占用
 ##### df
-
 ```
 docker system df
 ```
 
+<br><br>
+
 ##### Docker ps 查看完整信息
 ##### Docker ps display the full command along
-
 ```
 docker ps --no-trunc
 ```
+
+<br><br>
+
+##### 使用非root用户运行docker
+##### Run the Docker daemon as a non-root user (Rootless mode)
+> [链接](https://docs.docker.com/engine/security/rootless)
+
+<br><br>
 
 ##### 在树莓派中安装docker
 ##### How to install docker and docker-compose on Raspberry Pi
