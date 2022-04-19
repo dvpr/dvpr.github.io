@@ -102,6 +102,9 @@
 wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/epel-release-1-1.ius.el5.noarch.rpm
 rpm -Uvh ius-release*.rpm epel-release*.rpm
 </code></pre><h5>yum包信息</h5><h5>IUS packages List</h5><pre><code>https://dl.iuscommunity.org/pub/
+</code></pre><h5>打开/关闭显示器</h5><h5>Open/Close display</h5><pre><code>xset -display :0 dpms force on
+xset -display :0 dpms force off
+</code></pre><h5>Xdotool</h5><pre><code>export DISPLAY=:0; xdotool key Return
 </code></pre><h5>压缩</h5><h5>File compress</h5><pre><code>tar
 解包/decompress tar xvf your_file_name.tar
 打包/compress tar cvf your_file_name.tar path_name

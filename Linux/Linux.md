@@ -5,7 +5,6 @@
 
 ##### 快捷安装
 ##### Install
-
 ```
 wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/ius-release-1-2.ius.el5.noarch.rpm
 wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/epel-release-1-1.ius.el5.noarch.rpm
@@ -17,6 +16,18 @@ rpm -Uvh ius-release*.rpm epel-release*.rpm
 
 ```
 https://dl.iuscommunity.org/pub/
+```
+
+##### 打开/关闭显示器
+##### Open/Close display
+```
+xset -display :0 dpms force on
+xset -display :0 dpms force off
+```
+
+##### Xdotool
+```
+export DISPLAY=:0; xdotool key Return
 ```
 
 ##### 压缩
