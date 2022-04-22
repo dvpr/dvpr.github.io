@@ -39,6 +39,15 @@ Ctrl + b q (显示Pane编号/prints the pane numbers)
 Ctrl + b q <number> (切换到指定编号Pane/change to pane number)
 ```
 
+##### Pane移动
+##### Move pane
+```
+Ctrl + b { (先前移动/forward)
+Ctrl + b } (先后移动/backward)
+```
+
+<br>
+
 ##### 新建Window
 ##### Create new window
 ```
