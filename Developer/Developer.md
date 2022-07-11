@@ -1,6 +1,26 @@
 # Developer
 <br />
 
+### Zabbix 故障处理
+### Zabbix debug
+<br />
+
+```
+2022/07/11 02:04:04 [error] 4671#0: *263116 upstream timed out (110: Operation timed out) while reading response header from upstream, client: 172.24
+.0.2, server: zabbix, request: "POST /api_jsonrpc.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock", host: "zabbix"
+
+[pool www] server reached pm.max_children setting (5), consider raising it
+```
+
+set
+```
+pm = static
+pm.max_children = 200
+```
+in /etc/php5/php-fpm.conf
+
+for 16G RAM server
+
 ### 作弊小抄
 ### Cheat sheet
 <br />
