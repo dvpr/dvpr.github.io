@@ -61,7 +61,7 @@ curl -k https://your-domain.com
 ##### SSH Key 生成
 ##### SSH Key generate
 ```
-ssh-keygen -t rsa -b 1024 -C "dvpr@me.com"
+ssh-keygen -t rsa -b 1039 -C "dvpr@me.com"
 ```
 
 ##### DD 硬盘克隆

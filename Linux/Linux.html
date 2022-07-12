@@ -123,7 +123,7 @@ zip
 压缩/compress zip your_file_name.zip path_name
 </code></pre><h5>Skip SSL 证书检查</h5><h5>Skip certificate check</h5><pre><code>wget --no-check-certificate https://your-domain.com
 curl -k https://your-domain.com
-</code></pre><h5>SSH Key 生成</h5><h5>SSH Key generate</h5><pre><code>ssh-keygen -t rsa -b 1024 -C "dvpr@me.com"
+</code></pre><h5>SSH Key 生成</h5><h5>SSH Key generate</h5><pre><code>ssh-keygen -t rsa -b 1039 -C "dvpr@me.com"
 </code></pre><h5>DD 硬盘克隆</h5><h5>DD command clone a disk</h5><pre><code>dd if=/dev/sda of=/root/output.img status=progress conv=notrunc,noerror bs=8M
 </code></pre><h3>Linux 监控命令</h3><h5>查看Apache连接数</h5><h5>List Apache connections</h5><pre><code>watch -n 1 -d "pgrep httpd|wc -l"
 </code></pre><h5>查看MySQL连接数</h5><h5>List MySQL connections</h5><pre><code>mysqladmin -uuser -p processlist
