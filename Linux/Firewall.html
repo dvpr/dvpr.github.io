@@ -116,8 +116,8 @@ firewall-cmd --zone=public --permanent --remove-service=ssh
 
 新建区域并为指定IP添加端口/Create zone and add port for specific IP
 firewall-cmd --new-zone=your-zone-name --permanent
-firewall-cmd --zone=your-zone-name --add-source=59.65.196.31/32 --permanent
-firewall-cmd --zone=your-zone-name --add-port=8080/tcp --permanent
+firewall-cmd --zone=your-zone-name --add-source=your-ip-address(1.1.1.11)/32 --permanent
+firewall-cmd --zone=your-zone-name --add-port=80/tcp --permanent
 
 加载规则/Reload rules
 firewall-cmd --reload
