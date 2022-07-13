@@ -1,6 +1,15 @@
 # Developer
 <br />
 
+### Surfingkeys 在多个站点禁用
+### Disable Surfingkeys on multiple sites
+
+```
+settings.blacklistPattern = /.*mail.google.com.*|.*inbox.google.com.*|trello.com|duolingo.com|youtube.com|udemy.com/i;
+```
+
+<br />
+
 ### Zabbix 故障处理
 ### Zabbix debug
 <br />
