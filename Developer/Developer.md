@@ -3,7 +3,7 @@
 
 
 ### 此网站发送了 Google Chrome 无法处理的杂乱凭据
-###
+### Google Chrome: thisisunsafe SSL error bypass
 
 ```
 Google Chrome浏览器出现：您目前无法访问 XX.XX.XX.XX，因为此网站发送了 Google Chrome 无法处理的杂乱凭据。
@@ -13,7 +13,7 @@ Google Chrome浏览器出现：您目前无法访问 XX.XX.XX.XX，因为此网�
 ```
 thisisunsafe
 ```
-（鼠标点击当前页面任意位置，让页面处于最上层即可输入,输入时是不显示任何字符的，直接输入即可！）
+鼠标点击当前页面任意位置，让页面处于最上层即可输入,输入时是不显示任何字符的，直接输入即可。
 
 <br />
 
