@@ -30,4 +30,7 @@ firewall-cmd --reload
 
 删除区域/delete zone
 firewall-cmd --permanent --delete-zone=your-zone-name
+
+增加规则
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="192.168.28.0/24" port protocol="tcp" port="8080" accept'
 ```
