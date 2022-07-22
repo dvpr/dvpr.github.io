@@ -106,36 +106,7 @@
 [pool www] server reached pm.max_children setting (5), consider raising it
 </code></pre><p>set</p><pre><code>pm = static
 pm.max_children = 200
-</code></pre><p>in /etc/php5/php-fpm.conf</p><p>for 16G RAM server</p><h3>作弊小抄</h3><h3>Cheat sheet</h3><br /><h5>HTTP 文件类型列表</h5><h5>Content-type MIME TYPE list</h5><br /><pre><code>| 文件后缀	| MIME TYPE |
-| .doc	| application/msword |
-| .dot	| application/msword |
-| .docx	| application/vnd.openxmlformats-officedocument.wordprocessingml.document |
-| .dotx	| application/vnd.openxmlformats-officedocument.wordprocessingml.template |
-| .docm	| application/vnd.ms-word.document.macroEnabled.12 |
-| .dotm	| application/vnd.ms-word.template.macroEnabled.12 |
-| .xls	| application/vnd.ms-excel |
-| .xlt	| application/vnd.ms-excel |
-| .xla	| application/vnd.ms-excel |
-| .xlsx	| application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
-| .xltx	| application/vnd.openxmlformats-officedocument.spreadsheetml.template |
-| .xlsm	| application/vnd.ms-excel.sheet.macroEnabled.12 |
-| .xltm	| application/vnd.ms-excel.template.macroEnabled.12 |
-| .xlam	| application/vnd.ms-excel.addin.macroEnabled.12 |
-| .xlsb	| application/vnd.ms-excel.sheet.binary.macroEnabled.12 |
-| .ppt	| application/vnd.ms-powerpoint |
-| .pot	| application/vnd.ms-powerpoint |
-| .pps	| application/vnd.ms-powerpoint |
-| .ppa	| application/vnd.ms-powerpoint |
-| .pptx	| application/vnd.openxmlformats-officedocument.presentationml.presentation |
-| .potx	| application/vnd.openxmlformats-officedocument.presentationml.template |
-| .ppsx	| application/vnd.openxmlformats-officedocument.presentationml.slideshow |
-| .ppam	| application/vnd.ms-powerpoint.addin.macroEnabled.12 |
-| .pptm	| application/vnd.ms-powerpoint.presentation.macroEnabled.12 |
-| .potm	| application/vnd.ms-powerpoint.presentation.macroEnabled.12 |
-| .ppsm	| application/vnd.ms-powerpoint.slideshow.macroEnabled.12 |
-| .zip	| application/zip |
-| .tar	| application/x-tar |
-</code></pre><br /><h5>到底有多少个IP</h5><h5>How many IPs</h5><br /><h6>公式</h6><h6>Formula</h6><pre><code>IPv4: 2^(64-x)-3
+</code></pre><p>in /etc/php5/php-fpm.conf</p><p>for 16G RAM server</p><h3>作弊小抄</h3><h3>Cheat sheet</h3><br /><h5>HTTP 文件类型列表</h5><h5>Content-type MIME TYPE list</h5><br /><table class="table table-responsive table-condensed table-bordered table-striped table-hover"><tbody><tr><td>文件后缀</td><td>MIME TYPE</td><td></td></tr><tr><td>:-----</td><td>:-----</td><td>:-----</td></tr><tr><td>.doc</td><td>application/msword</td><td></td></tr><tr><td>.dot</td><td>application/msword</td><td></td></tr><tr><td>.docx</td><td>application/vnd.openxmlformats-officedocument.wordprocessingml.document</td><td></td></tr><tr><td>.dotx</td><td>application/vnd.openxmlformats-officedocument.wordprocessingml.template</td><td></td></tr><tr><td>.docm</td><td>application/vnd.ms-word.document.macroEnabled.12</td><td></td></tr><tr><td>.dotm</td><td>application/vnd.ms-word.template.macroEnabled.12</td><td></td></tr><tr><td>.xls</td><td>application/vnd.ms-excel</td><td></td></tr><tr><td>.xlt</td><td>application/vnd.ms-excel</td><td></td></tr><tr><td>.xla</td><td>application/vnd.ms-excel</td><td></td></tr><tr><td>.xlsx</td><td>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</td><td></td></tr><tr><td>.xltx</td><td>application/vnd.openxmlformats-officedocument.spreadsheetml.template</td><td></td></tr><tr><td>.xlsm</td><td>application/vnd.ms-excel.sheet.macroEnabled.12</td><td></td></tr><tr><td>.xltm</td><td>application/vnd.ms-excel.template.macroEnabled.12</td><td></td></tr><tr><td>.xlam</td><td>application/vnd.ms-excel.addin.macroEnabled.12</td><td></td></tr><tr><td>.xlsb</td><td>application/vnd.ms-excel.sheet.binary.macroEnabled.12</td><td></td></tr><tr><td>.ppt</td><td>application/vnd.ms-powerpoint</td><td></td></tr><tr><td>.pot</td><td>application/vnd.ms-powerpoint</td><td></td></tr><tr><td>.pps</td><td>application/vnd.ms-powerpoint</td><td></td></tr><tr><td>.ppa</td><td>application/vnd.ms-powerpoint</td><td></td></tr><tr><td>.pptx</td><td>application/vnd.openxmlformats-officedocument.presentationml.presentation</td><td></td></tr><tr><td>.potx</td><td>application/vnd.openxmlformats-officedocument.presentationml.template</td><td></td></tr><tr><td>.ppsx</td><td>application/vnd.openxmlformats-officedocument.presentationml.slideshow</td><td></td></tr><tr><td>.ppam</td><td>application/vnd.ms-powerpoint.addin.macroEnabled.12</td><td></td></tr><tr><td>.pptm</td><td>application/vnd.ms-powerpoint.presentation.macroEnabled.12</td><td></td></tr><tr><td>.potm</td><td>application/vnd.ms-powerpoint.presentation.macroEnabled.12</td><td></td></tr><tr><td>.ppsm</td><td>application/vnd.ms-powerpoint.slideshow.macroEnabled.12</td><td></td></tr><tr><td>.zip</td><td>application/zip</td><td></td></tr><tr><td>.tar</td><td>application/x-tar</td><td></td></tr></tbody></table><br /><h5>到底有多少个IP</h5><h5>How many IPs</h5><br /><h6>公式</h6><h6>Formula</h6><pre><code>IPv4: 2^(64-x)-3
 IPv6：2^(128-x)-3
 </code></pre><br /><h6>结果</h6><h6>Result</h6><pre><code>IPv4:
 

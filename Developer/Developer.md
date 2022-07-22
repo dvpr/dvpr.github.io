@@ -53,8 +53,8 @@ for 16G RAM server
 ##### Content-type MIME TYPE list
 <br />
 
-```
 | 文件后缀	| MIME TYPE |
+| :----- | :----- | :----- |
 | .doc	| application/msword |
 | .dot	| application/msword |
 | .docx	| application/vnd.openxmlformats-officedocument.wordprocessingml.document |
@@ -83,7 +83,6 @@ for 16G RAM server
 | .ppsm	| application/vnd.ms-powerpoint.slideshow.macroEnabled.12 |
 | .zip	| application/zip |
 | .tar	| application/x-tar |
-```
 
 <br />
 
