@@ -54,7 +54,7 @@ for 16G RAM server
 <br />
 
 | 文件后缀	| MIME TYPE |
-| :----- | :----- | :----- |
+| :-----	| :----- | :----- |
 | .doc	| application/msword |
 | .dot	| application/msword |
 | .docx	| application/vnd.openxmlformats-officedocument.wordprocessingml.document |
