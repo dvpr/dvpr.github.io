@@ -108,7 +108,9 @@ sit amet, consectetuer adipiscing elit.
 
 *   A list item with a code block:
 
-        <code goes here>
+``` 
+<code goes here>
+```
 
 ### You need backslash-escape the period
 
@@ -301,7 +303,7 @@ That is:
 [id]: url/to/image  "Optional title attribute"
 ```
 
-As of this writing, Markdown has no syntax for specifying the dimensions of an image; if this is important to you, you can simply use regular HTML <img> tags.
+As of this writing, Markdown has no syntax for specifying the dimensions of an image; if this is important to you, you can simply use regular HTML ```<img>``` tags.
 
 ## Miscellaneous
 
@@ -311,7 +313,9 @@ As of this writing, Markdown has no syntax for specifying the dimensions of an i
 
 Automatic links for email addresses work similarly, except that Markdown will also perform a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots
 
+```
 <x@dvpr.me>
+```
 
 ## Backslash Escapes
 

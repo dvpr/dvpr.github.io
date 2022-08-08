@@ -98,47 +98,11 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h2>Docker</h2><br><br>
-
-##### Docker清理空间
-##### Clean
-
-```
-docker system prune -a
-```
-
-<br><br>
-
-##### 查看Docker空间占用
-##### df
-
-```
-docker system df
-```
-
-<br><br>
-
-##### Docker ps 查看完整信息
-##### Docker ps display the full command along
-
-```
-docker ps --no-trunc
-```
-
-<br><br>
-
-##### 使用非root用户运行docker
-##### Run the Docker daemon as a non-root user (Rootless mode)
-> [链接](https://docs.docker.com/engine/security/rootless)
-
-<br><br>
-
-##### 在树莓派中安装docker
-##### How to install docker and docker-compose on Raspberry Pi
-
-```
-# Update source
-sudo apt-get update && sudo apt-get upgrade
+            <h2>Docker</h2><br /><br /><h5>Docker清理空间</h5><h5>Clean</h5><pre><code>docker system prune -a
+</code></pre><br /><br /><h5>查看Docker空间占用</h5><h5>df</h5><pre><code>docker system df
+</code></pre><br /><br /><h5>Docker ps 查看完整信息</h5><h5>Docker ps display the full command along</h5><pre><code>docker ps --no-trunc
+</code></pre><br /><br /><h5>使用非root用户运行docker</h5><h5>Run the Docker daemon as a non-root user (Rootless mode)</h5><blockquote><p><a href="https://docs.docker.com/engine/security/rootless">链接</a></p></blockquote><br /><br /><h5>在树莓派中安装docker</h5><h5>How to install docker and docker-compose on Raspberry Pi</h5><pre><code># Update source
+sudo apt-get update &amp;&amp; sudo apt-get upgrade
 
 # Install docker by shell script
 curl -sSL https://get.docker.com | sh
@@ -169,7 +133,7 @@ sudo apt-get upgrade
 sudo apt-get purge docker-ce
 sudo apt-get purge docker-ce-cli
 sudo rm -rf /var/lib/docker
-```
+</code></pre>
             <!-- /.markdown-output -->
         </div>
 

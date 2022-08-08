@@ -46,7 +46,7 @@ Ctrl + b { (先前移动/forward)
 Ctrl + b } (先后移动/backward)
 ```
 
-<br>
+<br />
 
 ##### 新建Window
 ##### Create new window

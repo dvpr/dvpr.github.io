@@ -1,7 +1,7 @@
 ## 树莓派
 > Raspberry Pi
 
-<br><br>
+<br /><br />
 
 ##### 国内镜像站
 
@@ -10,7 +10,7 @@
 [SJTUG 镜像站（上海）](https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images)
 ```
 
-<br><br>
+<br /><br />
 
 ##### 安装桌面环境
 ##### Install Desktop for Lit OS
@@ -22,7 +22,7 @@ sudo apt install lightdm -y // restart on boot
 sudo reboot
 ```
 
-<br><br>
+<br /><br />
 
 ##### 桌面环境开机启动软件
 ##### Run software on boot on Desktop

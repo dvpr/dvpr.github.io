@@ -98,238 +98,26 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <p>This is an H1 ============= This is an H2 -------------</p><h3>This is an H3</h3><h4>This is an H4</h4><h6>THis is h6</h6><h2>Blockquotes</h2><blockquote><p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus. Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing</p></blockquote><h3>Put the &gt; before the first line of a hard-wrapped paragraph</h3><blockquote><p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p></blockquote><blockquote><p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisseid sem consectetuer libero luctus adipiscing.</p></blockquote><h3>Blockquotes can be nested</h3><blockquote><p>This is the first level of quoting. &gt; This is nested blockquote. Back to the first level.</p></blockquote><h3>Blockquotes can contain other Markdown elements</h3><blockquote><p>## This is a header. 1. This is the first list item. 2. This is the second list item. Here's some example code: return shell<em>exec("echo $input | $markdown</em>script");</p></blockquote><h2>Lists</h2><ul><li>Red</li><li>Green</li><li>Blue</li></ul><ul><li>Red</li><li>Green</li><li>Blue</li></ul><ul><li>Red</li><li>Green</li><li>Blue</li></ul><h3>Ordered lists</h3><ol><li>Bird</li><li>McHale</li><li>Parish</li></ol><h3>The actual numbers you use to mark the list have no effect on the HTML output Markdown produces</h3><ol><li>Bird</li><li>McHale</li><li>Parish</li></ol><ol start="3"><li>Bird</li><li>McHale</li><li>Parish</li></ol><h3>You not need wrap items with hanging indents</h3><ul><li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</li><li>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.</li></ul><h3>If list items are separated by blank lines, Markdown will wrap the items in <code>&lt;p&gt;</code> tags in the HTML output</h3><ul><li>Bird</li></ul><ul><li>Magic</li></ul><h3>List items may consist of multiple paragraphs,indents not need.</h3><ul><li>This is a list item with two paragraphs.</li></ul><p>This is the second paragraph in the list item. You're only required to indent the first line. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p><ul><li>Another item in the same list.</li></ul><h3>To put a blockquote within a list item, the blockquote’s &gt; delimiters need to be indented</h3><ul><li>A list item with a blockquote:</li></ul><blockquote><p>This is a blockquote &gt; inside a list item.</p></blockquote><h3>To put a code block within a list item, the code block needs to be indented twice — 8 spaces</h3><ul><li>A list item with a code block:</li></ul><code goes here>
-
-### You need backslash-escape the period
-
-1986\. What a great season.
-
-## Code Blocks
-
-This is a normal paragraph:
-
-    This is a code block.
-
-### One level of indentation — 4 spaces or 1 tab — is removed from each line of the code block
-
-Here is an example of AppleScript:
-
-    tell application "Foo"
-        beep
-    end tell
-
-### Within a code block, ampersands (&) and angle brackets (< and >) are automatically converted into HTML entities
-
-    <div class="footer">
+            <p>This is an H1 ============= This is an H2 -------------</p><h3>This is an H3</h3><h4>This is an H4</h4><h6>THis is h6</h6><h2>Blockquotes</h2><blockquote><p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus. Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing</p></blockquote><h3>Put the &gt; before the first line of a hard-wrapped paragraph</h3><blockquote><p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p></blockquote><blockquote><p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisseid sem consectetuer libero luctus adipiscing.</p></blockquote><h3>Blockquotes can be nested</h3><blockquote><p>This is the first level of quoting. &gt; This is nested blockquote. Back to the first level.</p></blockquote><h3>Blockquotes can contain other Markdown elements</h3><blockquote><p>## This is a header. 1. This is the first list item. 2. This is the second list item. Here's some example code: return shell<em>exec("echo $input | $markdown</em>script");</p></blockquote><h2>Lists</h2><ul><li>Red</li><li>Green</li><li>Blue</li></ul><ul><li>Red</li><li>Green</li><li>Blue</li></ul><ul><li>Red</li><li>Green</li><li>Blue</li></ul><h3>Ordered lists</h3><ol><li>Bird</li><li>McHale</li><li>Parish</li></ol><h3>The actual numbers you use to mark the list have no effect on the HTML output Markdown produces</h3><ol><li>Bird</li><li>McHale</li><li>Parish</li></ol><ol start="3"><li>Bird</li><li>McHale</li><li>Parish</li></ol><h3>You not need wrap items with hanging indents</h3><ul><li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</li><li>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.</li></ul><h3>If list items are separated by blank lines, Markdown will wrap the items in <code>&lt;p&gt;</code> tags in the HTML output</h3><ul><li>Bird</li></ul><ul><li>Magic</li></ul><h3>List items may consist of multiple paragraphs,indents not need.</h3><ul><li>This is a list item with two paragraphs.</li></ul><p>This is the second paragraph in the list item. You're only required to indent the first line. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p><ul><li>Another item in the same list.</li></ul><h3>To put a blockquote within a list item, the blockquote’s &gt; delimiters need to be indented</h3><ul><li>A list item with a blockquote:</li></ul><blockquote><p>This is a blockquote &gt; inside a list item.</p></blockquote><h3>To put a code block within a list item, the code block needs to be indented twice — 8 spaces</h3><ul><li>A list item with a code block:</li></ul><pre><code>&lt;code goes here&gt;
+</code></pre><h3>You need backslash-escape the period</h3><p>1986. What a great season.</p><h2>Code Blocks</h2><p>This is a normal paragraph:</p><p>This is a code block.</p><h3>One level of indentation — 4 spaces or 1 tab — is removed from each line of the code block</h3><p>Here is an example of AppleScript:</p><p>tell application "Foo" beep end tell</p><h3>Within a code block, ampersands (&amp;) and angle brackets (&lt; and &gt;) are automatically converted into HTML entities</h3><div class="footer">
         &copy; 2004 Foo Corporation
-    </div>
-
-## Horizontal Rules
-
-* * *
-
-***
-
-*****
-
-- - -
-
----------------------------------------
-
-## Span Elements
-
-### Links
-
-This is [an example](http://dvpr.xyz/ "Title") inline link.
-
-[This link](http://example.me/) has no title attribute.
-
-See my [About](/about/) page for details.
-
-### Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link
-
-This is [an example][id] reference-style link.
-
-This is [an example] [id] reference-style link.
-
-[id]: http://example.com/  "Optional Title Here"
-
-That is:
-
-- Square brackets containing the link identifier (optionally indented from the left margin using up to three spaces);
-- followed by a colon;
-- followed by one or more spaces (or tabs);
-- followed by the URL for the link;
-- optionally followed by a title attribute for the link, enclosed in double or single quotes, or enclosed in parentheses.
-
-The following three link definitions are equivalent:
-
-    [foo1]: http://example.com/  "Optional Title Here"
-    [foo2]: http://example.com/  'Optional Title Here'
-    [foo3]: http://example.com/  (Optional Title Here)
-
-This is [an example foo1] [foo1] reference-style link.
-
-This is [an example foo2] [foo2] reference-style link.
-
-This is [an example foo3] [foo3] reference-style link.
-
-[foo1]: http://example.com/  "Optional Title Here"
-[foo2]: http://example.com/  'Optional Title Here'
-[foo3]: http://example.com/  (Optional Title Here)
-
-### Note: There is a known bug in Markdown.pl 1.0.1 which prevents single quotes from being used to delimit link titles.
-
-###The link URL may, optionally, be surrounded by angle brackets:
-
-```
-[id]: <http://example.com/>  "Optional Title Here"
-```
-
-[id]: <http://example.com/>  "Optional Title Here"
-
-### You can put the title attribute on the next line and use extra spaces or tabs for padding, which tends to look better with longer URLs
-
-```
-[id]: http://example.com/longish/path/to/resource/here
+    </div><h2>Horizontal Rules</h2><ul><li><em> </em></li></ul><hr><hr><ul><li>- -</li></ul><hr><h2>Span Elements</h2><h3>Links</h3><p>This is <a href="http://dvpr.xyz/ "Title"">an example</a> inline link.</p><p><a href="http://example.me/">This link</a> has no title attribute.</p><p>See my <a href="/about/">About</a> page for details.</p><h3>Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link</h3><p>This is <a href="http://example.com/longish/path/to/resource/here">an example</a> reference-style link.</p><p>This is [an example] [id] reference-style link.</p><p>That is:</p><ul><li>Square brackets containing the link identifier (optionally indented from the left margin using up to three spaces);</li><li>followed by a colon;</li><li>followed by one or more spaces (or tabs);</li><li>followed by the URL for the link;</li><li>optionally followed by a title attribute for the link, enclosed in double or single quotes, or enclosed in parentheses.</li></ul><p>The following three link definitions are equivalent:</p><p>This is [an example foo1] [foo1] reference-style link.</p><p>This is [an example foo2] [foo2] reference-style link.</p><p>This is [an example foo3] [foo3] reference-style link.</p><h3>Note: There is a known bug in Markdown.pl 1.0.1 which prevents single quotes from being used to delimit link titles.</h3><p>###The link URL may, optionally, be surrounded by angle brackets:</p><pre><code>[id]: &lt;http://example.com/&gt;  "Optional Title Here"
+</code></pre><h3>You can put the title attribute on the next line and use extra spaces or tabs for padding, which tends to look better with longer URLs</h3><pre><code>[id]: http://example.com/longish/path/to/resource/here
     "Optional Title Here"
-```
-
-[id]: http://example.com/longish/path/to/resource/here
-    "Optional Title Here"
-
-Link definitions are only used for creating links during Markdown processing, and are stripped from your document in the HTML output.
-
-Link definition names may consist of letters, numbers, spaces, and punctuation — but they are not case sensitive. E.g. these two links:
-
-```
-[link text][a]
+</code></pre><p>"Optional Title Here"</p><p>Link definitions are only used for creating links during Markdown processing, and are stripped from your document in the HTML output.</p><p>Link definition names may consist of letters, numbers, spaces, and punctuation — but they are not case sensitive. E.g. these two links:</p><pre><code>[link text][a]
 [link text][A]
-```
-
-[link text][a]
-[link text][A]
-
-[a]: http://dvpr.me "dvpr.me"
-
-are equivalent.
-
-### The implicit link name shortcut allows you to omit the name of the link
-
-```
-[dvpr][]
+</code></pre><p><a href="http://dvpr.me "dvpr.me"">link text</a> <a href="http://dvpr.me "dvpr.me"">link text</a></p><p>are equivalent.</p><h3>The implicit link name shortcut allows you to omit the name of the link</h3><pre><code>[dvpr][]
 [dvpr]: http://dvpr.me "dvpr.me"
-```
-
-[dvpr][]
+</code></pre><p><a href="">dvpr</a> [dvpr]: http://dvpr.me "dvpr.me"</p><h3>Because link names may contain spaces, this shortcut even works for multiple words in the link text</h3><pre><code>[dvpr][]
 [dvpr]: http://dvpr.me "dvpr.me"
-
-### Because link names may contain spaces, this shortcut even works for multiple words in the link text
-
-```
-[dvpr][]
-[dvpr]: http://dvpr.me "dvpr.me"
-```
-
-[dvpr][]
-[dvpr]: http://dvpr.me "dvpr.me"
-
-## Emphasis
-
-### Markdown treats asterisks (*) and underscores (_) as indicators of emphasis
-
-*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__
-
-## Code
-
-Use the `printf()` function.
-
-### To include a literal backtick character within a code span, you can use multiple backticks as the opening and closing delimiters
-
-``There is a literal backtick (`) here.``
-
-### The backtick delimiters surrounding a code span may include spaces — one after the opening, one before the closing
-
-A single backtick in a code span: `` ` ``
-
-A backtick-delimited string in a code span: `` `foo` ``
-
-### With a code span, ampersands and angle brackets are encoded as HTML entities automatically
-
-Please don't use any `<blink>` tags.
-
-`&#8212;` is the decimal-encoded equivalent of `&mdash;`.
-
-## Images
-
-### Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: inline and reference.
-
-```
-![Alt text](/path/to/img.jpg)
+</code></pre><p><a href="">dvpr</a> [dvpr]: http://dvpr.me "dvpr.me"</p><h2>Emphasis</h2><h3>Markdown treats asterisks (<em>) and underscores (</em>) as indicators of emphasis</h3><p><em>single asterisks</em></p><p><em>single underscores</em></p><p><strong>double asterisks</strong></p><p><strong>double underscores</strong></p><h2>Code</h2><p>Use the <code>printf()</code> function.</p><h3>To include a literal backtick character within a code span, you can use multiple backticks as the opening and closing delimiters</h3><p><code></code>There is a literal backtick (<code>) here.</code>`</p><h3>The backtick delimiters surrounding a code span may include spaces — one after the opening, one before the closing</h3><p>A single backtick in a code span: <code></code> <code> </code>`</p><p>A backtick-delimited string in a code span: <code></code> <code>foo</code> <code></code></p><h3>With a code span, ampersands and angle brackets are encoded as HTML entities automatically</h3><p>Please don't use any <code>&lt;blink&gt;</code> tags.</p><p><code>&amp;#8212;</code> is the decimal-encoded equivalent of <code>&amp;mdash;</code>.</p><h2>Images</h2><h3>Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: inline and reference.</h3><pre><code>![Alt text](/path/to/img.jpg)
 
 ![Alt text](/path/to/img.jpg "Optional title")
-```
-
-That is:
-
-
-- An exclamation mark: !;
-- followed by a set of square brackets, containing the alt attribute text for the image;
-- followed by a set of parentheses, containing the URL or path to the image, and an optional title attribute enclosed in double or single quotes.
-
-### Reference-style image syntax looks like this
-
-```
-![Alt text][id]
+</code></pre><p>That is:</p><ul><li>An exclamation mark: !;</li><li>followed by a set of square brackets, containing the alt attribute text for the image;</li><li>followed by a set of parentheses, containing the URL or path to the image, and an optional title attribute enclosed in double or single quotes.</li></ul><h3>Reference-style image syntax looks like this</h3><pre><code>![Alt text][id]
 
 [id]: url/to/image  "Optional title attribute"
-```
-
-As of this writing, Markdown has no syntax for specifying the dimensions of an image; if this is important to you, you can simply use regular HTML <img> tags.
-
-## Miscellaneous
-
-### Automatic Links
-
-<http://dvpr.me/>
-
-Automatic links for email addresses work similarly, except that Markdown will also perform a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots
-
-<x@dvpr.me>
-
-## Backslash Escapes
-
-### Markdown provides backslash escapes for the following characters:
-
-\\literal backslash\\
-
-\`literal backtick\`
-
-\*literal asterisks\*
-
-\_literal underscore\_
-
-\{literal curly braces\}
-
-\[literal square brackets\]
-
-\(literal parentheses\)
-
-\#literal hash mark\#
-
-\+literal plus sign\+
-
-\-literal minus sign (hyphen)\-
-
-\.literal dot\.
-
-\!literal exclamation mark\!
+</code></pre><p>As of this writing, Markdown has no syntax for specifying the dimensions of an image; if this is important to you, you can simply use regular HTML <code></code><code>&lt;img&gt;</code><code></code> tags.</p><h2>Miscellaneous</h2><h3>Automatic Links</h3><http://dvpr.me/><p>Automatic links for email addresses work similarly, except that Markdown will also perform a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots</p><pre><code>&lt;x@dvpr.me&gt;
+</code></pre><h2>Backslash Escapes</h2><h3>Markdown provides backslash escapes for the following characters:</h3><p>literal backslash<br> `literal backtick`</p><p>*literal asterisks*</p><p>_literal underscore_</p><p>{literal curly braces}</p><p>[literal square brackets]</p><p>(literal parentheses)</p><p>#literal hash mark#</p><p>+literal plus sign+</p><p>-literal minus sign (hyphen)-</p><p>.literal dot.</p><p>!literal exclamation mark!</p>
             <!-- /.markdown-output -->
         </div>
 
