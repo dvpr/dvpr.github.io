@@ -98,7 +98,19 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h2>Linux</h2><h3>IUS yum源</h3><h3>IUS yum sources</h3><h5>快捷安装</h5><h5>Install</h5><pre><code>wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/ius-release-1-2.ius.el5.noarch.rpm
+            <h2>Linux</h2><h3>Debian</h3><h5>Debian 大版本更新</h5><h5>Debian Upgrade</h5><h6>更新现有系统</h6><h6>Update current packages</h6><pre><code>apt update &amp;&amp; apt upgrade -y
+</code></pre><h6>系统清理</h6><h6>Clean</h6><pre><code>apt --purge autoremove
+</code></pre><h6>更新 /etc/apt/sources.list 文件</h6><h6>Update /etc/apt/sources.list</h6><pre><code>deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+</code></pre><h6>执行更新</h6><h6>Start Upgrade</h6><pre><code>apt update &amp;&amp; apt full-upgrade
+</code></pre><h6>验证</h6><h6>Validate</h6><pre><code>cat /etc/os-release
+</code></pre><br /><br /><h3>IUS yum源</h3><h3>IUS yum sources</h3><h5>快捷安装</h5><h5>Install</h5><pre><code>wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/ius-release-1-2.ius.el5.noarch.rpm
 wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/5/x86_64/epel-release-1-1.ius.el5.noarch.rpm
 rpm -Uvh ius-release*.rpm epel-release*.rpm
 </code></pre><h5>yum包信息</h5><h5>IUS packages List</h5><pre><code>https://dl.iuscommunity.org/pub/

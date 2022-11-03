@@ -1,5 +1,49 @@
 ## Linux
 
+### Debian
+
+##### Debian 大版本更新
+##### Debian Upgrade
+
+###### 更新现有系统
+###### Update current packages
+```
+apt update && apt upgrade -y
+```
+
+###### 系统清理
+###### Clean
+```
+apt --purge autoremove
+```
+
+###### 更新 /etc/apt/sources.list 文件
+###### Update /etc/apt/sources.list
+```
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+```
+
+###### 执行更新
+###### Start Upgrade
+```
+apt update && apt full-upgrade
+```
+
+###### 验证
+###### Validate
+```
+cat /etc/os-release
+```
+
+<br /><br />
+
 ### IUS yum源
 ### IUS yum sources
 
