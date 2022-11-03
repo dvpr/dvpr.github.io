@@ -60,8 +60,6 @@ systemctl start docker
 docker info -f '{{ .DockerRootDir}}'
 ```
 
-######
-
 <br /><br />
 
 ##### 使用非root用户运行docker

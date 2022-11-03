@@ -109,7 +109,7 @@ systemctl stop containerd
 }
 </code></pre><h6>启动Docker</h6><h6>Start the Docker services</h6><pre><code>systemctl start docker
 </code></pre><h6>验证</h6><h6>Validate</h6><pre><code>docker info -f '{{ .DockerRootDir}}'
-</code></pre><p>######</p><br /><br /><h5>使用非root用户运行docker</h5><h5>Run the Docker daemon as a non-root user (Rootless mode)</h5><blockquote><p><a href="https://docs.docker.com/engine/security/rootless">链接</a></p></blockquote><br /><br /><h5>在树莓派中安装docker</h5><h5>How to install docker and docker-compose on Raspberry Pi</h5><pre><code># Update source
+</code></pre><br /><br /><h5>使用非root用户运行docker</h5><h5>Run the Docker daemon as a non-root user (Rootless mode)</h5><blockquote><p><a href="https://docs.docker.com/engine/security/rootless">链接</a></p></blockquote><br /><br /><h5>在树莓派中安装docker</h5><h5>How to install docker and docker-compose on Raspberry Pi</h5><pre><code># Update source
 sudo apt-get update &amp;&amp; sudo apt-get upgrade
 
 # Install docker by shell script
