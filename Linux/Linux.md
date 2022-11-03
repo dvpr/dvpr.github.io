@@ -2,11 +2,15 @@
 
 ### Debian
 
+<br><br>
+
 ##### Debian 大版本更新
 ##### Debian Upgrade
 
+<br><br>
+
 ###### 更新现有系统
-###### Update current packages
+###### Update current OS
 ```
 apt update && apt upgrade -y
 ```
@@ -17,8 +21,8 @@ apt update && apt upgrade -y
 apt --purge autoremove
 ```
 
-###### 更新 /etc/apt/sources.list 文件
-###### Update /etc/apt/sources.list
+###### /etc/apt/sources.list 文件更新为新版系统地址
+###### Update /etc/apt/sources.list to new version OS
 ```
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
