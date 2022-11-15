@@ -101,6 +101,9 @@
             <h2>Docker</h2><br /><br /><h5>Docker清理空间</h5><h5>Clean</h5><pre><code>docker system prune -a
 </code></pre><br /><br /><h5>查看Docker空间占用</h5><h5>df</h5><pre><code>docker system df
 </code></pre><br /><br /><h5>Docker ps 查看完整信息</h5><h5>Docker ps display the full command along</h5><pre><code>docker ps --no-trunc
+</code></pre><br /><br /><h5>mysql container won't start - Failed to initialize DD Storage Engine</h5><pre><code>docker-compose down -v - Which stops and removes all the running services and volumes.
+docker system prune --volumes - Which completely removes volumes and cache.
+docker-compose up -d - Which pulls and creates the services again.
 </code></pre><br /><br /><h5>修改Docker主目录设置</h5><h5>Relocating the Docker root directory</h5><h6>停止Docker服务</h6><h6>Stop the Docker services</h6><pre><code>systemctl stop docker
 systemctl stop docker.socket
 systemctl stop containerd

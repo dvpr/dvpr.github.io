@@ -29,6 +29,16 @@ docker ps --no-trunc
 
 <br /><br />
 
+##### mysql container won't start - Failed to initialize DD Storage Engine
+
+```
+docker-compose down -v - Which stops and removes all the running services and volumes.
+docker system prune --volumes - Which completely removes volumes and cache.
+docker-compose up -d - Which pulls and creates the services again.
+```
+
+<br /><br />
+
 ##### 修改Docker主目录设置
 ##### Relocating the Docker root directory
 
