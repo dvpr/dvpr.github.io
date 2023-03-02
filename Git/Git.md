@@ -43,6 +43,13 @@ git rm -f --cached path_to_your_folder
 git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch path_to_your_file'
 ```
 
+##### 将某个大文件从提交记录中移除
+##### Remove large file
+
+```
+git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch {file_name}' --prune-empty --tag-name-filter cat -- --all
+```
+
 <br /><br />
 
 ##### Git branch

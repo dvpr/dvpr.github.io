@@ -109,6 +109,7 @@ chore：构建过程或辅助工具的变动
 </code></pre><br /><br /><h5>删除本地Add文件或文件夹</h5><h5>Delete local add file/folder</h5><pre><code>git rm --cached path_to_your_file
 git rm -f --cached path_to_your_folder
 </code></pre><br /><br /><h5>彻底清理Git库中某个文件</h5><h5>Clean file and history</h5><h5>this exceeds GitHub's file size limit of 100 MB</h5><pre><code>git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch path_to_your_file'
+</code></pre><h5>将某个大文件从提交记录中移除</h5><h5>Remove large file</h5><pre><code>git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch {file_name}' --prune-empty --tag-name-filter cat -- --all
 </code></pre><br /><br /><h5>Git branch</h5><h5>Git 分支</h5><pre><code>$ git branch # 查看本地分支
 $ git branch -r # 查看远程分支
 $ git branch -a # 查看所有分支
