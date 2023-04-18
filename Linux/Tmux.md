@@ -94,16 +94,16 @@ Ctrl + b [
 
 <br />
 
-### Tmux 命令进入命令行模式
-### Tmux enter command mode
+##### Tmux 命令进入命令行模式
+##### Tmux enter command mode
 ```
 Ctrl + b :
 ```
 
 <br />
 
-### 禁用window重命名
-### disable window automatic-rename
+##### 禁用window重命名
+##### disable window automatic-rename
 ```
 set-window-option -g automatic-rename off
 ```
