@@ -1,6 +1,23 @@
 # Developer
 <br />
 
+### 访问控制
+### Access Control
+
+```
+Access Control List (ACL)
+权限列表 基于权限列表的访问控制
+
+Attribute-Based Access Control (ABAC)
+实体属性 基于实体属性的访问控制
+
+Role-Based Access Control (RBAC)
+实体角色 基于实体角色的访问控制
+
+Policy-Based Access Control (PBAC) 
+策略 基于策略的访问控制
+```
+
 
 ### 此网站发送了 Google Chrome 无法处理的杂乱凭据
 ### Google Chrome: thisisunsafe SSL error bypass

@@ -98,7 +98,18 @@
     <div class="container">
         <div class="markdown-output">
             <!-- /markdown-output -->
-            <h1>Developer</h1><br /><h3>此网站发送了 Google Chrome 无法处理的杂乱凭据</h3><h3>Google Chrome: thisisunsafe SSL error bypass</h3><pre><code>Google Chrome浏览器出现：您目前无法访问 XX.XX.XX.XX，因为此网站发送了 Google Chrome 无法处理的杂乱凭据。
+            <h1>Developer</h1><br /><h3>访问控制</h3><h3>Access Control</h3><pre><code>Access Control List (ACL)
+权限列表 基于权限列表的访问控制
+
+Attribute-Based Access Control (ABAC)
+实体属性 基于实体属性的访问控制
+
+Role-Based Access Control (RBAC)
+实体角色 基于实体角色的访问控制
+
+Policy-Based Access Control (PBAC) 
+策略 基于策略的访问控制
+</code></pre><h3>此网站发送了 Google Chrome 无法处理的杂乱凭据</h3><h3>Google Chrome: thisisunsafe SSL error bypass</h3><pre><code>Google Chrome浏览器出现：您目前无法访问 XX.XX.XX.XX，因为此网站发送了 Google Chrome 无法处理的杂乱凭据。
 </code></pre><p>在chrome该页面上，直接键盘敲入这11个字符：</p><pre><code>thisisunsafe
 </code></pre><p>鼠标点击当前页面任意位置，让页面处于最上层即可输入,输入时是不显示任何字符的，直接输入即可。</p><br /><h3>Surfingkeys 在多个站点禁用</h3><h3>Disable Surfingkeys on multiple sites</h3><pre><code>settings.blacklistPattern = /.*mail.google.com.*|.*inbox.google.com.*|trello.com|duolingo.com|youtube.com|udemy.com/i;
 </code></pre><br /><h3>Zabbix 故障处理</h3><h3>Zabbix debug</h3><br /><pre><code>2022/07/11 02:04:04 [error] 4671#0: *263116 upstream timed out (110: Operation timed out) while reading response header from upstream, client: 172.24.0.2, server: zabbix, request: "POST /api_jsonrpc.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock", host: "zabbix"
